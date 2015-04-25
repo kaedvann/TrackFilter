@@ -1,0 +1,256 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass g7-32_text
+\options utf8x
+\use_default_options false
+\maintain_unincluded_children false
+\language russian
+\language_package default
+\inputencoding auto
+\fontencoding default
+\font_roman CMU Serif
+\font_sans CMU Sans Serif
+\font_typewriter CMU Typewriter Text
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth -1
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Раздел
+Применение фильтра Калмана для обработки последовательности GPS-координат.
+\end_layout
+
+\begin_layout Параграф
+УДК 
+\end_layout
+
+\begin_layout Standard
+\align right
+
+\shape italic
+Листеренко Р.Р., бакалавр
+\end_layout
+
+\begin_layout Standard
+\align right
+
+\shape italic
+Россия, 105005, г.
+ Москва, МГТУ им.
+ Н.Э.
+ Баумана, 
+\end_layout
+
+\begin_layout Standard
+\align right
+
+\shape italic
+кафедра 
+\begin_inset Quotes fld
+\end_inset
+
+Информатика и системы управления
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+
+\shape italic
+Научный руководитель: Бекасов Д.Е.
+\end_layout
+
+\begin_layout Standard
+\align right
+
+\shape italic
+Россия, 105005, г.
+ Москва, МГТУ им.
+ Н.Э.
+ Баумана
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Ключевые слова: .
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Keywords: .
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Аннотация: .
+\end_layout
+
+\begin_layout Раздел
+Построение математической модели с использованием фильтра Калмана
+\end_layout
+
+\begin_layout Standard
+Для использования фильтра Калмана необходимо, чтобы исследумый процесс описывалс
+я следующим образом [типа ссылка]:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s_{k}=A_{k}s_{k-1}+B_{k}u_{k-1}+w_{k}\label{eq:process}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+z_{k}=H_{k}s_{k}+\nu_{k}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В формуле 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:process"
+
+\end_inset
+
+ 
+\begin_inset Formula $s_{k}\in\mathbb{R}^{n}$
+\end_inset
+
+-вектор состояния системы, 
+\begin_inset Formula $A$
+\end_inset
+
+- матрица размерностью 
+\begin_inset Formula $n\times n$
+\end_inset
+
+, описывающая переход наблюдаемого процесса из состояния 
+\begin_inset Formula $s_{k-1}$
+\end_inset
+
+в состояние 
+\begin_inset Formula $s_{k}$
+\end_inset
+
+.
+ Вектор 
+\begin_inset Formula $u\in\mathbb{R}^{l}$
+\end_inset
+
+ описывает управляющие воздействия на процесс.
+ Матрица 
+\begin_inset Formula $B$
+\end_inset
+
+ размерностью 
+\begin_inset Formula $n\times l$
+\end_inset
+
+ отображает вектор управляющих воздействий 
+\begin_inset Formula $u$
+\end_inset
+
+ в изменение состояния 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ 
+\begin_inset Formula $w_{k}$
+\end_inset
+
+ является случайной величиной, описывающей погрешности исследуемого процесса,
+ причем 
+\begin_inset Formula $p(w)\sim N(0,Q)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Подраздел
+Заключение
+\end_layout
+
+\end_body
+\end_document
