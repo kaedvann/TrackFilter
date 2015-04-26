@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="KalmanFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrackCombiner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

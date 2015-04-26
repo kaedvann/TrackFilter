@@ -32,6 +32,7 @@ namespace Filter
             }
             var result = new List<Coordinate>(input.Count);
             var statePrevious = CreateState(input.First());
+            result.Add(input.First());
             var pPrevious = Matrix<double>.Build.Dense(4, 4, 0.0);
             for (var i = 0; i < input.Count; ++i)
             {
@@ -44,20 +45,51 @@ namespace Filter
                 var measureError = CalculateMeasureErrorCovariance(input[i]);
                 var kalmanGain = CalculateKalmanGain(pEstimation, measureTransition, measureError);
                 var measureCurrent = CreateState(input[i]);
-                var stateCurrent = CalculateCurrentState(stateEstimation, measureCurrent, kalmanGain, measureTransition);
-                var pCurrent = CalculateCurrentError(pEstimation, kalmanGain, measureTransition);
-                //TODO засунуть результат в координаты
+                var stateCurrent = CorrectCurrentState(stateEstimation, measureCurrent, kalmanGain, measureTransition);
+                var pCurrent = CorrectCurrentError(pEstimation, kalmanGain, measureTransition);
+                result.Add(StateToCoordinate(stateCurrent, input[i].Time));
+                statePrevious = stateCurrent;
+                pPrevious = pCurrent;
             }
             return result;
         }
 
-        private Matrix<double> CalculateCurrentError(Matrix<double> errorEstimation, Matrix<double> kalmanGain, Matrix<double> measureTransition)
+        /// <summary>
+        /// Converts state vector to a coordinate
+        /// </summary>
+        /// <param name="state">4x1 matrix {x, y, vx, vy}T</param>
+        /// <param name="time">Time of the creared coordinate</param>
+        /// <returns>Constructed coordinate</returns>
+        private Coordinate StateToCoordinate(Matrix<double> state, DateTimeOffset time)
+        {
+            if (state.RowCount!=4 || state.ColumnCount!=1)
+                throw new ArgumentException("Not a state vector");
+            //TODO конвертация скорости
+            return new Coordinate{Longitude = state[0,0],Latitude = state[1,0], Time = time};
+        }
+
+        /// <summary>
+        /// Corrects predicted error matrix
+        /// </summary>
+        /// <param name="errorEstimation">Error matrix estimation</param>
+        /// <param name="kalmanGain">Kalman gain for this step</param>
+        /// <param name="measureTransition">Measure transtion matrix</param>
+        /// <returns>Corrected error matrix</returns>
+        private Matrix<double> CorrectCurrentError(Matrix<double> errorEstimation, Matrix<double> kalmanGain, Matrix<double> measureTransition)
         {
             return (Matrix<double>.Build.DenseIdentity(4) - kalmanGain*measureTransition)*errorEstimation;
 
         }
 
-        private Matrix<double> CalculateCurrentState(Matrix<double> stateEstimation, Matrix<double> measureCurrent, Matrix<double> kalmanGain, Matrix<double> measureTransition)
+        /// <summary>
+        /// Corrects predicted state matrix
+        /// </summary>
+        /// <param name="stateEstimation">State estimation</param>
+        /// <param name="measureCurrent">Current measured state</param>
+        /// <param name="kalmanGain">Kalman gain</param>
+        /// <param name="measureTransition">Measure transition matrix</param>
+        /// <returns>Corrected state</returns>
+        private Matrix<double> CorrectCurrentState(Matrix<double> stateEstimation, Matrix<double> measureCurrent, Matrix<double> kalmanGain, Matrix<double> measureTransition)
         {
             return stateEstimation + kalmanGain.Multiply(measureCurrent - measureTransition*stateEstimation);
         }
@@ -77,11 +109,22 @@ namespace Filter
             return Matrix<double>.Build.Dense(4, 4, 0);
         }
 
+        /// <summary>
+        /// Creates measure transition matrix
+        /// </summary>
+        /// <returns>Measure transition matrix</returns>
         private Matrix<double> CreateMeasureTransition()
         {
             return Matrix<double>.Build.DenseIdentity(4);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="previousError"></param>
+        /// <param name="transition"></param>
+        /// <param name="processNoiseCovariance"></param>
+        /// <returns></returns>
         private Matrix<double> CalculateErrorEstimation(Matrix<double> previousError, Matrix<double> transition, Matrix<double> processNoiseCovariance)
         {
             return transition.Multiply(previousError).Multiply(transition.Transpose()).Add(processNoiseCovariance);
