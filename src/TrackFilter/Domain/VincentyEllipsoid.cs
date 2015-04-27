@@ -14,16 +14,23 @@ namespace Domain
         private const double F = 1 / 298.257223563;
 
 
-
+        /// <summary>
+        /// Calculates new geographical point by supplied distance, direction and start point using Vincenty's formula 
+        /// </summary>
+        /// <param name="direction">Direction in degrees</param>
+        /// <param name="distance">Distance in meters</param>
+        /// <param name="currentLongtitude">Starting longitude</param>
+        /// <param name="currentLatitude">Starting latitude</param>
+        /// <returns>Calculated Poin</returns>
         public static Point GetPointFromDistance(double direction, double distance, double currentLongtitude, double currentLatitude)
         {
-            double alpha1 = direction;
+            double alpha1 = direction * Math.PI / 180.0;
             double s = distance;
             double lo1 = currentLongtitude;
             double la1 = currentLatitude;
 
-            double lat1 = la1 * Math.PI / 180;
-            double lon1 = lo1 * Math.PI / 180;
+            double lat1 = la1 * Math.PI / 180.0;
+            double lon1 = lo1 * Math.PI / 180.0;
 
             if (alpha1 < 0)
             {
