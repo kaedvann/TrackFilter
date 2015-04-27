@@ -33,10 +33,5 @@ namespace Domain
         /// Speed in metres per second
         /// </summary>
         public double Speed { get; set; }
-
-        /// <summary>
-        /// Accuracy in degrees
-        /// </summary>
-        public double SphereAccuracy { get; set; }
     }
 }

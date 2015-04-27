@@ -35,11 +35,12 @@ namespace Filter
         private Coordinate Combine(Coordinate[] coordinatesToCombine)
         {
             var accuracySum = coordinatesToCombine.Sum(c => c.Accuracy);
+            var weightSum = coordinatesToCombine.Sum(c => accuracySum - c.Accuracy);
             var times = coordinatesToCombine.Select(c => c.Time).OrderBy(t => t);
             var result = new Coordinate
             {
-                Latitude = coordinatesToCombine.Sum(c => (accuracySum -c.Accuracy)*c.Latitude/accuracySum),
-                Longitude = coordinatesToCombine.Sum(c => (accuracySum - c.Accuracy) * c.Longitude / accuracySum),
+                Latitude = coordinatesToCombine.Sum(c => (accuracySum - c.Accuracy) * c.Latitude / weightSum),
+                Longitude = coordinatesToCombine.Sum(c => (accuracySum - c.Accuracy) * c.Longitude / weightSum),
                 Time = times.First().AddSeconds(times.Average(d => (d - times.First()).TotalSeconds)),
                 Azimuth = coordinatesToCombine.Average(c => c.Azimuth),
                 Speed = coordinatesToCombine.Average(c => c.Speed)

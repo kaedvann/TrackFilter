@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Domain;
+using Domain.Extensions;
 using MathNet.Numerics.LinearAlgebra;
 
 namespace Filter
@@ -11,6 +12,21 @@ namespace Filter
     /// </summary>
     public class KalmanFilter
     {
+        private double AccelerationOx(Coordinate coordinate)
+        {
+            var point = VincentyEllipsoid.GetPointFromDistance(90, Math.Sqrt(AccelerationVariance), coordinate.Longitude,
+                coordinate.Latitude);
+            var res = point.X - coordinate.Longitude;
+            return res*res;
+        }
+
+        private double AccelerationOy(Coordinate coordinate)
+        {
+            var point = VincentyEllipsoid.GetPointFromDistance(0, Math.Sqrt(AccelerationVariance), coordinate.Longitude,
+                coordinate.Latitude);
+            var res = point.Y - coordinate.Latitude;
+            return res * res;
+        }
         /// <summary>
         ///     Gets or sets variance of acceleration (σ^2) to be used in process noise covariance matrix computation
         /// </summary>
@@ -39,7 +55,7 @@ namespace Filter
                 var dt = (input[i].Time - input[i - 1].Time).TotalSeconds;
                 var transition = CreateStateTransition(dt);
                 var stateEstimation = transition.Multiply(statePrevious);
-                var processNoiseCovariance = CalculateProcessNoiseCovariance(dt);
+                var processNoiseCovariance = CalculateProcessNoiseCovariance(dt, input[i]);
                 var pEstimation = CalculateErrorEstimation(pPrevious, transition, processNoiseCovariance);
                 var measureTransition = CreateMeasureTransition();
                 var measureError = CalculateMeasureErrorCovariance(input[i]);
@@ -47,7 +63,7 @@ namespace Filter
                 var measureCurrent = CreateState(input[i]);
                 var stateCurrent = CorrectCurrentState(stateEstimation, measureCurrent, kalmanGain, measureTransition);
                 var pCurrent = CorrectCurrentError(pEstimation, kalmanGain, measureTransition);
-                result.Add(StateToCoordinate(stateCurrent, input[i].Time));
+                result.Add(StateToCoordinate(stateCurrent, input[i]));
                 statePrevious = stateCurrent;
                 pPrevious = pCurrent;
             }
@@ -58,14 +74,13 @@ namespace Filter
         /// Converts state vector to a coordinate
         /// </summary>
         /// <param name="state">4x1 matrix {x, y, vx, vy}T</param>
-        /// <param name="time">Time of the creared coordinate</param>
+        /// <param name="coordinate">Original coordinate</param>
         /// <returns>Constructed coordinate</returns>
-        private Coordinate StateToCoordinate(Matrix<double> state, DateTimeOffset time)
+        private Coordinate StateToCoordinate(Matrix<double> state, Coordinate coordinate)
         {
             if (state.RowCount!=4 || state.ColumnCount!=1)
                 throw new ArgumentException("Not a state vector");
-            //TODO конвертация скорости
-            return new Coordinate{Longitude = state[0,0],Latitude = state[1,0], Time = time};
+            return new Coordinate{Longitude = state[0,0],Latitude = state[1,0], Time = coordinate.Time, Accuracy = coordinate.Accuracy, Azimuth = coordinate.Azimuth, Speed = coordinate.Speed};
         }
 
         /// <summary>
@@ -106,7 +121,13 @@ namespace Filter
         private Matrix<double> CalculateMeasureErrorCovariance(Coordinate coordinate)
         {
             //TODO actual error matrix calculation
-            return Matrix<double>.Build.Dense(4, 4, 0);
+            return Matrix<double>.Build.DenseOfArray(new[,]
+            {
+                {coordinate.AccuracyOx(),0,0,0},
+                {0,coordinate.AccuracyOy(),0,0},
+                {0,0,coordinate.AccuracyOx()/50,0},
+                {0,0,0,coordinate.AccuracyOy()/50}
+            });
         }
 
         /// <summary>
@@ -133,9 +154,10 @@ namespace Filter
         /// <summary>
         /// Calculates Q matrix from equation Q = G*G^t*σ^2
         /// </summary>
-        /// <param name="dt">Current time period</param>
+        /// <param name="dt">Current coordinate period</param>
+        /// <param name="coordinate">Coordinate to calculate acceleration noise against</param>
         /// <returns>Q matrix</returns>
-        private Matrix<double> CalculateProcessNoiseCovariance(double dt)
+        private Matrix<double> CalculateProcessNoiseCovariance(double dt, Coordinate coordinate)
         {
             var g = Matrix<double>.Build.DenseOfArray(new[,]
             {
@@ -144,7 +166,12 @@ namespace Filter
                 {dt, 0},
                 {0, dt}
             });
-            return g.Multiply(g.Transpose()).Multiply(AccelerationVariance);
+            var accelerationMatrix = Matrix<double>.Build.DenseOfArray(new[,]
+            {
+                {AccelerationOx(coordinate), 0},
+                {0, AccelerationOy(coordinate)}
+            });
+            return g.Multiply(accelerationMatrix).Multiply(g.Transpose());
         }
 
         /// <summary>
@@ -154,7 +181,7 @@ namespace Filter
         ///     |0 0 1  0|
         ///     |0 0 0  1|
         /// </summary>
-        /// <param name="dt">Current time period</param>
+        /// <param name="dt">Current coordinate period</param>
         /// <returns>A matrix</returns>
         private Matrix<double> CreateStateTransition(double dt)
         {
@@ -177,7 +204,8 @@ namespace Filter
             var result = Matrix<double>.Build.Dense(4, 1);
             result[0, 0] = coordinate.Longitude;
             result[1, 0] = coordinate.Latitude;
-            //TODO speed projections
+            result[2, 0] = coordinate.SpeedOx();
+            result[3, 0] = coordinate.SpeedOy();
             return result;
         }
     }
