@@ -8,7 +8,6 @@
         public MainWindow()
         {
             InitializeComponent();
-            MapControl.RenderTrack(TestRoute.Points);
         }
 
     }

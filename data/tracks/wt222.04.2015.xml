@@ -1,0 +1,803 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Coordinates>
+  <Coordinate>
+    <Latitude>55.7833773</Latitude>
+    <Longitude>37.5467593</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>556</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:32:00 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.7827719</Latitude>
+    <Longitude>37.5520226</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>556</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:32:16 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.7807501</Latitude>
+    <Longitude>37.5522041</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>500</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:32:36 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77823904</Latitude>
+    <Longitude>37.54898565</Longitude>
+    <Speed>5.7628116607666016</Speed>
+    <Accuracy>23</Accuracy>
+    <Azimuth>165</Azimuth>
+    <Time>04/22/2015 03:32:52 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77825701</Latitude>
+    <Longitude>37.54898185</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>5</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:32:56 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77825044</Latitude>
+    <Longitude>37.54899231</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>6</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:32:58 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77825301</Latitude>
+    <Longitude>37.54899796</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>7</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:33:00 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77826727</Latitude>
+    <Longitude>37.54912581</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>6</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:33:12 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.7782684</Latitude>
+    <Longitude>37.54913924</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>9</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:33:14 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77826893</Latitude>
+    <Longitude>37.54916831</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>15</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:33:18 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77826517</Latitude>
+    <Longitude>37.54924476</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>14</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:33:32 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77825896</Latitude>
+    <Longitude>37.54924686</Longitude>
+    <Speed>3.5999999046325684</Speed>
+    <Accuracy>13</Accuracy>
+    <Azimuth>177</Azimuth>
+    <Time>04/22/2015 03:33:35 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77816791</Latitude>
+    <Longitude>37.54947309</Longitude>
+    <Speed>5.4000000953674316</Speed>
+    <Accuracy>18</Accuracy>
+    <Azimuth>166</Azimuth>
+    <Time>04/22/2015 03:33:38 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77811955</Latitude>
+    <Longitude>37.54953767</Longitude>
+    <Speed>4.5</Speed>
+    <Accuracy>18</Accuracy>
+    <Azimuth>182</Azimuth>
+    <Time>04/22/2015 03:33:50 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77792192</Latitude>
+    <Longitude>37.54978864</Longitude>
+    <Speed>4.5</Speed>
+    <Accuracy>16</Accuracy>
+    <Azimuth>195</Azimuth>
+    <Time>04/22/2015 03:33:55 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77788556</Latitude>
+    <Longitude>37.5498592</Longitude>
+    <Speed>4.5</Speed>
+    <Accuracy>15</Accuracy>
+    <Azimuth>189</Azimuth>
+    <Time>04/22/2015 03:33:58 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77772523</Latitude>
+    <Longitude>37.55016952</Longitude>
+    <Speed>4.5</Speed>
+    <Accuracy>14</Accuracy>
+    <Azimuth>206</Azimuth>
+    <Time>04/22/2015 03:34:11 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77770576</Latitude>
+    <Longitude>37.55018524</Longitude>
+    <Speed>4.5</Speed>
+    <Accuracy>14</Accuracy>
+    <Azimuth>216</Azimuth>
+    <Time>04/22/2015 03:34:14 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77767594</Latitude>
+    <Longitude>37.55022489</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>14</Accuracy>
+    <Azimuth>222</Azimuth>
+    <Time>04/22/2015 03:34:17 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77766052</Latitude>
+    <Longitude>37.55023301</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>13</Accuracy>
+    <Azimuth>222</Azimuth>
+    <Time>04/22/2015 03:34:19 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77761319</Latitude>
+    <Longitude>37.55025244</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>14</Accuracy>
+    <Azimuth>228</Azimuth>
+    <Time>04/22/2015 03:34:23 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77758184</Latitude>
+    <Longitude>37.55025873</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>13</Accuracy>
+    <Azimuth>218</Azimuth>
+    <Time>04/22/2015 03:34:25 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77754768</Latitude>
+    <Longitude>37.5502641</Longitude>
+    <Speed>3.5999999046325684</Speed>
+    <Accuracy>13</Accuracy>
+    <Azimuth>212</Azimuth>
+    <Time>04/22/2015 03:34:27 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77742132</Latitude>
+    <Longitude>37.55023731</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>241</Azimuth>
+    <Time>04/22/2015 03:34:39 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77740846</Latitude>
+    <Longitude>37.55022406</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>232</Azimuth>
+    <Time>04/22/2015 03:34:41 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77738265</Latitude>
+    <Longitude>37.5502348</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>232</Azimuth>
+    <Time>04/22/2015 03:34:44 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77736061</Latitude>
+    <Longitude>37.55023869</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>12</Accuracy>
+    <Azimuth>232</Azimuth>
+    <Time>04/22/2015 03:34:46 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77722404</Latitude>
+    <Longitude>37.55013283</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>12</Accuracy>
+    <Azimuth>232</Azimuth>
+    <Time>04/22/2015 03:34:59 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77719803</Latitude>
+    <Longitude>37.55012279</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>12</Accuracy>
+    <Azimuth>232</Azimuth>
+    <Time>04/22/2015 03:35:01 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77715627</Latitude>
+    <Longitude>37.55010693</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>12</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:35:05 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77715088</Latitude>
+    <Longitude>37.55009768</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>13</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:35:07 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77713163</Latitude>
+    <Longitude>37.55008045</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>13</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:35:18 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77712993</Latitude>
+    <Longitude>37.55008149</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>14</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:35:20 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77712788</Latitude>
+    <Longitude>37.55008405</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>14</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:35:25 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77712757</Latitude>
+    <Longitude>37.55008392</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>13</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:35:27 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.7770748</Latitude>
+    <Longitude>37.55000402</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>13</Accuracy>
+    <Azimuth>232</Azimuth>
+    <Time>04/22/2015 03:35:38 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77704015</Latitude>
+    <Longitude>37.54996429</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>14</Accuracy>
+    <Azimuth>232</Azimuth>
+    <Time>04/22/2015 03:35:41 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77692833</Latitude>
+    <Longitude>37.54985842</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>13</Accuracy>
+    <Azimuth>232</Azimuth>
+    <Time>04/22/2015 03:35:45 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77687253</Latitude>
+    <Longitude>37.54980097</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>13</Accuracy>
+    <Azimuth>232</Azimuth>
+    <Time>04/22/2015 03:35:46 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77656415</Latitude>
+    <Longitude>37.54944842</Longitude>
+    <Speed>3.5999999046325684</Speed>
+    <Accuracy>12</Accuracy>
+    <Azimuth>189</Azimuth>
+    <Time>04/22/2015 03:35:59 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77653199</Latitude>
+    <Longitude>37.5494289</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>12</Accuracy>
+    <Azimuth>161</Azimuth>
+    <Time>04/22/2015 03:36:01 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77650357</Latitude>
+    <Longitude>37.54933489</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>13</Accuracy>
+    <Azimuth>161</Azimuth>
+    <Time>04/22/2015 03:36:05 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77647172</Latitude>
+    <Longitude>37.54921081</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>14</Accuracy>
+    <Azimuth>161</Azimuth>
+    <Time>04/22/2015 03:36:08 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77636257</Latitude>
+    <Longitude>37.54880306</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>14</Accuracy>
+    <Azimuth>241</Azimuth>
+    <Time>04/22/2015 03:36:19 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77633709</Latitude>
+    <Longitude>37.54873028</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>15</Accuracy>
+    <Azimuth>225</Azimuth>
+    <Time>04/22/2015 03:36:21 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77626804</Latitude>
+    <Longitude>37.54855972</Longitude>
+    <Speed>4.5</Speed>
+    <Accuracy>15</Accuracy>
+    <Azimuth>238</Azimuth>
+    <Time>04/22/2015 03:36:25 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77624633</Latitude>
+    <Longitude>37.54847325</Longitude>
+    <Speed>3.5999999046325684</Speed>
+    <Accuracy>15</Accuracy>
+    <Azimuth>260</Azimuth>
+    <Time>04/22/2015 03:36:27 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77614242</Latitude>
+    <Longitude>37.54810962</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>15</Accuracy>
+    <Azimuth>255</Azimuth>
+    <Time>04/22/2015 03:36:38 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.776113</Latitude>
+    <Longitude>37.54807122</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>15</Accuracy>
+    <Azimuth>255</Azimuth>
+    <Time>04/22/2015 03:36:40 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77606779</Latitude>
+    <Longitude>37.54798435</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>14</Accuracy>
+    <Azimuth>255</Azimuth>
+    <Time>04/22/2015 03:36:45 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77596054</Latitude>
+    <Longitude>37.5477096</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>12</Accuracy>
+    <Azimuth>253</Azimuth>
+    <Time>04/22/2015 03:36:56 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77593608</Latitude>
+    <Longitude>37.54766232</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>12</Accuracy>
+    <Azimuth>244</Azimuth>
+    <Time>04/22/2015 03:36:58 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77588186</Latitude>
+    <Longitude>37.54760567</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:37:03 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77585098</Latitude>
+    <Longitude>37.5475825</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>10</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:37:17 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77585077</Latitude>
+    <Longitude>37.54758196</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>10</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:37:19 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77584729</Latitude>
+    <Longitude>37.54756749</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>10</Accuracy>
+    <Azimuth>244</Azimuth>
+    <Time>04/22/2015 03:37:23 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77583598</Latitude>
+    <Longitude>37.54754738</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>10</Accuracy>
+    <Azimuth>244</Azimuth>
+    <Time>04/22/2015 03:37:24 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77582605</Latitude>
+    <Longitude>37.54745697</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>244</Azimuth>
+    <Time>04/22/2015 03:37:35 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77577568</Latitude>
+    <Longitude>37.54730938</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>285</Azimuth>
+    <Time>04/22/2015 03:37:38 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.7757537</Latitude>
+    <Longitude>37.54725511</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>12</Accuracy>
+    <Azimuth>285</Azimuth>
+    <Time>04/22/2015 03:37:40 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77569427</Latitude>
+    <Longitude>37.54715565</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>12</Accuracy>
+    <Azimuth>285</Azimuth>
+    <Time>04/22/2015 03:37:44 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77562692</Latitude>
+    <Longitude>37.54697935</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>285</Azimuth>
+    <Time>04/22/2015 03:37:57 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77561108</Latitude>
+    <Longitude>37.54693834</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>285</Azimuth>
+    <Time>04/22/2015 03:37:59 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77558133</Latitude>
+    <Longitude>37.54686308</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>285</Azimuth>
+    <Time>04/22/2015 03:38:03 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77557447</Latitude>
+    <Longitude>37.54683615</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>285</Azimuth>
+    <Time>04/22/2015 03:38:15 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77548047</Latitude>
+    <Longitude>37.54662603</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>14</Accuracy>
+    <Azimuth>319</Azimuth>
+    <Time>04/22/2015 03:38:20 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77543745</Latitude>
+    <Longitude>37.54649247</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>13</Accuracy>
+    <Azimuth>310</Azimuth>
+    <Time>04/22/2015 03:38:24 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77505913</Latitude>
+    <Longitude>37.54604797</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>12</Accuracy>
+    <Azimuth>275</Azimuth>
+    <Time>04/22/2015 03:38:36 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77503901</Latitude>
+    <Longitude>37.54599272</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>265</Azimuth>
+    <Time>04/22/2015 03:38:39 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77501137</Latitude>
+    <Longitude>37.54592554</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>292</Azimuth>
+    <Time>04/22/2015 03:38:41 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77499346</Latitude>
+    <Longitude>37.54588948</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>292</Azimuth>
+    <Time>04/22/2015 03:38:43 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.7748572</Latitude>
+    <Longitude>37.54565035</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>240</Azimuth>
+    <Time>04/22/2015 03:38:56 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77483401</Latitude>
+    <Longitude>37.54564607</Longitude>
+    <Speed>2.7000000476837158</Speed>
+    <Accuracy>10</Accuracy>
+    <Azimuth>240</Azimuth>
+    <Time>04/22/2015 03:38:58 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77479817</Latitude>
+    <Longitude>37.54563793</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:39:02 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77477853</Latitude>
+    <Longitude>37.54563395</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>10</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:39:14 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77472227</Latitude>
+    <Longitude>37.54566263</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>10</Accuracy>
+    <Azimuth>240</Azimuth>
+    <Time>04/22/2015 03:39:19 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77465488</Latitude>
+    <Longitude>37.54564587</Longitude>
+    <Speed>3.5999999046325684</Speed>
+    <Accuracy>10</Accuracy>
+    <Azimuth>190</Azimuth>
+    <Time>04/22/2015 03:39:22 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77450102</Latitude>
+    <Longitude>37.54559664</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>10</Accuracy>
+    <Azimuth>181</Azimuth>
+    <Time>04/22/2015 03:39:35 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77448469</Latitude>
+    <Longitude>37.54557652</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>10</Accuracy>
+    <Azimuth>181</Azimuth>
+    <Time>04/22/2015 03:39:38 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77445534</Latitude>
+    <Longitude>37.54552007</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>181</Azimuth>
+    <Time>04/22/2015 03:39:42 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77443683</Latitude>
+    <Longitude>37.54549123</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>10</Accuracy>
+    <Azimuth>181</Azimuth>
+    <Time>04/22/2015 03:39:53 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77430907</Latitude>
+    <Longitude>37.54531171</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>181</Azimuth>
+    <Time>04/22/2015 03:39:58 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77426146</Latitude>
+    <Longitude>37.54529539</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>12</Accuracy>
+    <Azimuth>181</Azimuth>
+    <Time>04/22/2015 03:40:02 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77422984</Latitude>
+    <Longitude>37.54527947</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>12</Accuracy>
+    <Azimuth>181</Azimuth>
+    <Time>04/22/2015 03:40:03 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77401829</Latitude>
+    <Longitude>37.54516686</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>181</Azimuth>
+    <Time>04/22/2015 03:40:17 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.7739814</Latitude>
+    <Longitude>37.54516077</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>181</Azimuth>
+    <Time>04/22/2015 03:40:19 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77396048</Latitude>
+    <Longitude>37.54519686</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>181</Azimuth>
+    <Time>04/22/2015 03:40:24 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.77395536</Latitude>
+    <Longitude>37.54520789</Longitude>
+    <Speed>1.7999999523162842</Speed>
+    <Accuracy>11</Accuracy>
+    <Azimuth>181</Azimuth>
+    <Time>04/22/2015 03:40:35 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.7686872</Latitude>
+    <Longitude>37.5459567</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>1081</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:42:49 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.7649747</Latitude>
+    <Longitude>37.5554081</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>1261</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:43:11 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.7649747</Latitude>
+    <Longitude>37.5554081</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>1261</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:43:25 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.7649747</Latitude>
+    <Longitude>37.5554081</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>1261</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:43:47 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.7649747</Latitude>
+    <Longitude>37.5554081</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>1261</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:44:07 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.7649747</Latitude>
+    <Longitude>37.5554081</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>1261</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:44:14 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.7649747</Latitude>
+    <Longitude>37.5554081</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>1261</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 03:44:33 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.7758391</Latitude>
+    <Longitude>37.5498956</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>572</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 04:31:10 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.7839827</Latitude>
+    <Longitude>37.5414959</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>914</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 04:32:04 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.7649747</Latitude>
+    <Longitude>37.5554081</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>1261</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 04:45:28 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.7649747</Latitude>
+    <Longitude>37.5554081</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>1261</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 04:45:31 +00:00</Time>
+  </Coordinate>
+  <Coordinate>
+    <Latitude>55.7781881</Latitude>
+    <Longitude>37.5497516</Longitude>
+    <Speed>0</Speed>
+    <Accuracy>30</Accuracy>
+    <Azimuth>0</Azimuth>
+    <Time>04/22/2015 19:06:18 +00:00</Time>
+  </Coordinate>
+</Coordinates>
