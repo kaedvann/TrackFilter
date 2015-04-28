@@ -50,7 +50,7 @@ namespace Filter
             var statePrevious = CreateState(input.First());
             result.Add(input.First());
             var pPrevious = Matrix<double>.Build.Dense(4, 4, 0.0);
-            for (var i = 0; i < input.Count; ++i)
+            for (var i = 1; i < input.Count; ++i)
             {
                 var dt = (input[i].Time - input[i - 1].Time).TotalSeconds;
                 var transition = CreateStateTransition(dt);
@@ -121,12 +121,14 @@ namespace Filter
         private Matrix<double> CalculateMeasureErrorCovariance(Coordinate coordinate)
         {
             //TODO actual error matrix calculation
+            var speedx = VincentyEllipsoid.GetPointFromDistance(90, 0.01, coordinate.Longitude, coordinate.Latitude);
+            var speedy = VincentyEllipsoid.GetPointFromDistance(0, 0.01, coordinate.Longitude, coordinate.Latitude);
             return Matrix<double>.Build.DenseOfArray(new[,]
             {
                 {coordinate.AccuracyOx(),0,0,0},
                 {0,coordinate.AccuracyOy(),0,0},
-                {0,0,coordinate.AccuracyOx()/50,0},
-                {0,0,0,coordinate.AccuracyOy()/50}
+                {0,0,speedx.X - coordinate.Longitude,0},
+                {0,0,0,speedy.Y - coordinate.Latitude}
             });
         }
 

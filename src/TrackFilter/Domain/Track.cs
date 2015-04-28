@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Windows.Media;
 
 namespace Domain
 {
@@ -11,5 +12,6 @@ namespace Domain
             get { return _coordinates; }
             set { _coordinates = value; }
         }
+        public Color Color { get; set; }
     }
 }

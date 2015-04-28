@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Windows;
+using System.Windows.Media;
+using System.Windows.Shapes;
 using Domain;
 using GMap.NET;
 using GMap.NET.MapProviders;
@@ -41,9 +43,12 @@ namespace TrackFilter.Views
             Map.Markers.Clear();
             foreach (var track in Tracks)
             {
+
                 var route = new GMapRoute(track.Coordinates.Select(c => new PointLatLng(c.Latitude, c.Longitude)));
                 Map.Markers.Add(route);
                 route.RegenerateShape(Map);
+                (route.Shape as Path).Effect = null;
+                (route.Shape as Path).Stroke = new SolidColorBrush(track.Color);
             }
         }
 

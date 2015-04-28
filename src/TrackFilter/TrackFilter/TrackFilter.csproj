@@ -136,6 +136,10 @@
       <Project>{8C7004F0-29CD-415D-A689-D5D21D9A6331}</Project>
       <Name>Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Filter\Filter.csproj">
+      <Project>{FAA95BE9-ECF0-45FA-88C3-DD7D62489A23}</Project>
+      <Name>Filter</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

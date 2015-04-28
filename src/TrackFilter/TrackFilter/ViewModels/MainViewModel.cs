@@ -1,6 +1,9 @@
-﻿using System.Windows;
+﻿using System.Linq;
+using System.Windows;
+using System.Windows.Media;
 using Caliburn.Micro;
 using Domain;
+using Filter;
 using Microsoft.Win32;
 using TrackFilter.Utility;
 
@@ -39,7 +42,14 @@ namespace TrackFilter.ViewModels
                     var file = dialog.FileName;
                     var worker = new TrackXmlWorker();
                     var track = worker.ReadTrack(file);
+                    track.Color = Colors.Black;
+                    Tracks.Clear();
                     Tracks.Add(track);
+                    var filter = new KalmanFilter();
+                    filter.AccelerationVariance = 2;
+                    var filtered = new Track {Coordinates = filter.Filter(track.Coordinates).ToList()};
+                    filtered.Color = Colors.Red;
+                    Tracks.Add(filtered);
                 }
             }
             catch
