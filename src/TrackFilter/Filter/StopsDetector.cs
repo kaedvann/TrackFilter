@@ -23,7 +23,7 @@ namespace Filter
 
         private const double MaxAzimuthVariance = 60;
         private const double MaxSpeedVariance = 20e-5;
-        private const double MaxLatLongVariance = 1e-7;
+        private const double MaxLatLongVariance = 5e-7;
         public List<List<Coordinate>> SplitSequence(List<Coordinate> track, double threshold)
         {
             var result = new List<List<Coordinate>>
@@ -70,7 +70,8 @@ namespace Filter
         {
             var x = end.Longitude - start.Longitude;
             var y = end.Latitude - end.Latitude;
-            return Math.Acos(y / Math.Sqrt(x * x + y * y)) * 180 / Math.PI;           
+            var result =  Math.Acos(y / Math.Sqrt(x * x + y * y)) * 180 / Math.PI;
+            return double.IsNaN(result) ? 0 : result;
         }
 
         public List<Coordinate> RemoveStops(List<Coordinate> track)
@@ -135,8 +136,9 @@ namespace Filter
 
         private bool IsStop(CoordinateGroup coordinateGroup)
         {
-            return coordinateGroup.AzimuthVariance > MaxAzimuthVariance && coordinateGroup.SpeedVariance > MaxSpeedVariance &&
-                coordinateGroup.LatitudeVariance < MaxLatLongVariance && coordinateGroup.LongitudeVariance<MaxLatLongVariance;
+            //return coordinateGroup.AzimuthVariance > MaxAzimuthVariance &&
+            //       coordinateGroup.SpeedVariance > MaxSpeedVariance &&
+             return coordinateGroup.LatitudeVariance < MaxLatLongVariance && coordinateGroup.LongitudeVariance<MaxLatLongVariance;
         }
 
         private CoordinateGroup CalculateStatistics(List<Coordinate> coordinates)

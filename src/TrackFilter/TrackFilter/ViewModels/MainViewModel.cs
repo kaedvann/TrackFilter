@@ -44,33 +44,27 @@ namespace TrackFilter.ViewModels
                     var track = worker.ReadTrack(file);
                     track.Color = Colors.Black;
                     Tracks.Clear();
-                   // Tracks.Add(track);
+                    Tracks.Add(track);
                     var kalmanfilter = new KalmanFilter
                     {
                         AccelerationVariance = 2
                     };
                     var filter = new StopsDetector
                     {
-                        Threshold = 60
+                        Threshold = 50
                     };
                     var filtered = new Track
                     {
                         Coordinates = filter.RemoveStops(track.Coordinates),
                         Color = Colors.Red
                     };
-                    //for(int i =0; i<100; ++i)
-                    //    filtered = new Track
-                    //    {
-                    //        Coordinates = filter.RemoveStops(filtered.Coordinates),
-                    //        Color = Colors.Red
-                    //    };
                     var kalmanresult = new Track()
                     {
                         Coordinates = kalmanfilter.Filter(filtered.Coordinates).ToList(),
                         Color = Colors.BlueViolet
                     };
-                    Tracks.Add(kalmanresult);
-                    //Tracks.Add(filtered);
+                    //Tracks.Add(kalmanresult);
+                    Tracks.Add(filtered);
                 }
             }
             catch
