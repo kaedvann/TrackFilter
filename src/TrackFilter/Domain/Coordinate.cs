@@ -33,5 +33,10 @@ namespace Domain
         /// Speed in metres per second
         /// </summary>
         public double Speed { get; set; }
+
+        public Coordinate Copy()
+        {
+            return new Coordinate{Accuracy = Accuracy, Azimuth = Azimuth, Latitude = Latitude, Longitude = Longitude, Speed = Speed, Time = Time};
+        }
     }
 }
