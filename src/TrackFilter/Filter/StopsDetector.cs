@@ -15,13 +15,15 @@ namespace Filter
             public double SpeedVariance { get; set; }
             public double SpeedMean { get; set; }
             public bool IsStop { get; set; }
+            public double LongitudeVariance { get; set; }
+            public double LatitudeVariance { get; set; }
         }
 
         public double Threshold { get; set; }
 
-        private const double MaxAzimuthVariance = 10;
-        private const double MaxSpeedVariance = 5e-5;
-
+        private const double MaxAzimuthVariance = 60;
+        private const double MaxSpeedVariance = 20e-5;
+        private const double MaxLatLongVariance = 1e-7;
         public List<List<Coordinate>> SplitSequence(List<Coordinate> track, double threshold)
         {
             var result = new List<List<Coordinate>>
@@ -33,7 +35,7 @@ namespace Filter
             };
             for (int i = 1; i < track.Count; i++)
             {
-                if ((result.Last().First().Time - track[i].Time).TotalSeconds < threshold)
+                if ((track[i].Time - result.Last().First().Time).TotalSeconds < threshold)
                     result.Last().Add(track[i]);
                 else
                 {
@@ -46,6 +48,7 @@ namespace Filter
         public List<Coordinate> ComputeParametersByCoordinates(List<Coordinate> coordinates)
         {
             var result = new List<Coordinate>{coordinates.First()};
+            
             result.AddRange(coordinates.Skip(1).Select((c, i) =>
             {
                 var coord = c.Copy();
@@ -74,7 +77,8 @@ namespace Filter
         {
             var groups = SplitSequence(track, Threshold).Select(CalculateStatistics).ToList();
             groups.ForEach(c => c.IsStop = IsStop(c));
-            return groups.SelectMany(g => g.IsStop ? new List<Coordinate>
+            var squashed = SquashStops(groups);
+            return (squashed.SelectMany(g => g.IsStop ? new List<Coordinate>
             {
                 new Coordinate
                 {
@@ -86,12 +90,53 @@ namespace Filter
                     Time = g.Coordinates.First().Time.AddSeconds(g.Coordinates.Average(d => (d.Time - g.Coordinates.First().Time).TotalSeconds))
                 },
                 
-            } :g.Coordinates).ToList();
+            } :g.Coordinates).ToList());
+        }
+
+        private List<CoordinateGroup> SquashStops(List<CoordinateGroup> groups)
+        {
+            var result = new List<CoordinateGroup>();
+            var firstStops = groups.TakeWhile(g => g.IsStop).ToList();
+            if (firstStops.Count != 0)
+                result.Add(MergeStops(firstStops));
+            result.Add(groups[firstStops.Count]);
+            for (int i = firstStops.Count + 1; i < groups.Count; ++i)
+            {
+                if (!groups[i].IsStop)
+                    result.Add(groups[i]);
+                else
+                {
+                    int j = i;
+                    while (j != groups.Count && groups[j].IsStop)
+                    {
+                        j++;
+                    }
+                    var sublist = groups.GetRange(i, j - i);
+                    result.Add(MergeStops(sublist));
+                    i = j - 1;
+                }
+            }
+            return result;
+        }
+
+        private CoordinateGroup MergeStops(IEnumerable<CoordinateGroup> stops)
+        {
+            var result = new CoordinateGroup()
+            {
+                Coordinates = new List<Coordinate>(),
+                IsStop = true
+            };
+            foreach (var coordinateGroup in stops)
+            {
+                result.Coordinates.AddRange(coordinateGroup.Coordinates);
+            }
+            return result;
         }
 
         private bool IsStop(CoordinateGroup coordinateGroup)
         {
-            return coordinateGroup.AzimuthVariance > MaxAzimuthVariance && coordinateGroup.SpeedVariance > MaxSpeedVariance;
+            return coordinateGroup.AzimuthVariance > MaxAzimuthVariance && coordinateGroup.SpeedVariance > MaxSpeedVariance &&
+                coordinateGroup.LatitudeVariance < MaxLatLongVariance && coordinateGroup.LongitudeVariance<MaxLatLongVariance;
         }
 
         private CoordinateGroup CalculateStatistics(List<Coordinate> coordinates)
@@ -99,7 +144,18 @@ namespace Filter
             var temp = ComputeParametersByCoordinates(coordinates);
             var speed = MathNet.Numerics.Statistics.Statistics.MeanVariance(temp.Select(t => t.Speed));
             var azimuth = MathNet.Numerics.Statistics.Statistics.MeanVariance(temp.Select(t => t.Azimuth));
-            return new CoordinateGroup{Coordinates = coordinates, SpeedMean = speed.Item1, SpeedVariance = speed.Item2, AzimuthMean = azimuth.Item1, AzimuthVariance = azimuth.Item2};
+            var latitude = MathNet.Numerics.Statistics.Statistics.MeanVariance(temp.Select(t => t.Latitude));
+            var longitude = MathNet.Numerics.Statistics.Statistics.MeanVariance(temp.Select(t => t.Longitude));
+            return new CoordinateGroup 
+            {
+                Coordinates = coordinates, 
+                SpeedMean = speed.Item1, 
+                SpeedVariance = speed.Item2, 
+                AzimuthMean = azimuth.Item1, 
+                AzimuthVariance = azimuth.Item2,
+                LatitudeVariance = latitude.Item2,
+                LongitudeVariance = longitude.Item2
+            };
         }
     }
 }
