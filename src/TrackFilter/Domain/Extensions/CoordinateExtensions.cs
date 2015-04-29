@@ -20,7 +20,7 @@
         {
             var point = VincentyEllipsoid.GetPointFromDistance(90, coordinate.Accuracy, coordinate.Longitude,
                 coordinate.Latitude);
-            return point.Y - coordinate.Longitude;
+            return point.X - coordinate.Longitude;
         }
         
         public static double AccuracyOy(this Coordinate coordinate)

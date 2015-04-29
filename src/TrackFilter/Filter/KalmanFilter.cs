@@ -125,10 +125,10 @@ namespace Filter
             var speedy = VincentyEllipsoid.GetPointFromDistance(0, 0.01, coordinate.Longitude, coordinate.Latitude);
             return Matrix<double>.Build.DenseOfArray(new[,]
             {
-                {coordinate.AccuracyOx(),0,0,0},
-                {0,coordinate.AccuracyOy(),0,0},
-                {0,0,speedx.X - coordinate.Longitude,0},
-                {0,0,0,speedy.Y - coordinate.Latitude}
+                {coordinate.AccuracyOx()/50,0,0,0},
+                {0,coordinate.AccuracyOy()/50,0,0},
+                {0,0,(speedx.X - coordinate.Longitude)/10,0},
+                {0,0,0,(speedy.Y - coordinate.Latitude)/10}
             });
         }
 

@@ -47,15 +47,16 @@ namespace TrackFilter.ViewModels
                     Tracks.Add(track);
                     var kalmanfilter = new KalmanFilter
                     {
-                        AccelerationVariance = 2
+                        AccelerationVariance = 5
                     };
-                    var filter = new StopsDetector
+                    var filter = new StopsDetector()
                     {
-                        Threshold = 50
+                        Threshold = 15
                     };
+                    var spikes = new SpikeRemover();
                     var filtered = new Track
                     {
-                        Coordinates = filter.RemoveStops(track.Coordinates),
+                        Coordinates = filter.RemoveStops(spikes.Process(track.Coordinates)),
                         Color = Colors.Red
                     };
                     var kalmanresult = new Track()
@@ -63,7 +64,7 @@ namespace TrackFilter.ViewModels
                         Coordinates = kalmanfilter.Filter(filtered.Coordinates).ToList(),
                         Color = Colors.BlueViolet
                     };
-                    //Tracks.Add(kalmanresult);
+                    Tracks.Add(kalmanresult);
                     Tracks.Add(filtered);
                 }
             }

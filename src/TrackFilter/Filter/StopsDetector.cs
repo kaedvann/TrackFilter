@@ -21,9 +21,7 @@ namespace Filter
 
         public double Threshold { get; set; }
 
-        private const double MaxAzimuthVariance = 60;
-        private const double MaxSpeedVariance = 20e-5;
-        private const double MaxLatLongVariance = 5e-7;
+
         public List<List<Coordinate>> SplitSequence(List<Coordinate> track, double threshold)
         {
             var result = new List<List<Coordinate>>
@@ -52,8 +50,8 @@ namespace Filter
             result.AddRange(coordinates.Skip(1).Select((c, i) =>
             {
                 var coord = c.Copy();
-                c.Azimuth = CalculateAzimuth(coordinates[i], c);
-                c.Speed = CalculateSpeed(coordinates[i], c);
+                coord.Azimuth = CalculateAzimuth(coordinates[i], c);
+                coord.Speed = CalculateSpeed(coordinates[i], c);
                 return coord;
             }));
             return result;
@@ -133,12 +131,15 @@ namespace Filter
             }
             return result;
         }
-
+        private const double MaxAzimuthVariance = 50000;
+        private const double MaxSpeedVariance = 0;
+        private const double MaxLatLongVariance = 0.1e-10;
         private bool IsStop(CoordinateGroup coordinateGroup)
         {
-            //return coordinateGroup.AzimuthVariance > MaxAzimuthVariance &&
-            //       coordinateGroup.SpeedVariance > MaxSpeedVariance &&
-             return coordinateGroup.LatitudeVariance < MaxLatLongVariance && coordinateGroup.LongitudeVariance<MaxLatLongVariance;
+            return 
+                (coordinateGroup.AzimuthVariance > MaxAzimuthVariance &&
+                   coordinateGroup.SpeedVariance > MaxSpeedVariance) ||
+              (coordinateGroup.LatitudeVariance < MaxLatLongVariance && coordinateGroup.LongitudeVariance<MaxLatLongVariance);
         }
 
         private CoordinateGroup CalculateStatistics(List<Coordinate> coordinates)
