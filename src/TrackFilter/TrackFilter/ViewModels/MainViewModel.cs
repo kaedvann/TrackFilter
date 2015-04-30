@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Media;
 using Caliburn.Micro;
@@ -39,10 +40,13 @@ namespace TrackFilter.ViewModels
                 var result = dialog.ShowDialog();
                 if (result == true)
                 {
+                    var combiner = new TrackCombiner(){Threshold = TimeSpan.FromSeconds(2.0)};
                     var file = dialog.FileName;
                     var worker = new TrackXmlWorker();
-                    var track = worker.ReadTrack(file);
+                    var tracks= worker.ReadTracks(file);
+                    var track = combiner.Combine(tracks);
                     track.Color = Colors.Black;
+                   
                     Tracks.Clear();
                     Tracks.Add(track);
                     var kalmanfilter = new KalmanFilter
@@ -61,7 +65,7 @@ namespace TrackFilter.ViewModels
                     };
                     var kalmanresult = new Track()
                     {
-                        Coordinates = kalmanfilter.Filter(filtered.Coordinates).ToList(),
+                        Coordinates = spikes.Process(kalmanfilter.Filter(filtered.Coordinates).ToList()).ToList(),
                         Color = Colors.BlueViolet
                     };
                     Tracks.Add(kalmanresult);

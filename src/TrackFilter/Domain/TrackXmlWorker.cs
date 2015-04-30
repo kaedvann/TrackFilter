@@ -10,12 +10,15 @@ namespace Domain
 {
     public class TrackXmlWorker
     {
-        public Track ReadTrack(string filename)
+        public List<Track> ReadTracks(string filename)
+        {
+            var doc = XDocument.Load(filename);
+            return doc.Descendants("Coordinates").Select(ReadTrack).ToList();
+        }
+        public Track ReadTrack(XElement coordinates)
         {
             try
             {
-                var doc = XDocument.Load(filename);
-                var coordinates = doc.Element("Coordinates");
                 var result = coordinates.Descendants("Coordinate").Select(n => new Coordinate
                 {
                     Accuracy = double.Parse(n.Element("Accuracy").Value, NumberStyles.Any, CultureInfo.InvariantCulture),
