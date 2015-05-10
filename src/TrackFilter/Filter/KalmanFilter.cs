@@ -121,8 +121,8 @@ namespace Filter
         private Matrix<double> CalculateMeasureErrorCovariance(Coordinate coordinate)
         {
             //TODO actual error matrix calculation
-            var speedx = VincentyEllipsoid.GetPointFromDistance(90, 0.01, coordinate.Longitude, coordinate.Latitude);
-            var speedy = VincentyEllipsoid.GetPointFromDistance(0, 0.01, coordinate.Longitude, coordinate.Latitude);
+            var speedx = VincentyEllipsoid.GetPointFromDistance(90, 0.0005, coordinate.Longitude, coordinate.Latitude);
+            var speedy = VincentyEllipsoid.GetPointFromDistance(0, 0.0005, coordinate.Longitude, coordinate.Latitude);
             return Matrix<double>.Build.DenseOfArray(new[,]
             {
                 {coordinate.AccuracyOx()/50,0,0,0},

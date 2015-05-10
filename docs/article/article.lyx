@@ -134,13 +134,14 @@
 \begin_layout Standard
 
 \shape italic
-Ключевые слова: .
+Ключевые слова: GPS, Kalman Filter, spotting error, object track correction.
 \end_layout
 
 \begin_layout Standard
 
 \shape italic
-Keywords: .
+Keywords: GPS, фильтр Калмана, погрешность определения местоположения, коррекция
+ маршрута объекта.
 \begin_inset Newline newline
 \end_inset
 
@@ -150,16 +151,91 @@ Keywords: .
 \begin_layout Standard
 
 \shape italic
-Аннотация: .
+Аннотация: в статье рассматривается способ фильтрации GPS-координат с использова
+нием фильтра Калмана.
+ Данный способ позволяет учитывать как погрешности датчиков местоположения
+ объекта, так и случайную природу процесса передвижения объекта, позволяя
+ повысить точность результатов.
+ Возможна как обработка полного маршрута, так и коррекция получаемых от
+ датчика координат в реальном времени.
 \end_layout
 
-\begin_layout Раздел
+\begin_layout Подраздел
+Задача фильтрации GPS-координат
+\end_layout
+
+\begin_layout Standard
+В настоящее время широко используются сервисы GPS-трекинга, задачей которых
+ является отслеживание маршрутов наблюдаемых объектов с целью их сохранения
+ и дальнейшего воспроизведения.
+ Однако из-за погрешности GPS-датчика, обусловленной рядом причин 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Yadav2011"
+
+\end_inset
+
+, таких как потеря сигнала от спутника, изменение геометрии расположения
+ спутников, отражение сигналов, вычислительные ошибки и ошибки округления,
+ итоговый результат не соответствует в точности маршруту объекта.
+ Наблюдаются как незначительные отклонения, не затрудняющие восприятие визуально
+й информации о маршруте, так и весьма значительные.
+ Для демонстрации результата приведенного в статье алгоритма используется
+ маршрут, содержащий отклонения от действительного местоположения, превыщающие
+ несколько километров.
+ С целью коррекции таких погрешностей составляется алгоритм, выполняющий
+ преобразование последовательности координат.
+ Входными данными для алгоритма служит последовательность GPS-координат.
+ В каждой координате содержится следующая информация, полученная от датчика:
+\end_layout
+
+\begin_layout Itemize
+Широта
+\end_layout
+
+\begin_layout Itemize
+Долгота
+\end_layout
+
+\begin_layout Itemize
+Азимут в градусах
+\end_layout
+
+\begin_layout Itemize
+Скорость в м/с
+\end_layout
+
+\begin_layout Itemize
+Погрешность в метрах
+\end_layout
+
+\begin_layout Itemize
+Время получения координаты
+\end_layout
+
+\begin_layout Standard
+Результатом работы алгоритма является последовательность координат с скорректиро
+ванной широтой и долготой.
+ В качестве основы для построения алгоритма решено использовать фильтр Калмана,
+ так как он позволяет отдельно учитывать погрешности измерений и погрешности
+ случайного процесса, а также использовать получаемую от датчика сокрость
+ движения объекта.
+\end_layout
+
+\begin_layout Подраздел
 Построение математической модели с использованием фильтра Калмана
 \end_layout
 
 \begin_layout Standard
 Для использования фильтра Калмана необходимо, чтобы исследумый процесс описывалс
-я следующим образом [типа ссылка]:
+я следующим образом 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "tr-kalman"
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
@@ -727,8 +803,187 @@ P_{k}=(I-K_{K}H_{k})P_{k}^{\sim},
  - единичная матрица.
 \end_layout
 
+\begin_layout Standard
+Следует заметить, что для использования указанных выше соотношений, необходимо,
+ чтобы для параметров объекта, участвующих в вычислениях, единицы измерений
+ были согласованы.
+ Однако в исходных данных широта и долгота приводятся в угловых координатах,
+ а скорость --- в метрических.
+ Кроме того, ускорение для расчета ошибки процесса также удобнее задавать
+ в метрических единицах.
+ Для перевода скорости и ускорения в угловые единицы используются формулы
+ Винченти 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vincenty"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Подраздел
+Результат работы фильтра
+\end_layout
+
+\begin_layout Standard
+На рис.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:before"
+
+\end_inset
+
+ приведен пример маршрута до обработки.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pics/before.JPG
+	display false
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Маршрут объекта
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:before"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Можно заметить, что в данном примере присутствуют несколько координат с
+ высокой степенью погрешности, что выражается в наличии 
+\begin_inset Quotes fld
+\end_inset
+
+пиков
+\begin_inset Quotes frd
+\end_inset
+
+ --- координат, значительно удаленных от основного маршрута.
+ На рис.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:after"
+
+\end_inset
+
+ приведен результат работы фильтра с данным маршрутом.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pics/after.JPG
+	display false
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Маршрут объекта после применения фильтра
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:after"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В результате отсутствуют практически отсутствуют 
+\begin_inset Quotes fld
+\end_inset
+
+пики
+\begin_inset Quotes frd
+\end_inset
+
+, за исключением самого крупного, который был заметно уменьшен, и сглажена
+ остальная часть маршрута.
+ Таким образом, с помощью приведенного алгоритма удалось снизить степень
+ искажений маршрута и повысить его визуальное качество.
+ 
+\end_layout
+
 \begin_layout Подраздел
 Заключение
+\end_layout
+
+\begin_layout Standard
+В данной работе был рассмотрен подход к коррекции GPS-координат с помощью
+ фильтра Калмана.
+ С помощью приведенного алгоритма удалось устранить наиболее заметные искажения
+ маршрута, что подтверждает работоспособность данного метода.
+ Однако для дальнейшего повышения качества алгоритма необходима дополнительная
+ обработка последовательности координат с целью устранения избыточных точек,
+ возникающих при отсутствии движения наблюдаемого объекта.
+ 
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "article"
+options "gost780u"
+
+\end_inset
+
+
 \end_layout
 
 \end_body
