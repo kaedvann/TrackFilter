@@ -94,5 +94,3730 @@ name "cha:bzd"
 
 \end_layout
 
+\begin_layout Подраздел
+Введение
+\end_layout
+
+\begin_layout Standard
+Безопасность жизнедеятельности (БЖД) — наука о комфортном и травмобезопасном
+ взаимодействии человека со средой обитания.
+ 
+\end_layout
+
+\begin_layout Standard
+Опасность — это явления, процессы или объекты, которые способны в определенных
+ условиях наносить вред здоровью человека непосредственно или косвенно.
+\end_layout
+
+\begin_layout Standard
+Для решения задач БЖД в рабочих условиях предназначены санитарные правила
+ и нормы.
+ Санитарные правила и нормы (СанПиН) — нормативные акты, устанавливающие
+ критерии безопасности и безвредности для человека факторов окружающей его
+ среды и требования к обеспечению благоприятных условий его жизнедеятельности.
+ Согласно Закону РФ о санитарно-эпидемиологическом благополучии населения
+ (1991), санитарные правила обязательны для соблюдения всеми учреждениями,
+ предприятиями и общественными организациями, независимо от их ведомственного
+ подчинения и форм собственности, а также всеми гражданами.
+ Санитарным нарушением считается посягающее на права граждан и интересы
+ общества умышленное или неосторожное действие (или бездействие), связанное
+ с несоблюдением санитарных правил.
+ Разработка программного обеспечения требует длительного взаимодействия
+ с вычислительными системами.
+\end_layout
+
+\begin_layout Standard
+Нормы для работы с ПЭВМ определены с СанПиН 2.2.2/2.4.1340-03 "Гигиенические
+ требования к персональным электронно-вычислительным машинам и организации
+ работы".
+ 
+\end_layout
+
+\begin_layout Подраздел
+Требования к рабочему месту
+\end_layout
+
+\begin_layout Пункт
+Требования к ПЭВМ
+\end_layout
+
+\begin_layout Standard
+ПЭВМ должны соответствовать требованиям действующих санитарных правил и
+ каждый их тип подлежит санитарно-эпидемиологической экспертизе с оценкой
+ в испытательных лабораториях, аккредитованных в установленном порядке.
+ Перечень контролируемых параметров вредных и опасных факторов представлен
+ в таблице 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:controlledParameters"
+
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="4">
+<features rotate="0" islongtable="true" longtabularalignment="center">
+<column alignment="left" valignment="top" width="5page%">
+<column alignment="left" valignment="top" width="20page%">
+<column alignment="center" valignment="top" width="10page%">
+<column alignment="left" valignment="top" width="30page%">
+<row endfirsthead="true" caption="true">
+<cell multicolumn="1" alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Контролируемые гигиенические параметры
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:controlledParameters"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row endfirsthead="true">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+№
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Вид продукции
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Код ОКП 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Контролируемые гигиенические параметры 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Машины вычислительные электронные цифровые, машины вычислительные электронные
+ цифровые персональные (включая портативные ЭВМ)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+40 1300, 40 1350, 40 1370
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Уровни электромагнитных полей (ЭМП), акустического шума, концентрация вредных
+ веществ в воздухе, визуальные показатели ВДТ, мягкое рентгеновское излучение*
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Устройства периферийные: принтеры, сканеры, модемы, сетевые устройства,
+ блоки бесперебойного питания и т.д.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+40 3000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Уровни ЭМП, акустического шума, концентрация вредных веществ в воздухе
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Устройства отображения информации (видеодисплейные терминалы)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+40 3200
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Уровни ЭМП, визуальные показатели, концентрация вредных веществ в воздухе,
+ мягкое рентгеновское излучение*
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Автоматы игровые с использованием ПЭВМ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+96 8575
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Уровни ЭМП, акустического шума, концентрация вредных веществ в воздухе,
+ визуальные показатели ВДТ, мягкое рентгеновское излучение*
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none" width="80page%">
+\begin_inset Text
+
+\begin_layout Plain Layout
+* Контроль мягкого рентгеновского излучения осуществляется только для видеодиспл
+ейных терминалов с использованием электронно-лучевых трубок.
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+Допустимые уровни звукового давления и уровней звука, создаваемого ПЭВМ,
+ не должны превышать значений, представленных в таблице 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:soundLevels"
+
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="10">
+<features rotate="0" islongtable="true" longtabularalignment="left">
+<column alignment="right" valignment="middle" width="1.5cm">
+<column alignment="right" valignment="middle" width="1.2cm">
+<column alignment="right" valignment="middle" width="1.2cm">
+<column alignment="right" valignment="middle" width="1.2cm">
+<column alignment="right" valignment="middle" width="1.2cm">
+<column alignment="right" valignment="middle" width="1.2cm">
+<column alignment="right" valignment="middle" width="1.2cm">
+<column alignment="right" valignment="middle" width="1.2cm">
+<column alignment="right" valignment="middle" width="1.2cm">
+<column alignment="right" valignment="middle" width="1.8cm">
+<row endfirsthead="true" caption="true">
+<cell multicolumn="1" alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Допустимые значения уровней звукового давления в октавных полосах частот
+ и уровня звука, создаваемого ПЭВМ
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:soundLevels"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="right" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none" width="14cm">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Уровни звукового давления в октавных полосах со среднегеометрическими частотами
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Уровни звука в дБА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+31,5 Гц
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+63 Гц
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+125 Гц 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+250 Гц
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+500 Гц 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000 Гц
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2000 Гц
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4000 Гц
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="middle" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ 8000 Гц
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+86 дБ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+71 дБ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+61 дБ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+54 дБ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+49 дБ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ 45 дБ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+42 дБ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+40 дБ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="middle" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+38 дБ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="middle" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+Допустимые визуальные параметры устройств отображения информации представлены
+ в таблице 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:visualParameters"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Допустимые визуальные параметры устройств отображения информации
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="center" valignment="top" width="50page%">
+<column alignment="center" valignment="top" width="30page%">
+<row>
+<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+№ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Параметры
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Допустимые значения
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Яркость белого поля 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Не менее 35 
+\begin_inset Formula $\text{кд/м}^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Неравномерность яркости рабочего поля 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Не более 
+\begin_inset Formula $\pm$
+\end_inset
+
+20% 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Контрастность (для монохромного режима) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Не менее 3:1 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Временная нестабильность изображения (непреднамеренное изменение во времени
+ яркости изображения на экране дисплея) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Не должна фиксироваться
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Пространственная нестабильность изображения (непреднамеренные изменения
+ положения фрагментов изображения на экране) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Не более 
+\begin_inset Formula $2\cdot10^{-4L}$
+\end_inset
+
+, где L - проектное расстояние наблюдения, мм
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:visualParameters"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+Концентрации вредных веществ, выделяемых ПЭВМ в воздух помещений, не должны
+ превышать предельно допустимых концентраций (ПДК), установленных для атмосферно
+го воздуха.
+ Конструкция ПЭВМ должна обеспечивать возможность поворота корпуса в горизонталь
+ной и вертикальной плоскости с фиксацией в заданном положении для обеспечения
+ фронтального наблюдения экрана ВДТ.
+ Дизайн ПЭВМ должен предусматривать окраску корпуса в спокойные мягкие тона
+ с диффузным рассеиванием света.
+ Корпус ПЭВМ, клавиатура и другие блоки и устройства ПЭВМ должны иметь матовую
+ поверхность с коэффициентом отражения 0,4 - 0,6 и не иметь блестящих деталей,
+ способных создавать блики.
+ Конструкция ВДТ должна предусматривать регулирование яркости и контрастности.
+ 
+\end_layout
+
+\begin_layout Пункт
+Требования к помещению
+\end_layout
+
+\begin_layout Standard
+Помещения для эксплуатации ПЭВМ должны иметь естественное и искусственное
+ освещение.
+ Эксплуатация ПЭВМ в помещениях без естественного освещения допускается
+ только при соответствующем обосновании и наличии положительного санитарно-эпиде
+миологического заключения, выданного в установленном порядке.
+ На одно рабочее место с ПЭВМ должно отводиться не менее 6 
+\begin_inset Formula $\text{м}{}^{2}$
+\end_inset
+
+ для ВДТ на базе электронно-лучевой трубки и 4,5
+\begin_inset Formula $\text{м}{}^{2}$
+\end_inset
+
+ для ВДТ на базе плоских дискретных экранов.
+ Внутренняя отделка помещений должна быть выполнена с использованием диффузно-от
+ражающих материалов со следующими коэффициентами отражения: 
+\end_layout
+
+\begin_layout Itemize
+0,7-0,8 для потолка; 
+\end_layout
+
+\begin_layout Itemize
+0,5-0,6 для стен; 
+\end_layout
+
+\begin_layout Itemize
+0,3-0,5 для пола.
+\end_layout
+
+\begin_layout Standard
+Помещение должно быть оборудовано защитным заземлением (занулением) в соответств
+ии с техническими требованиями.
+ 
+\end_layout
+
+\begin_layout Пункт
+Требования к микроклимату
+\end_layout
+
+\begin_layout Standard
+В помещении должны обеспечиваться оптимальные условия для теплообмена тела
+ человека с окружающей средой.
+ Так как вычислительная техника является выделяет значительное количество
+ тепла, помещение должно проветриваться и/или кондиционироваться.
+ Оптимальные параметры микроклимата определяются (таблица 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:micro"
+
+\end_inset
+
+) в СанПиН 2.2.4.548-96 «Гигиенические требования к микроклимату производственных
+ помещений» и ССБТ ГОСТ 12.1.005-88 «Общие санитарно-гигиенические требования
+ к воздуху рабочей зоны».
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="6">
+<features rotate="0" islongtable="true" longtabularalignment="left">
+<column alignment="center" valignment="middle" width="11page%">
+<column alignment="center" valignment="middle" width="16page%">
+<column alignment="center" valignment="middle" width="12page%">
+<column alignment="center" valignment="middle" width="13text%">
+<column alignment="center" valignment="middle" width="16page%">
+<column alignment="center" valignment="middle" width="10page%">
+<row endfirsthead="true" caption="true">
+<cell multicolumn="1" alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Оптимальные параметры микроклимата
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:micro"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="14cm">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Период года
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Категория работ по уровням энергозатрат, Вт
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Температура воздуха,°C 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Температура поверхностей, °C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Относительная влажность воздуха, %
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Скорость движения воздуха, м/с
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Холодный
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Iа (до 139)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ 22,0 - 24,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+21,0 - 25,0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60 - 40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Iб (140-174)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ 21,0 - 23,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20,0 - 24,0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60 - 40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Теплый
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Iа (до 139)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ 23,0 - 25,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+22,0 - 26,0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60 - 40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Iб (140-174)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ 22,0 - 24,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+21,0 - 25,0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60 - 40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+В помещениях должна проводиться ежедневная влажная уборка для избегания
+ запыления.
+\end_layout
+
+\begin_layout Пункт
+Требования к содержанию аэроионов и вредных химических веществ в воздухе
+\end_layout
+
+\begin_layout Standard
+Уровни положительных и отрицательных аэроионов в воздухе помещения должны
+ соответствовать нормам, указанным в СанПиН 2.2.4.1294-03 «Гигиенические требования
+ к аэроионному составу воздуха производственных и общественных помещений»
+ (таблица
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:aeroions"
+
+\end_inset
+
+).
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Уровни аэроионов
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="3.1cm">
+<column alignment="center" valignment="top" width="20page%">
+<column alignment="center" valignment="top" width="20page%">
+<column alignment="left" valignment="middle" width="4cm">
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Нормируемые показатели 
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Концентрация аэроионов, 
+\begin_inset Formula $\rho(\text{ион/см}^{3})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Коэффициент униполярности У
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Положительной полярности
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Отрицательной полярности
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Минимально допустимые
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+400
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+600
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Масимально допустимые
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:aeroions"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+Содержании химических веществ в помещении не должно превышать предельно
+ допустимых концентраций в соответствии с действующими гигиеническими нормативам
+и (ГН 2.2.5.1313-03).
+ Концентрации вредных веществ, выделяемых ПЭВМ в воздух помещений, не должны
+ превышать предельно допустимых концентраций, установленных для атмосферного
+ воздуха.
+ 
+\end_layout
+
+\begin_layout Пункт
+Требования к уровням шума
+\end_layout
+
+\begin_layout Standard
+Уровни шума в помещении не должны превышать предельно допустимых значений,
+ установленных ГОСТ 12.1.003.83 (таблица 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:noiseLevels"
+
+\end_inset
+
+).
+ 
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Нормативные значения уровней шума
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="10">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="3.1cm">
+<column alignment="center" valignment="top" width="1cm">
+<column alignment="center" valignment="top" width="1cm">
+<column alignment="center" valignment="top" width="1cm">
+<column alignment="center" valignment="top" width="1cm">
+<column alignment="center" valignment="top" width="1cm">
+<column alignment="center" valignment="top" width="1cm">
+<column alignment="center" valignment="top" width="1cm">
+<column alignment="center" valignment="top" width="1cm">
+<column alignment="left" valignment="middle" width="3cm">
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Рабочее место
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" rightline="true" usebox="none" width="8cm">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Уровень звукового давления в дБ в октавных полосах со среднегеометрическими
+ частотами, Гц
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Уровень звука, дБА, эквивалентный уровень звука, дБА
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+63
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+125
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+250
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8000
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Помещения КБ, расчетчиков, программистов вычислительных машин, лабораторий
+ для теоретических работ и обработки экспериментальных данных, приема больных
+ здравпунктов
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+71
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+61
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+54
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+49
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+45
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+42
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+38
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:noiseLevels"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Шумящее оборудование (печатающие устройства, серверы и т.п.), уровни шума
+ которого превышают нормативные, должно размещаться вне помещений с ПЭВМ.
+ Уровни звукового давления и уровни звука, создаваемые ПЭВМ не должны превышать
+ нормы, указанные в таблице 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:soundLevels"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Пункт
+Требования к освещению
+\end_layout
+
+\begin_layout Standard
+Рабочие столы в помещение следует размещать так, чтобы естественный свет
+ падал на ВДТ преимущественно слева.
+ Искусственное освещение в помещении должно представлять собой систему общего
+ равномерного освещения.
+ Освещенность на поверхности стола в зоне размещения рабочего документа
+ должна быть 300 - 500 лк.
+ Освещение не должно создавать бликов на поверхности экрана.
+ Освещенность поверхности экрана не должна быть более 300 лк.
+ Следует ограничивать прямую блесткость от источников освещения, при этом
+ яркость светящихся поверхностей (окна, светильники и др.), находящихся в
+ поле зрения, должна быть не более 200 кд/м2.
+ Следует ограничивать отраженную блесткость на рабочих поверхностях (экран,
+ стол, клавиатура и др.) за счет правильного выбора типов светильников и
+ расположения рабочих мест по отношению к источникам естественного и искусственн
+ого освещения, при этом яркость бликов на экране ПЭВМ не должна превышать
+ 40 кд/м2 и яркость потолка не должна превышать 200 кд/м2.
+ Показатель ослепленности для источников общего искусственного освещения
+ должен быть не более 20.
+ Яркость светильников общего освещения в зоне углов излучения от 50 до 90
+ градусов с вертикалью в продольной и поперечной плоскостях должна составлять
+ не более 200 кд/м2, защитный угол светильников должен быть не менее 40
+ градусов.
+ Светильники местного освещения должны иметь не просвечивающий отражатель
+ с защитным углом не менее 40 градусов.
+ Следует ограничивать неравномерность распределения яркости в поле зрения
+ пользователя ПЭВМ, при этом соотношение яркости между рабочими поверхностями
+ не должно превышать 3:1 - 5:1, а между рабочими поверхностями и поверхностями
+ стен и оборудования 10:1.
+ Для освещения помещений с ПЭВМ следует применять светильники с зеркальными
+ параболическими решетками, укомплектованными электронными пуско-регулирующими
+ аппаратами (ЭПРА).
+ Допускается использование многоламповых светильников с электромагнитными
+ пуско-регулирующими аппаратами (ЭПРА), состоящими из равного числа опережающих
+ и отстающих ветвей.
+ В светильниках местного освещения допускается применение ламп накаливания,
+ в том числе галогенные.
+ Применение светильников без рассеивателей и экранирующих решеток не допускается.
+ Общее освещение при использовании люминесцентных светильников следует выполнять
+ в виде сплошных или прерывистых линий светильников, расположенных сбоку
+ от рабочих мест, параллельно линии зрения пользователя при рядном расположении
+ видеодисплейных терминалов.
+ При периметральном расположении компьютеров линии светильников должны располага
+ться локализовано над рабочим столом ближе к его переднему краю, обращенному
+ к оператору.
+ Коэффициент запаса (Кз) для осветительных установок общего освещения должен
+ приниматься равным 1,4.
+ Коэффициент пульсации не должен превышать 5%.
+ 
+\end_layout
+
+\begin_layout Пункт
+Требования к визуальным параметрам ВДТ
+\end_layout
+
+\begin_layout Standard
+Предельно допустимые значения визуальных параметров ВДТ, контролируемые
+ на рабочих местах, представлены в таблице 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:visualParameters"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Пункт
+Требования к организации и оборудованию рабочих мест
+\end_layout
+
+\begin_layout Standard
+Высота рабочей поверхности стола для взрослых пользователей должна регулироватьс
+я в пределах 680 - 800 мм; при отсутствии такой возможности высота рабочей
+ поверхности стола должна составлять 725 мм.
+ Модульными размерами рабочей поверхности стола для ПЭВМ, на основании которых
+ должны рассчитываться конструктивные размеры, следует считать: ширину 800,
+ 1000, 1200 и 1400 мм, глубину 800 и 1000 мм при нерегулируемой его высоте,
+ равной 725 мм.
+ Рабочий стол должен иметь пространство для ног высотой не менее 600 мм,
+ шириной - не менее 500 мм, глубиной на уровне колен - не менее 450 мм и
+ на уровне вытянутых ног - не менее 650 мм.
+ Конструкция рабочего стула должна обеспечивать: • ширину и глубину поверхности
+ сиденья не менее 400 мм; • поверхность сиденья с закругленным передним
+ краем; • регулировку высоты поверхности сиденья в пределах 400 - 550 мм
+ и углам наклона вперед до 15 град, и назад до 5 град.; • высоту опорной
+ поверхности спинки 300 +-20 мм, ширину - не менее 380 мм и радиус кривизны
+ горизонтальной плоскости - 400 мм; • угол наклона спинки в вертикальной
+ плоскости в пределах +-30 градусов; • регулировку расстояния спинки от
+ переднего края сиденья в пределах 260 - 400 мм; • стационарные или съемные
+ подлокотники длиной не менее 250 мм и шириной - 50 - 70 мм; • регулировку
+ подлокотников по высоте над сиденьем в пределах 230 +-30 мм и внутреннего
+ расстояния между подлокотниками в пределах 350 -500 мм.
+ Рабочее место пользователя ПЭВМ следует оборудовать подставкой для ног,
+ имеющей ширину не менее 300 мм, глубину не менее 400 мм, регулировку по
+ высоте в пределах до 150 мм и по углу наклона опорной поверхности подставки
+ до 20°.
+ Поверхность подставки должна быть рифленой и иметь по переднему краю бортик
+ высотой 10 мм.
+ Клавиатуру следует располагать на поверхности стола на расстоянии 100 -
+ 300 мм от края, обращенного к пользователю или на специальной, регулируемой
+ по высоте рабочей поверхности, отделенной от основной столешницы.
+ 
+\end_layout
+
+\begin_layout Подраздел
+Расчёты
+\end_layout
+
+\begin_layout Пункт
+Схема помещения
+\end_layout
+
+\begin_layout Standard
+Помещение представляет собой прямоугольную комнату размером 6,5м на 4,5м.
+ Высота помещения – 2,9 м.
+ В помещении расположены три рабочих места.
+ В соответствии с требованиями к рабочим местам пользователя ПЭВМ, под каждое
+ рабочее место отводится 4,5 м2, рабочие места расположены так, чтобы естественн
+ое освещение поступало слева, как указано на рис.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:office_scheme"
+
+\end_inset
+
+.
+\begin_inset Float figure
+placement th
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename inc/pics/office_scheme.png
+	display false
+	width 100text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Схема рабочего помещения
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:office_scheme"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Пункт
+Расчёт освещённости помещения
+\end_layout
+
+\begin_layout Standard
+В зависимости от цели расчета при проектировании искусственного освещения
+ приходится решать следующий ряд вопросов: 
+\end_layout
+
+\begin_layout Enumerate
+Выбрать или определить типы ламп и светильников.
+  
+\end_layout
+
+\begin_layout Enumerate
+Выбрать систему освещения.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Выбрать расположение светильников и определить их количество.
+ Светильники, расположенные симметрично вдоль или поперек помещения, в шахматном
+ порядке, рядами, ромбовидно, обеспечивают равномерное по площади освещение.
+ Локализованное неравномерное размещение светильников производят с учетом
+ местонахождения ПЭВМ, оборудования и т.д.
+\end_layout
+
+\begin_layout Enumerate
+Определить нормируемую освещенность рабочего места.
+ 
+\end_layout
+
+\begin_layout Пункт
+Типы ламп и светильников.
+\end_layout
+
+\begin_layout Standard
+Согласно СанПиН 2.2.2/2.4.1340-03, система светильники должны быть равномерно
+ распределены по помещению.
+ Целесообразно использовать люминесцентные лампы, поскольку они имеют ряд
+ преимуществ перед лампами накаливания, среди которых повышенная светоотдача
+ и КПД.
+ Были выбраны лампы со следующими параметрами: 
+\end_layout
+
+\begin_layout Itemize
+Световой поток: 4896 lm 
+\end_layout
+
+\begin_layout Itemize
+Мощность светильников: 42.0 W 
+\end_layout
+
+\begin_layout Пункт
+Выбор системы освещения
+\end_layout
+
+\begin_layout Standard
+Наиболее экономичной является система комбинированного освещения, так как
+ она создает наиболее равномерное светораспределение.
+ При комбинированном освещении доля общего освещения в нем не должна быть
+ меньше 10%.
+ 
+\end_layout
+
+\begin_layout Пункт
+Расположение светильников и их количество
+\end_layout
+
+\begin_layout Standard
+Расчёт производится методом светового потока.
+ Для определения количества светильников по формуле 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:light_stream"
+
+\end_inset
+
+ определяется световой поток, падающий на поверхность.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+F=\frac{E\cdot K\cdot S\cdot Z}{n},\label{eq:light_stream}
+\end{equation}
+
+\end_inset
+
+где F --- рассчитываемый световой поток, Лм;
+\begin_inset Newline newline
+\end_inset
+
+Е --- нормированная минимальная освещенность, Лк.
+ Для работы с ПЭВМ Е = 350 Лк; 
+\begin_inset Newline newline
+\end_inset
+
+S --- площадь освещаемого помещения (S = 23,04 м2);
+\begin_inset Newline newline
+\end_inset
+
+Z --- отношение средней освещенности к минимальной (обычно принимается равным
+ 1,1-1,2 , пусть Z = 1,1); 
+\begin_inset Newline newline
+\end_inset
+
+К --- коэффициент запаса, учитывающий уменьшение светового потока лампы
+ в резуль¬тате загрязнения светильников в процессе эксплуатации (его значение
+ зависит от типа помещения и характера проводимых в нем работ, в случае
+ работы с ПЭВМ К = 1,4); 
+\begin_inset Newline newline
+\end_inset
+
+n --- коэффициент использования, (выражается отношением светового потока,
+ падаю¬щего на расчетную поверхность, к суммарному потоку всех ламп и исчисляетс
+я в долях единицы; зависит от характеристик светильника, размеров помещения,
+ окраски стен и потолка, характеризуемых коэффициентами отражения от стен
+ (РС) и потолка (РП).
+ В соответствии с СанПиН 2.2.2/2.4.1340-03, эти коэффициенты равны РС = 50%
+ и РП = 70%.)
+\end_layout
+
+\begin_layout Standard
+Значение n определяется по таблице коэффициентов использования светильников.
+ Для определения n нужно вычислить индекс помещения по формуле 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:office_index"
+
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+I=\frac{S}{h\cdot(A+B)},\label{eq:office_index}
+\end{equation}
+
+\end_inset
+
+где S --- площадь помещения, S = 23,04 м2; 
+\begin_inset Newline newline
+\end_inset
+
+h --- расчетная высота подвеса, h = 2,9 м; 
+\begin_inset Newline newline
+\end_inset
+
+A --- ширина помещения, А = 3,6 м; 
+\begin_inset Newline newline
+\end_inset
+
+В --- длина помещения, В = 6,4 м.
+ 
+\end_layout
+
+\begin_layout Standard
+Следовательно, I = 0,79, а n = 0,42.
+ Тогда световой поток равен F=29568 Лм.
+ Световой поток люминесцентных ламп, выбранных для помещения, равен F =
+ 4896 Лк.
+ Необходимое количество ламп определяется по формуле 
+\begin_inset Formula $N=F/F_{\text{Л}}$
+\end_inset
+
+, где N --- определяемое число ламп; F --- световой поток, F = 29568 Лм;
+ Fл --- световой поток лампы, Fл = 4896 Лм.
+ Следовательно, N = 6.
+\end_layout
+
+\begin_layout Standard
+В программе DIALux были выполнены построение схемы помещения и расчет освещеннос
+ти.
+ Расположение светильников в помещении показано на рисунке 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:office_lamps"
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+placement th
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename inc/pics/office_with_lamps.png
+	display false
+	width 100text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Расположение светильников в помещении
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:office_lamps"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для помещения был произведён расчёт двух способов освещения: искусственного
+ (рис.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:office_artificial"
+
+\end_inset
+
+) и естественного (рис.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:office_scheme"
+
+\end_inset
+
+).
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename inc/pics/office_artificial.png
+	display false
+	width 100text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Моделирование искусственного освещения в помещении
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:office_artificial"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename inc/pics/office_natural.png
+	display false
+	width 100text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Моделирование естественного освещения в помещении
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:office_natural"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Параметры светильников, использовавшихся для расчётов, приведены на рисунке
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:lamps_pars"
+
+\end_inset
+
+.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename inc/pics/lamps.png
+	display false
+	width 100text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Параметры светильников
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:lamps_pars"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Кривые освещенности для искусственного освещения приведены на рисунке 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:light_curves"
+
+\end_inset
+
+.
+\begin_inset Float figure
+placement th
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename inc/pics/light_curves.png
+	display false
+	width 100text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Кривые освещенности
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:light_curves"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Пункт
+Расчёт уровней звукового давления
+\end_layout
+
+\begin_layout Standard
+Исходные данные: источник шума находится у стену по центру на расстоянии
+ 4 метра от расчётной точки.
+ Уровни звуковой мощности источника шума приведены в таблице 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:sound_levels_for_calc"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="9">
+<features rotate="0" islongtable="true" longtabularalignment="left">
+<column alignment="center" valignment="middle" width="1cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<row endfirsthead="true" caption="true">
+<cell multicolumn="1" alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Уровни звуковой мощности источника шума
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:sound_levels_for_calc"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none" width="14cm">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+63 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+125
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+250
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+2000 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+4000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+8000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="1cm">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+L
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+78,5630949
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+76,74032
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+78,62112
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+85,03365
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+87,00615
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+85,65765
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+81,2725
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+79,91561
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+На рисунке 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:noise_scheme"
+
+\end_inset
+
+ приведена схема расположения источника шума.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement th
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename inc/pics/noise_scheme.JPG
+	display false
+	width 100text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cхема расположения источника шума
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:noise_scheme"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Расчёт проводился по следующим формулам:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+L_{p}=L(f)+10\cdot lg(\frac{\phi}{K\cdot S}+\frac{4}{B}),
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+B=B_{1000}\cdot\mu,
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+L_{\Sigma}=10\cdot lg(10^{\frac{L_{1}}{10}}),
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\phi=1,K=1.$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang russian
+Площадь S вычисляется по формуле 
+\begin_inset Formula $S=\pi\cdot r^{2},$
+\end_inset
+
+так как источник находится на полу у стены.
+\end_layout
+
+\begin_layout Standard
+По СНиП II-12-77 был выбран следующий параметр В: с небольшим количеством
+ людей (металлообрабатывающие цехи, вентиляционные камеры, генераторные,
+ машинные залы, испытательные стенды) – V/20.
+ Таким образом, 
+\begin_inset Formula $B=10\cdot10\cdot5/20=25$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Нормативные значения звукового давления выбираются в соответствии с СН 2.2.4/2.1.8.56
+2-96: «Творческая деятельность, руководящая работа с повышенными требованиями,
+ научная деятельность, конструирование и проектирование, программирование,
+ преподавание и обучение, врачебная деятельность.
+ Рабочие места в помещениях дирекции, проектно-конструкторских бюро, расчетчиков
+, программистов вычислительных машин, в лабораториях для теоретических работ
+ и обработки данных, приема больных в здравпунктах.»
+\end_layout
+
+\begin_layout Standard
+В таблице 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:sound_levels_result"
+
+\end_inset
+
+ приведены результаты вычислений и нормативное значение.
+ Норма – предельный уровень звукового давления (СН 2.2.4/2.1.8.562-96).
+ Соответствующий график изображен на рисунке 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:noise_levels"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="9">
+<features rotate="0" islongtable="true" longtabularalignment="left">
+<column alignment="center" valignment="middle" width="1.2cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<row endfirsthead="true" caption="true">
+<cell multicolumn="1" alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Уровни звукового давления
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:sound_levels_result"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none" width="14cm">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+63 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+125
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+250
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+2000 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+4000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+8000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" width="1cm">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+L
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+78,5630949
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+76,74032
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+78,62112
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+85,03365
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+87,00615
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+85,65765
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+81,2725
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+79,91561
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Норма
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+71 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+61
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+54
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+49
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+45
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+42
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+38
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename inc/pics/sound_levels.PNG
+	display false
+	width 100text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Кривые освещенности
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:noise_levels"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Уровень шума в помещении значительно превышает санитарные нормы во всём
+ рассматриваемом частотном спектре.
+ Отсюда следует необходимость защитных мероприятий.
+ Следует использовать защитные экраны для ограждения источника шума.
+ 
+\end_layout
+
 \end_body
 \end_document
