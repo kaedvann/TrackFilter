@@ -10,7 +10,7 @@
 \language_package default
 \inputencoding auto
 \fontencoding default
-\font_roman CMU Serif
+\font_roman Times New Roman
 \font_sans CMU Sans Serif
 \font_typewriter CMU Typewriter Text
 \font_math auto
@@ -270,14 +270,14 @@ z_{k}=H_{k}s_{k}+\nu_{k}\label{eq:measurement}
 \end_layout
 
 \begin_layout Standard
-В формуле 
+В формуле (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:process"
 
 \end_inset
 
- 
+) 
 \begin_inset Formula $s_{k}\in\mathbb{R}^{n}$
 \end_inset
 
@@ -334,14 +334,14 @@ reference "eq:process"
 \end_inset
 
  - ковариационная матрица погрешностей процесса.
- Формула 
+ Формула (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:measurement"
 
 \end_inset
 
- описывает измерения случайного процесса.
+) описывает измерения случайного процесса.
  
 \begin_inset Formula $z_{k}\in\mathbb{R}^{m}$
 \end_inset
@@ -408,14 +408,14 @@ v_{k}^{y}
 \end_inset
 
  - проекции скорости объекта.
- Таким образом, для рассматриваемого процесса уравнение 
+ Таким образом, для рассматриваемого процесса уравнение (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:process"
 
 \end_inset
 
- принимает следующий вид:
+) принимает следующий вид:
 \end_layout
 
 \begin_layout Standard
@@ -516,14 +516,14 @@ dt_{k} & 0\\
 \end_layout
 
 \begin_layout Standard
-Таким образом, в формуле 
+Таким образом, в формуле (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:concrete_process"
 
 \end_inset
 
- член 
+) член 
 \begin_inset Formula $G_{k}a_{k}$
 \end_inset
 
@@ -531,14 +531,14 @@ reference "eq:concrete_process"
 \begin_inset Formula $w_{k}$
 \end_inset
 
- из формулы 
+ из формулы (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:process"
 
 \end_inset
 
-.
+).
  Для дальнейших вычислений необходимо получить значение матрицы 
 \begin_inset Formula $Q$
 \end_inset
@@ -576,14 +576,14 @@ reference "eq:аcceleration"
 \end_inset
 
 .
- Следовательно, формула 
+ Следовательно, формула (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:qmatrix"
 
 \end_inset
 
- принимает следующий вид:
+) принимает следующий вид:
 \end_layout
 
 \begin_layout Standard
@@ -631,14 +631,14 @@ z_{k}=\begin{bmatrix}\chi_{k}\\
 \begin_inset Formula $H$
 \end_inset
 
- в формуле 
+ в формуле (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:measurement"
 
 \end_inset
 
- принимается равной единичной матрице размерностью 
+) принимается равной единичной матрице размерностью 
 \begin_inset Formula $4\times4$
 \end_inset
 
@@ -740,25 +740,25 @@ P_{k}^{\sim}=AP_{k-1}A^{T}+Q_{k},
 \begin_inset Formula $A_{k}$
 \end_inset
 
- известна из формулы 
+ известна из формулы (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:transiton_matrix"
 
 \end_inset
 
-, матрица 
+), матрица 
 \begin_inset Formula $Q_{k}$
 \end_inset
 
- вычисляется по формуле 
+ вычисляется по формуле (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:process_noise"
 
 \end_inset
 
-.
+).
 \end_layout
 
 \begin_layout Enumerate
