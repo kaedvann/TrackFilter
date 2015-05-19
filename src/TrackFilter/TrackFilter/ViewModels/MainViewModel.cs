@@ -48,7 +48,7 @@ namespace TrackFilter.ViewModels
                     track.Color = Colors.Black;
                    
                     Tracks.Clear();
-                    //Tracks.Add(track);
+                    Tracks.Add(track);
                     var kalmanfilter = new KalmanFilter
                     {
                         AccelerationVariance = 3
@@ -65,7 +65,7 @@ namespace TrackFilter.ViewModels
                     };
                     var kalmanresult = new Track()
                     {
-                        Coordinates = (kalmanfilter.Filter(track.Coordinates).ToList()).ToList(),
+                        Coordinates = (kalmanfilter.Filter(filtered.Coordinates).ToList()).ToList(),
                         Color = Colors.BlueViolet
                     };
                     Tracks.Add(kalmanresult);
