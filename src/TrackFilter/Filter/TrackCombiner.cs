@@ -16,6 +16,8 @@ namespace Filter
         }
         public Track Combine(IList<Track> tracks)
         {
+            if (tracks.Count == 1)
+                return tracks.First();
             var result = new Track();
             var indexedTracks = tracks.Select(t => new IndexedTrack{Coordinates = t.Coordinates, Index = 0}).ToArray();
             while (indexedTracks.All(t => t.Coordinates.Count != t.Index))

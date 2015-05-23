@@ -40,7 +40,7 @@ namespace TrackFilter.ViewModels
                 var result = dialog.ShowDialog();
                 if (result == true)
                 {
-                    var combiner = new TrackCombiner(){Threshold = TimeSpan.FromSeconds(2.0)};
+                    var combiner = new TrackCombiner(){Threshold = TimeSpan.FromSeconds(0)};
                     var file = dialog.FileName;
                     var worker = new TrackXmlWorker();
                     var tracks= worker.ReadTracks(file);
@@ -60,7 +60,7 @@ namespace TrackFilter.ViewModels
                     var spikes = new SpikeRemover();
                     var filtered = new Track
                     {
-                        Coordinates = filter.RemoveStops(spikes.Process(track.Coordinates)),
+                        Coordinates = spikes.Process(track.Coordinates),
                         Color = Colors.Red
                     };
                     var kalmanresult = new Track()
@@ -68,7 +68,7 @@ namespace TrackFilter.ViewModels
                         Coordinates = (kalmanfilter.Filter(filtered.Coordinates).ToList()).ToList(),
                         Color = Colors.BlueViolet
                     };
-                    Tracks.Add(kalmanresult);
+                    //Tracks.Add(kalmanresult);
                    // Tracks.Add(filtered);
                 }
             }
