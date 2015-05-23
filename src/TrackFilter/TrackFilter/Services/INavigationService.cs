@@ -7,6 +7,6 @@
 
     public enum ViewType
     {
-        MainWindow
+        MainWindow, AnalysisWindow
     }
 }

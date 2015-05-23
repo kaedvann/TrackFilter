@@ -6,20 +6,25 @@ using Caliburn.Micro;
 using Domain;
 using Filter;
 using Microsoft.Win32;
+using TrackFilter.Services;
 using TrackFilter.Utility;
 
 namespace TrackFilter.ViewModels
 {
     public class MainViewModel: PropertyChangedBase
     {
+        private readonly INavigationService _navigationService;
 
         private readonly TrackProcessor _trackProcessor = new TrackProcessor();
         public DelegateCommand LoadFileCommand { get; set; }
 
         public BindableCollection<Track> Tracks { get; set; }
 
-        public MainViewModel()
+        public DelegateCommand StartAnalysisCommand { get; set; }
+
+        public MainViewModel(INavigationService navigationService)
         {
+            _navigationService = navigationService;
             Tracks = new BindableCollection<Track>();
             CreateCommands();
         }
@@ -27,6 +32,7 @@ namespace TrackFilter.ViewModels
         private void CreateCommands()
         {
             LoadFileCommand = new DelegateCommand(LoadFile);
+            StartAnalysisCommand = new DelegateCommand(()=>_navigationService.Navigate(ViewType.AnalysisWindow));
         }
 
         private void LoadFile()

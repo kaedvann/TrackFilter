@@ -79,10 +79,18 @@
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="TestRoute.cs" />
     <Compile Include="Utility\DelegateCommand.cs" />
+    <Compile Include="ViewModels\AnalysisViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Views\AnalysisWindow.xaml.cs">
+      <DependentUpon>AnalysisWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MapControl.xaml.cs">
       <DependentUpon>MapControl.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\AnalysisWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -129,6 +137,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Analysis\Analysis.csproj">
+      <Project>{1E68C779-763B-4BBC-A59B-C0A9253C4F29}</Project>
+      <Name>Analysis</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{8C7004F0-29CD-415D-A689-D5D21D9A6331}</Project>
       <Name>Domain</Name>
