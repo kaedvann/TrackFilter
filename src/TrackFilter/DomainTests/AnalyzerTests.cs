@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace DomainTests
 {
     [TestFixture]
-   public  class AnalyzerTets
+   public  class AnalyzerTests
     {
         [Test]
         public void TestMeasuring()

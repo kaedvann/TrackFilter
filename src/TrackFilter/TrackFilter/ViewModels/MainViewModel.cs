@@ -12,6 +12,8 @@ namespace TrackFilter.ViewModels
 {
     public class MainViewModel: PropertyChangedBase
     {
+
+        private readonly TrackProcessor _trackProcessor = new TrackProcessor();
         public DelegateCommand LoadFileCommand { get; set; }
 
         public BindableCollection<Track> Tracks { get; set; }
@@ -40,35 +42,17 @@ namespace TrackFilter.ViewModels
                 var result = dialog.ShowDialog();
                 if (result == true)
                 {
-                    var combiner = new TrackCombiner(){Threshold = TimeSpan.FromSeconds(0)};
                     var file = dialog.FileName;
                     var worker = new TrackXmlWorker();
                     var tracks= worker.ReadTracks(file);
-                    var track = combiner.Combine(tracks);
-                    track.Color = Colors.Black;
+                    
                    
                     Tracks.Clear();
-                    Tracks.Add(track);
-                    var kalmanfilter = new KalmanFilter
-                    {
-                        AccelerationVariance = 3
-                    };
-                    var filter = new StopsDetector()
-                    {
-                        Threshold = 15
-                    };
-                    var spikes = new SpikeRemover();
-                    var filtered = new Track
-                    {
-                        Coordinates = spikes.Process(track.Coordinates),
-                        Color = Colors.Red
-                    };
-                    var kalmanresult = new Track()
-                    {
-                        Coordinates = (kalmanfilter.Filter(filtered.Coordinates).ToList()).ToList(),
-                        Color = Colors.BlueViolet
-                    };
-                    //Tracks.Add(kalmanresult);
+                    Tracks.AddRange(tracks);
+
+                    var filterResult = _trackProcessor.ProcessTracks(tracks);
+
+                    Tracks.Add(filterResult);
                    // Tracks.Add(filtered);
                 }
             }

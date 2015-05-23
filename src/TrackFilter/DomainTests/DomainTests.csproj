@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnalyzerTets.cs" />
+    <Compile Include="AnalyzerTests.cs" />
     <Compile Include="UtilTets.cs" />
     <Compile Include="VincentyTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

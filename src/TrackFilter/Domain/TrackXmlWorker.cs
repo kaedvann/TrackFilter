@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Windows.Media;
 using System.Xml.Linq;
 
 namespace Domain
 {
     public class TrackXmlWorker
     {
+        private readonly Random _rand = new Random();
         public List<Track> ReadTracks(string filename)
         {
             var doc = XDocument.Load(filename);
@@ -28,7 +30,8 @@ namespace Domain
                 });
                 return new Track
                 {
-                    Coordinates = result.ToList()
+                    Coordinates = result.ToList(),
+                    Color = Color.FromRgb((byte) _rand.Next(256), (byte) _rand.Next(256), (byte) _rand.Next(256))
                 };
             }
             catch

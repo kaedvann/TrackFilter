@@ -46,8 +46,12 @@ namespace TrackFilter.Views
                 var route = new GMapRoute(track.Coordinates.Select(c => new PointLatLng(c.Latitude, c.Longitude)));
                 Map.Markers.Add(route);
                 route.RegenerateShape(Map);
-                (route.Shape as Path).Effect = null;
-                (route.Shape as Path).Stroke = new SolidColorBrush(track.Color);
+                var path = route.Shape as Path;
+                if (path != null)
+                {
+                    path.Effect = null;
+                    path.Stroke = new SolidColorBrush(track.Color);
+                }
             }
         }
 
