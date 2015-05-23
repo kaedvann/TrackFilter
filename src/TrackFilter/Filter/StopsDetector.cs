@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Domain;
+using MathNet.Numerics.Statistics;
 
 namespace Filter
 {
@@ -145,10 +146,10 @@ namespace Filter
         private CoordinateGroup CalculateStatistics(List<Coordinate> coordinates)
         {
             var temp = ComputeParametersByCoordinates(coordinates);
-            var speed = MathNet.Numerics.Statistics.Statistics.MeanVariance(temp.Select(t => t.Speed));
-            var azimuth = MathNet.Numerics.Statistics.Statistics.MeanVariance(temp.Select(t => t.Azimuth));
-            var latitude = MathNet.Numerics.Statistics.Statistics.MeanVariance(temp.Select(t => t.Latitude));
-            var longitude = MathNet.Numerics.Statistics.Statistics.MeanVariance(temp.Select(t => t.Longitude));
+            var speed = Statistics.MeanVariance(temp.Select(t => t.Speed));
+            var azimuth = Statistics.MeanVariance(temp.Select(t => t.Azimuth));
+            var latitude = Statistics.MeanVariance(temp.Select(t => t.Latitude));
+            var longitude = Statistics.MeanVariance(temp.Select(t => t.Longitude));
             return new CoordinateGroup 
             {
                 Coordinates = coordinates, 
