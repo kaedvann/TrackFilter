@@ -10,6 +10,8 @@ using Caliburn.Micro;
 using Domain;
 using Filter;
 using Microsoft.Win32;
+using OxyPlot;
+using OxyPlot.Series;
 using TrackFilter.Utility;
 
 namespace TrackFilter.ViewModels
@@ -19,15 +21,27 @@ namespace TrackFilter.ViewModels
         private Track _actualTrack;
         private Track _referenceTrack;
         private readonly Analyzer _analyzer = new Analyzer();
-        private readonly TrackProcessor _trackProcessor = new TrackProcessor();
+        private readonly TrackProcessor _trackProcessor = new TrackProcessor{StopsDetection = false, SpikeDetection = false};
+        private PlotModel _plot;
         public DelegateCommand OpenReferenceCommand { get; set; }
         public DelegateCommand OpenActualCommand { get; set; }
+
+        public PlotModel Plot
+        {
+            get { return _plot; }
+            set
+            {
+                if (Equals(value, _plot)) return;
+                _plot = value;
+                NotifyOfPropertyChange(() => Plot);
+            }
+        }
 
         public AnalysisViewModel()
         {
             OpenReferenceCommand = new DelegateCommand(OpenReference);
             OpenActualCommand = new DelegateCommand(OpenActual);
-
+            Plot = new PlotModel();
             Tracks = new BindableCollection<Track>();
         }
 
@@ -97,6 +111,16 @@ namespace TrackFilter.ViewModels
             Tracks.Add(result);
             Tracks.Add(_referenceTrack);
             Tracks.Add(_actualTrack);
+
+            var sourceDerivations = new LineSeries();
+            sourceDerivations.Points.AddRange(analysis.Select((a,i)=> new DataPoint(i, a.SourceDerivation)));
+            sourceDerivations.Color = _actualTrack.Color.ToOxyColor();
+            var resultDerivations = new LineSeries();
+            resultDerivations.Points.AddRange(analysis.Select((a, i) => new DataPoint(i, a.ResultDerivation)));
+            resultDerivations.Color = result.Color.ToOxyColor();
+            Plot.Series.Clear();
+            Plot.Series.Add(sourceDerivations);
+            Plot.Series.Add(resultDerivations);
         }
 
         public bool ReadyToAnalyse
@@ -106,4 +130,11 @@ namespace TrackFilter.ViewModels
         }
 
     }
+    public static class ColorExtensions
+{
+        public static OxyColor ToOxyColor(this Color color)
+        {
+            return OxyColor.FromArgb(color.A, color.R, color.G, color.B);
+        }
+}
 }

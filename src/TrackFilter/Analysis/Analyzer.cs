@@ -8,21 +8,21 @@ namespace Analysis
     public class Analyzer
     {
         public IList<AnalysisResult> Analyze(IList<Coordinate> source, IList<Coordinate> result,
-            IList<Coordinate> actual)
+            IList<Coordinate> reference)
         {
             return Enumerable.Zip(source, result, (sourceCoordinate, resultCoordinate) => new AnalysisResult
             {
                 Source = sourceCoordinate,
                 Result = resultCoordinate,
                 SourceDerivation =
-                    actual.Pairwise(
+                    reference.Pairwise(
                         (coordinate, coordinate1) =>
                             Utils.PointLineDistance(
                                 new Point {X = sourceCoordinate.Longitude, Y = sourceCoordinate.Latitude},
                                 new Point {X = coordinate.Longitude, Y = coordinate.Latitude},
                                 new Point {X = coordinate1.Longitude, Y = coordinate1.Latitude})).Min(),
                 ResultDerivation =
-                    actual.Pairwise(
+                    reference.Pairwise(
                         (coordinate, coordinate1) =>
                             Utils.PointLineDistance(
                                 new Point {X = resultCoordinate.Longitude, Y = resultCoordinate.Latitude},

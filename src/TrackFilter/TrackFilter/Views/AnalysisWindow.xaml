@@ -4,29 +4,34 @@
         xmlns:views="clr-namespace:TrackFilter.Views" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewModels="clr-namespace:TrackFilter.ViewModels"
+        xmlns:oxy="http://oxyplot.org/wpf"
         mc:Ignorable="d"
-        Title="AnalysisWindow" 
+        Title="AnalysisWindow"
         WindowState="Maximized" d:DataContext="{d:DesignInstance viewModels:AnalysisViewModel }">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
         </Grid.RowDefinitions>
         <Menu>
             <MenuItem Header="File">
                 <MenuItem Header="Open Reference Track"
-                          Command="{Binding OpenReferenceCommand}"></MenuItem>
+                          Command="{Binding OpenReferenceCommand}" />
                 <MenuItem Header="Open Actual Track"
-                          Command="{Binding OpenActualCommand}"></MenuItem>
-                <MenuItem Header="Close Window"></MenuItem>
+                          Command="{Binding OpenActualCommand}" />
+                <MenuItem Header="Close Window" />
             </MenuItem>
-            
+
         </Menu>
         <TabControl Grid.Row="1">
             <TabItem Header="Map">
-                <views:MapControl Tracks="{Binding Tracks}"></views:MapControl>
+                <views:MapControl Tracks="{Binding Tracks}" />
             </TabItem>
-            <TabItem Header="Plot"></TabItem>
+            <TabItem Header="Plot">
+                <Grid>
+                    <oxy:PlotView Model="{Binding Plot}" />
+                </Grid>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>

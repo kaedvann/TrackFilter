@@ -322,8 +322,7 @@
       <Azimuth>0</Azimuth>
     </Coordinate>
 
-
-	<Coordinate>
+ <Coordinate>
       <Latitude>55.740449544291856</Latitude>
       <Longitude>37.533953868370851</Longitude>
       <Time>04/09/2015 07:46:17 +00:00</Time>
@@ -340,16 +339,16 @@
       <Azimuth>0</Azimuth>
     </Coordinate>
     <Coordinate>
-      <Latitude>55.73911189237144</Latitude>
-      <Longitude>37.529791079979752</Longitude>
+      <Latitude>55.739305582371941</Latitude>
+      <Longitude>37.530585013848139</Longitude>
       <Time>04/09/2015 07:46:17 +00:00</Time>
       <Speed>0</Speed>
       <Accuracy>0</Accuracy>
       <Azimuth>0</Azimuth>
     </Coordinate>
     <Coordinate>
-      <Latitude>55.739444796474245</Latitude>
-      <Longitude>37.529522859078249</Longitude>
+      <Latitude>55.739626379322054</Latitude>
+      <Longitude>37.530354343872879</Longitude>
       <Time>04/09/2015 07:46:17 +00:00</Time>
       <Speed>0</Speed>
       <Accuracy>0</Accuracy>
@@ -371,7 +370,7 @@
       <Accuracy>0</Accuracy>
       <Azimuth>0</Azimuth>
     </Coordinate>
-    <Coordinate>
+     <Coordinate>
       <Latitude>55.741902145809213</Latitude>
       <Longitude>37.527795516472658</Longitude>
       <Time>04/09/2015 07:46:17 +00:00</Time>
@@ -387,5 +386,5 @@
       <Accuracy>0</Accuracy>
       <Azimuth>0</Azimuth>
     </Coordinate>
-  </Coordinates>
+	</Coordinates>
 </Tracks>
