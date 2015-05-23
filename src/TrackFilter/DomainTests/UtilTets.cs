@@ -10,6 +10,7 @@ namespace DomainTests
         [TestCase(0, 0, 0,1, 0.5, 1, 0.5)]
         [TestCase(0, 0, 2, 2, 2, 0, 1.4142135623730950488016887242097)]
         [TestCase(0,0,1,0,0.5,1,1)]
+        [TestCase(0, 0, 1, 0, 2, 1, 1.4142135623730950488016887242097)]
         public void TestDistance(double x1, double y1, double x2, double y2, double x0, double y0, double expected)
         {
             var start = new Point {X=x1,Y=y1};

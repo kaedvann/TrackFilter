@@ -321,22 +321,8 @@
       <Accuracy>0</Accuracy>
       <Azimuth>0</Azimuth>
     </Coordinate>
-    <Coordinate>
-      <Latitude>55.74</Latitude>
-      <Longitude>37.53437</Longitude>
-      <Time>04/09/2015 07:46:17 +00:00</Time>
-      <Speed>0</Speed>
-      <Accuracy>0</Accuracy>
-      <Azimuth>0</Azimuth>
-    </Coordinate>
-    <Coordinate>
-      <Latitude>55.73998</Latitude>
-      <Longitude>37.5343</Longitude>
-      <Time>04/09/2015 07:46:17 +00:00</Time>
-      <Speed>0</Speed>
-      <Accuracy>0</Accuracy>
-      <Azimuth>0</Azimuth>
-    </Coordinate>
+
+
 	<Coordinate>
       <Latitude>55.740449544291856</Latitude>
       <Longitude>37.533953868370851</Longitude>
