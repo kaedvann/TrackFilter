@@ -19,7 +19,9 @@
                           Command="{Binding OpenReferenceCommand}" />
                 <MenuItem Header="Open Actual Track"
                           Command="{Binding OpenActualCommand}" />
-                <MenuItem Header="Close Window" />
+                <MenuItem Header="Close Window"
+                          Command="{Binding CloseCommand}"
+                          CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}"/>
             </MenuItem>
 
         </Menu>

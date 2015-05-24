@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using Analysis;
 using Caliburn.Micro;
 using Domain;
@@ -41,8 +42,16 @@ namespace TrackFilter.ViewModels
         {
             OpenReferenceCommand = new DelegateCommand(OpenReference);
             OpenActualCommand = new DelegateCommand(OpenActual);
+            CloseCommand = new DelegateCommand(Close);
             Plot = new PlotModel();
             Tracks = new BindableCollection<Track>();
+        }
+
+        private void Close(object obj)
+        {
+            var window = obj as Window;
+            if (window != null)
+                window.Close();
         }
 
         public BindableCollection<Track> Tracks { get; set; }
@@ -129,6 +138,7 @@ namespace TrackFilter.ViewModels
             
         }
 
+        public DelegateCommand CloseCommand { get; set; }
     }
     public static class ColorExtensions
 {

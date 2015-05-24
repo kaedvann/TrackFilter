@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Media;
@@ -16,12 +17,31 @@ namespace TrackFilter.ViewModels
         private readonly INavigationService _navigationService;
 
         private readonly TrackProcessor _trackProcessor = new TrackProcessor();
+        private Track _filterResult;
         public DelegateCommand LoadFileCommand { get; set; }
 
         public BindableCollection<Track> Tracks { get; set; }
-
+        public DelegateCommand CloseCommand { get; set; }
         public DelegateCommand StartAnalysisCommand { get; set; }
+        public DelegateCommand ExportTrackCommand { get; set; }
+        public List<Track> SourceTracks { get; set; }
 
+        public Track FilterResult
+        {
+            get { return _filterResult; }
+            set
+            {
+                _filterResult = value;
+                ExportTrackCommand.RaiseCanExecuteChanged();
+            }
+        }
+
+        private void Close(object obj)
+        {
+            var window = obj as Window;
+            if (window != null)
+                window.Close();
+        }
         public MainViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
@@ -33,6 +53,32 @@ namespace TrackFilter.ViewModels
         {
             LoadFileCommand = new DelegateCommand(LoadFile);
             StartAnalysisCommand = new DelegateCommand(()=>_navigationService.Navigate(ViewType.AnalysisWindow));
+            CloseCommand = new DelegateCommand(Close);
+            ExportTrackCommand = new DelegateCommand(ExportTrack, () => FilterResult!=null);
+        }
+
+        private void ExportTrack()
+        {
+            try
+            {
+                var dialog = new SaveFileDialog()
+                {
+                    Filter = "XML documents | *.xml",
+                    FileName = "Result.xml",
+                    Title = "Choose location to save result track"
+                };
+                var result = dialog.ShowDialog();
+                if (result == true)
+                {
+                    var file = dialog.FileName;
+                    var worker = new TrackXmlWorker();
+                    worker.WriteTrack(FilterResult, file);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error occured while saving track");
+            }
         }
 
         private void LoadFile()
@@ -50,15 +96,15 @@ namespace TrackFilter.ViewModels
                 {
                     var file = dialog.FileName;
                     var worker = new TrackXmlWorker();
-                    var tracks= worker.ReadTracks(file);
+                    SourceTracks= worker.ReadTracks(file);
                     
                    
                     Tracks.Clear();
-                    Tracks.AddRange(tracks);
+                    Tracks.AddRange(SourceTracks);
 
-                    var filterResult = _trackProcessor.ProcessTracks(tracks);
+                    FilterResult = _trackProcessor.ProcessTracks(SourceTracks);
 
-                    Tracks.Add(filterResult);
+                    Tracks.Add(FilterResult);
                    // Tracks.Add(filtered);
                 }
             }

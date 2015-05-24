@@ -14,6 +14,11 @@
             <MenuItem Header="File">
                 <MenuItem Header="Open track"
                           Command="{Binding LoadFileCommand}"></MenuItem>
+                <MenuItem Header="Save Result"
+                          Command="{Binding ExportTrackCommand}"></MenuItem>
+                <MenuItem Header="Exit"
+                          Command="{Binding CloseCommand}"
+                          CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"></MenuItem>
             </MenuItem>
             <MenuItem Header="Tools">
                 <MenuItem Header="Analysis"
