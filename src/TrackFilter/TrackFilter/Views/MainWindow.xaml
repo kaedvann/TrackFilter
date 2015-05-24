@@ -23,6 +23,9 @@
             <MenuItem Header="Tools">
                 <MenuItem Header="Analysis"
                           Command="{Binding StartAnalysisCommand}"></MenuItem>
+                <MenuItem Header="Settings"
+                          Command="{Binding ShowSettingsCommand}"
+                          ></MenuItem>
             </MenuItem>
         </Menu>
         <Grid DockPanel.Dock="Left"> 

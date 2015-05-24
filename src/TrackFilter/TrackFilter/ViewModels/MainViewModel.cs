@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Media;
 using Caliburn.Micro;
 using Domain;
 using Filter;
@@ -18,6 +15,9 @@ namespace TrackFilter.ViewModels
 
         private readonly TrackProcessor _trackProcessor = new TrackProcessor();
         private Track _filterResult;
+        private bool _stopsDetection = true;
+        private bool _spikeDetection = true;
+        private bool _filtering = true;
         public DelegateCommand LoadFileCommand { get; set; }
 
         public BindableCollection<Track> Tracks { get; set; }
@@ -55,6 +55,48 @@ namespace TrackFilter.ViewModels
             StartAnalysisCommand = new DelegateCommand(()=>_navigationService.Navigate(ViewType.AnalysisWindow));
             CloseCommand = new DelegateCommand(Close);
             ExportTrackCommand = new DelegateCommand(ExportTrack, () => FilterResult!=null);
+            ShowSettingsCommand = new DelegateCommand(ShowSettings);
+        }
+
+        public DelegateCommand ShowSettingsCommand { get; set; }
+
+        public bool Filtering
+        {
+            get { return _filtering; }
+            set
+            {
+                if (value == _filtering) return;
+                _filtering = value;
+                NotifyOfPropertyChange(() => Filtering);
+            }
+        }
+
+        public bool SpikeDetection
+        {
+            get { return _spikeDetection; }
+            set
+            {
+                if (value == _spikeDetection) return;
+                _spikeDetection = value;
+                NotifyOfPropertyChange(() => SpikeDetection);
+            }
+        }
+
+        public bool StopsDetection
+        {
+            get { return _stopsDetection; }
+            set
+            {
+                if (value == _stopsDetection) return;
+                _stopsDetection = value;
+                NotifyOfPropertyChange(() => StopsDetection);
+            }
+        }
+
+        private void ShowSettings()
+        {
+            _navigationService.Navigate(ViewType.SettingsWindow);
+            ProcessTracks();
         }
 
         private void ExportTrack()
@@ -99,18 +141,29 @@ namespace TrackFilter.ViewModels
                     SourceTracks= worker.ReadTracks(file);
                     
                    
-                    Tracks.Clear();
-                    Tracks.AddRange(SourceTracks);
-
-                    FilterResult = _trackProcessor.ProcessTracks(SourceTracks);
-
-                    Tracks.Add(FilterResult);
-                   // Tracks.Add(filtered);
+                    ProcessTracks();
                 }
             }
             catch
             {
                 MessageBox.Show("Bad file format");
+            }
+        }
+
+        private void ProcessTracks()
+        {
+            if (SourceTracks != null)
+            {
+                _trackProcessor.KalmanEnabled = Filtering;
+                _trackProcessor.StopsDetection = StopsDetection;
+                _trackProcessor.SpikeDetection = SpikeDetection;
+                Tracks.Clear();
+                Tracks.AddRange(SourceTracks);
+
+                FilterResult = _trackProcessor.ProcessTracks(SourceTracks);
+
+                Tracks.Add(FilterResult);
+                
             }
         }
     }

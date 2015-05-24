@@ -3,11 +3,11 @@
 namespace TrackFilter.Views
 {
     /// <summary>
-    /// Interaction logic for AnalysisWindow.xaml
+    /// Interaction logic for SettingsWindow.xaml
     /// </summary>
-    public partial class AnalysisWindow : Window
+    public partial class SettingsWindow : Window
     {
-        public AnalysisWindow()
+        public SettingsWindow()
         {
             InitializeComponent();
         }

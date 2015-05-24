@@ -7,6 +7,7 @@
 
     public enum ViewType
     {
-        MainWindow, AnalysisWindow
+        MainWindow, AnalysisWindow,
+        SettingsWindow
     }
 }

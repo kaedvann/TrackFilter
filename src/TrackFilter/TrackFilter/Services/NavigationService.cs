@@ -32,6 +32,15 @@ namespace TrackFilter.Services
                     };
                     window.ShowDialog();
                     break;
+                case ViewType.SettingsWindow:
+                    var settingsWindow = new SettingsWindow
+                    {
+                        ShowInTaskbar = false,
+                        DataContext = _mainWindow.DataContext,
+                        Owner = _mainWindow
+                    };
+                    settingsWindow.ShowDialog();
+                    break;
                 default:
                     throw new ArgumentException();
             }
