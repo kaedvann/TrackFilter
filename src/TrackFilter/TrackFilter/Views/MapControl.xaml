@@ -10,7 +10,7 @@
         <windowsPresentation:GMapControl x:Name="Map" 
                                          Grid.Row="0"
                                          MinZoom="1"
-                                         MaxZoom="17"
+                                         MaxZoom="19"
                                          MouseWheelZoomType="MousePositionWithoutCenter"
                                          />
     </Grid>

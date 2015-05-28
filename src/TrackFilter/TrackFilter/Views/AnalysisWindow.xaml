@@ -40,13 +40,20 @@
                     <StackPanel Grid.Row="1"
                                 Orientation="Horizontal">
                         <TextBlock Text="Source average:"
+                                   VerticalAlignment="Center"
                                    ></TextBlock>
                         <TextBox Text="{Binding SourceAverage}"
-                                 Margin="5"></TextBox>
+                                 Margin="10"></TextBox>
+
+                        <TextBox Text="{Binding SourceVariance}"
+                                 Margin="10"></TextBox>
                         <TextBlock Text="Result average"
-                                   Margin="20,0,5,0"></TextBlock>
+                                   VerticalAlignment="Center"
+                                   Margin="20,0,0,0"></TextBlock>
                         <TextBox Text="{Binding ResultAverage}"
-                                 ></TextBox>
+                                 Margin="10"></TextBox>
+                        <TextBox Text="{Binding ResultVariance}"
+                                 Margin="10"></TextBox>
                     </StackPanel>
                 </Grid>
             </TabItem>

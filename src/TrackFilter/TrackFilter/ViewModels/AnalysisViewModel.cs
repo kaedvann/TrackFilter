@@ -6,6 +6,7 @@ using Analysis;
 using Caliburn.Micro;
 using Domain;
 using Filter;
+using MathNet.Numerics.Statistics;
 using Microsoft.Win32;
 using OxyPlot;
 using OxyPlot.Series;
@@ -23,6 +24,8 @@ namespace TrackFilter.ViewModels
         private List<Track> _tracks;
         private double _resultAverage;
         private double _sourceAverage;
+        private double _sourceVariance;
+        private double _resultVariance;
         public DelegateCommand OpenReferenceCommand { get; set; }
         public DelegateCommand OpenActualCommand { get; set; }
 
@@ -134,10 +137,34 @@ namespace TrackFilter.ViewModels
             resultDerivations.Color = result.Color.ToOxyColor();
 
             SourceAverage = trackDerivations.SelectMany(s => s).Average();
+            SourceVariance = trackDerivations.SelectMany(s => s).StandardDeviation();
             ResultAverage = fullResultDerivations.Average();
+            ResultVariance = fullResultDerivations.StandardDeviation();
             Plot.Series.Clear();
             Plot.Series.Add(sourceDerivations);
             Plot.Series.Add(resultDerivations);
+        }
+
+        public double ResultVariance
+        {
+            get { return _resultVariance; }
+            set
+            {
+                if (value.Equals(_resultVariance)) return;
+                _resultVariance = value;
+                NotifyOfPropertyChange(() => ResultVariance);
+            }
+        }
+
+        public double SourceVariance
+        {
+            get { return _sourceVariance; }
+            set
+            {
+                if (value.Equals(_sourceVariance)) return;
+                _sourceVariance = value;
+                NotifyOfPropertyChange(() => SourceVariance);
+            }
         }
 
         public double SourceAverage
