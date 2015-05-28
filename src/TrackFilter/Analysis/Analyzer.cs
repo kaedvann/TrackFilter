@@ -31,6 +31,16 @@ namespace Analysis
             }).ToList();
         }
 
+        public IList<double> Derivations(IList<Coordinate> track, IList<Coordinate> reference)
+        {
+            return track.Select(sourceCoordinate => reference.Pairwise(
+                (coordinate, coordinate1) =>
+                    Utils.PointLineDistance(
+                        new Point {X = sourceCoordinate.Longitude, Y = sourceCoordinate.Latitude},
+                        new Point {X = coordinate.Longitude, Y = coordinate.Latitude},
+                        new Point {X = coordinate1.Longitude, Y = coordinate1.Latitude})).Min()).ToList();
+        }
+
         public class AnalysisResult
         {
             public double SourceDerivation { get; set; }

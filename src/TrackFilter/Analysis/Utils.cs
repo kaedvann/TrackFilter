@@ -26,7 +26,7 @@ namespace Analysis
             var gamma = TriangleCosAlpha(ab, bc, ac);
             if (alpha < 0 || gamma < 0)
                 return ab > bc ? bc : ab;
-            return double.IsNaN(h)?0:h;
+            return double.IsNaN(h)?double.PositiveInfinity:h;
         }
     }
 }

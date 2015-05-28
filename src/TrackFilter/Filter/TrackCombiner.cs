@@ -20,7 +20,7 @@ namespace Filter
                 return tracks.First();
             var result = new Track();
             var indexedTracks = tracks.Select(t => new IndexedTrack{Coordinates = t.Coordinates, Index = 0}).ToArray();
-            while (indexedTracks.All(t => t.Coordinates.Count != t.Index))
+            while ((indexedTracks = indexedTracks.Where(t => t.Coordinates.Count != t.Index).ToArray()).Any())
             {
                 var currentTime = indexedTracks.Min(t => t.Coordinates[t.Index].Time);
                 var coordinatesToCombine =

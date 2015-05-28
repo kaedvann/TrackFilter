@@ -7,7 +7,7 @@ namespace Filter
 {
     public class SpikeRemover
     {
-        private const double MaxDegSpeed = 0.0009;// 47e-5;
+        private const double MaxDegSpeed = 0.0008;// 47e-5;
         public List<Coordinate> Process(List<Coordinate> track)
         {
             var result = new List<Coordinate>{track.First()};
@@ -24,7 +24,7 @@ namespace Filter
                           Math.Pow(current.Longitude - previous.Longitude, 2));
             var nextDist =                 Math.Sqrt(Math.Pow(next.Latitude - previous.Latitude, 2) +
                           Math.Pow(next.Longitude - previous.Longitude, 2));
-            return dist/(current.Time - previous.Time).TotalSeconds > MaxDegSpeed;// || dist >10*nextDist;
+            return dist/(current.Time - previous.Time).TotalSeconds > MaxDegSpeed || dist >10*nextDist;
         }
     }
 }

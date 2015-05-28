@@ -30,7 +30,7 @@ namespace Filter
             KalmanEnabled = true;
             StopsDetection = true;
             SpikeDetection = true;
-            AccelerationVariance = 3;
+            AccelerationVariance = 6;
             StopsTreshold = 15;
             CombineTreshold = TimeSpan.FromSeconds(2);
         }
@@ -50,7 +50,8 @@ namespace Filter
 
             _kalman.AccelerationVariance = AccelerationVariance;
             var result = KalmanEnabled ? _kalman.Filter(withoutStops) : withoutStops;
-            return  new Track{Coordinates = result.ToList(), Color = Colors.Purple};
+
+            return  new Track{Coordinates = result.ToList(), Color = Colors.Red};
         }
     }
 }

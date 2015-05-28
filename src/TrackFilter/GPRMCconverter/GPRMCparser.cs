@@ -48,7 +48,7 @@ namespace GPRMCconverter
         {
             double result;
             var p = double.TryParse(speed, NumberStyles.Any, CultureInfo.InvariantCulture, out result);
-            return p ? result*0.514 : (double?)null;
+            return p ? result*1.852 : (double?)null;
         }
 
         double? ParseAzimuth(string azimuth)

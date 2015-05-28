@@ -30,8 +30,24 @@
                 <views:MapControl Tracks="{Binding Tracks}" />
             </TabItem>
             <TabItem Header="Plot">
-                <Grid>
+                <Grid VerticalAlignment="Stretch"
+                      HorizontalAlignment="Stretch">
+                    <Grid.RowDefinitions>
+                        <RowDefinition ></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                    </Grid.RowDefinitions>
                     <oxy:PlotView Model="{Binding Plot}" />
+                    <StackPanel Grid.Row="1"
+                                Orientation="Horizontal">
+                        <TextBlock Text="Source average:"
+                                   ></TextBlock>
+                        <TextBox Text="{Binding SourceAverage}"
+                                 Margin="5"></TextBox>
+                        <TextBlock Text="Result average"
+                                   Margin="20,0,5,0"></TextBlock>
+                        <TextBox Text="{Binding ResultAverage}"
+                                 ></TextBox>
+                    </StackPanel>
                 </Grid>
             </TabItem>
         </TabControl>

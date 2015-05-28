@@ -51,6 +51,7 @@ namespace TrackFilter.Views
                 {
                     path.Effect = null;
                     path.Stroke = new SolidColorBrush(track.Color);
+                    path.StrokeThickness = 2;
                 }
             }
         }
