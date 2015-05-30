@@ -69,93 +69,29 @@
 
 \begin_body
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% Также можно использовать 
-\backslash
-Referat, как в оригинале
-\end_layout
-
-\end_inset
-
-
+\begin_layout Abstract
+РПЗ 111 страниц,  рисунков, 12 таблиц, 10 источников.
 \end_layout
 
 \begin_layout Abstract
-Это пример каркаса расчётно-пояснительной записки, желательный к использованию
- в РПЗ проекта по курсу РСОИ.
-\end_layout
-
-\begin_layout Abstract
-Данный опус, как и более новые версии этого документа, можно взять по адресу
- (
-\begin_inset Flex Flex:URL
-status collapsed
-
-\begin_layout Plain Layout
-
-https://github.com/rominf/latex-g7-32
-\end_layout
-
-\end_inset
-
-).
-\end_layout
-
-\begin_layout Abstract
-Текст в документе носит совершенно абстрактный характер.
+Ключевые слова: отслеживание объекта, GPS-данные, коррекция погрешностей
+ GPS, объединение данных от разных источников.
  
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%%% Local Variables: 
+\begin_layout Abstract
+Цель квалификационной работы бакалавра – разработка метода для построения
+ и уточнения маршрута объекта по набору GPS-координат.
 \end_layout
 
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%%% mode: latex
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%%% TeX-master: "rpz"
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%%% End: 
-\end_layout
-
-\end_inset
-
-
+\begin_layout Abstract
+В квалификационной работе бакалавра проведён обзор средств решения сходных
+ задач с обоснованием необходимости разработки метода, проанализирована
+ предметная область.
+ Предложен метод объединения нескольких последовательностей координат и
+ уточнения полученного маршрута.
+ Создан программный продукт, реализующий предложенный метод, и проведен
+ эксперимент, подтверждающий применимость разработанного метода.
 \end_layout
 
 \end_body

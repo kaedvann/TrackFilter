@@ -84,104 +84,329 @@ name "cha:design"
 
 \end_layout
 
-\begin_layout Standard
-В данном разделе проектируется новая всячина.
-\end_layout
-
 \begin_layout Подраздел
-Архитектура всячины
+Сглаживание погрешностей маршрута
+\end_layout
+
+\begin_layout Пункт
+Построение математической модели с использованием фильтра Калмана
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-paragraph{Проверка}
-\end_layout
+Для использования фильтра Калмана необходимо, чтобы исследуемый процесс
+ описывался следующим образом 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "tr-kalman"
 
 \end_inset
 
- параграфа.
- Вроде работает.
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-paragraph{Вторая проверка}
-\end_layout
-
-\end_inset
-
- параграфа.
- Опять работает.
+:
 \end_layout
 
 \begin_layout Standard
-Вот.
-\end_layout
+\begin_inset Formula 
+\begin{equation}
+s_{k}=A_{k}s_{k-1}+B_{k}u_{k-1}+w_{k}\label{eq:process}
+\end{equation}
 
-\begin_layout Itemize
-Это список с 
-\begin_inset Quotes ard
 \end_inset
 
-палочками
-\begin_inset Quotes ald
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+z_{k}=H_{k}s_{k}+\nu_{k}\label{eq:measurement}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В формуле (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:process"
+
+\end_inset
+
+) 
+\begin_inset Formula $s_{k}\in\mathbb{R}^{n}$
+\end_inset
+
+-вектор состояния процесса, 
+\begin_inset Formula $A$
+\end_inset
+
+- матрица размерностью 
+\begin_inset Formula $n\times n$
+\end_inset
+
+, описывающая переход наблюдаемого процесса из состояния 
+\begin_inset Formula $s_{k-1}$
+\end_inset
+
+в состояние 
+\begin_inset Formula $s_{k}$
+\end_inset
+
+.
+ Вектор 
+\begin_inset Formula $u\in\mathbb{R}^{l}$
+\end_inset
+
+ описывает управляющие воздействия на процесс.
+ Матрица 
+\begin_inset Formula $B$
+\end_inset
+
+ размерностью 
+\begin_inset Formula $n\times l$
+\end_inset
+
+ отображает вектор управляющих воздействий 
+\begin_inset Formula $u$
+\end_inset
+
+ в изменение состояния 
+\begin_inset Formula $s$
 \end_inset
 
 .
  
+\begin_inset Formula $w_{k}\in\mathbb{R}^{n}$
+\end_inset
+
+ является случайной величиной, описывающей погрешности исследуемого процесса,
+ причем 
+\begin_inset Formula $p(w)\sim N(0,Q)$
+\end_inset
+
+, где 
+\begin_inset Formula $Q$
+\end_inset
+
+ - ковариационная матрица погрешностей процесса.
+ Формула (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:measurement"
+
+\end_inset
+
+) описывает измерения случайного процесса.
+ 
+\begin_inset Formula $z_{k}\in\mathbb{R}^{m}$
+\end_inset
+
+- вектор измеряемого состояния процесса, матрица 
+\begin_inset Formula $H$
+\end_inset
+
+ размерностью 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ отображает состояние процесса 
+\begin_inset Formula $s_{k}$
+\end_inset
+
+ в измерение процесса 
+\begin_inset Formula $z_{k}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\nu_{k}\mathbb{R}^{m}$
+\end_inset
+
+ - случайная величина, характеризующая погрешности измерений, причем 
+\begin_inset Formula $p(\nu)\sim N(0,P)$
+\end_inset
+
+, где 
+\begin_inset Formula $P$
+\end_inset
+
+ - ковариационная матрица погрешностей измерений.
 \end_layout
 
-\begin_layout Itemize
-Хотя он и не по ГОСТ, кажется.
+\begin_layout Standard
+Так как исследуется процесс движения объекта, уравнение состояния составляется
+ исходя из уравнения движения тела 
+\begin_inset Formula $\bar{r}_{k}=\bar{r}_{k-1}+\bar{v}_{k-1}dt_{k}+\bar{a}_{k-1}\frac{dt_{k}^{2}}{2}$
+\end_inset
+
+.
+ Кроме того, отсутствует дополнительная информация о процессе движения,
+ поэтому считается, что управляющее воздействие 
+\begin_inset Formula $Bu$
+\end_inset
+
+ равно 0.
+ За состояние процесса принят вектор 
+\begin_inset Formula $s_{k}=\begin{bmatrix}x_{k}\\
+y_{k}\\
+v_{k}^{x}\\
+v_{k}^{y}
+\end{bmatrix}$
+\end_inset
+
+, где 
+\begin_inset Formula $x_{k},y_{k}$
+\end_inset
+
+ - координаты объекта, 
+\begin_inset Formula $v_{k}^{x},v_{k}^{y}$
+\end_inset
+
+ - проекции скорости объекта.
+ Таким образом, для рассматриваемого процесса уравнение (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:process"
+
+\end_inset
+
+) принимает следующий вид:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s_{k}=A_{k}s_{k-1}+G_{k}a_{k},\label{eq:concrete_process}
+\end{equation}
+
+\end_inset
+
+где
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A_{k}=\begin{bmatrix}1 & 0 & dt_{k} & 0\\
+0 & 1 & 0 & dt_{k}\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{bmatrix},\label{eq:transiton_matrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+a_{k}=\begin{bmatrix}a_{k}^{x}\\
+a_{k}^{y}
+\end{bmatrix},\label{eq:аcceleration}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+G_{k}=\begin{bmatrix}\frac{dt_{k}^{2}}{2} & 0\\
+0 & \frac{dt_{k}^{2}}{2}\\
+dt_{k} & 0\\
+0 & dt_{k}
+\end{bmatrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В данной модели ускорение объекта рассматривается как случайная погрешность
+ процесса.
+ Принимаются следующие допущения: 
+\end_layout
+
+\begin_layout Enumerate
+Ускорения по разным осям являются независимыми случайными величинами.
  
 \end_layout
 
 \begin_layout Enumerate
-Поэтому для списка, начинающегося с заглавной буквы, лучше список с цифрами.
+\begin_inset Formula $p(a_{k}^{x,y})\sim N(0,\sigma_{a})$
+\end_inset
+
+, то есть ускорения распределены нормально с нулевым математическим ожиданием
+ и некоторым среднеквадратичным отклонением 
+\begin_inset Formula $\sigma_{a}$
+\end_inset
+
+, которое считается известным.
+\end_layout
+
+\begin_layout Standard
+Данные допущения приняты из следующих соображений:
+\end_layout
+
+\begin_layout Enumerate
+Нет оснований полагать, что по значению одной компоненты вектора ускорения
+ можно сделать вывод о значении другой компоненты.
  
 \end_layout
 
+\begin_layout Enumerate
+Большую часть времени объект движется равномерно.
+ В качестве возможных источников координат рассматриваются пешеходы и автомобили.
+ Ненулевое ускорение обычно связано либо с изменением направления движения,
+ что происходит за небольшой промежуток времени (от 5 до 15 cекунд), либо
+ с остановкой или началом движения, причем разгон или торможение до требуемой
+ скорости также происходят сравнительно быстро (в случае пешеходов практически
+ моментально, автомобилей - в пределах 10-15 секунд).
+ Ускорение, возникающее в других ситуациях (например, обгон или замедление
+ для оценки окружающей обстановки), также отличается от нуля в течение небольших
+ промежутков времени.
+\end_layout
+
 \begin_layout Standard
-Формула 
+Таким образом, в формуле (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "F:F1"
+reference "eq:concrete_process"
 
 \end_inset
 
- совершено бессмысленна.
-\end_layout
+) член 
+\begin_inset Formula $G_{k}a_{k}$
+\end_inset
 
-\begin_layout Standard
-\begin_inset ERT
-status open
+ выполняет роль члена 
+\begin_inset Formula $w_{k}$
+\end_inset
 
-\begin_layout Plain Layout
-
-%Кстати, при каких-то условиях <<удавалось>> получить двойный скобки вокруг
- номеров формул.
- Вопрос исследуется.
-\end_layout
+ из формулы (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:process"
 
 \end_inset
 
+).
+ Для дальнейших вычислений необходимо получить значение матрицы 
+\begin_inset Formula $Q$
+\end_inset
 
+.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-a=cb\label{F:F1}
+Q_{k}=cov(w_{k})=\mathbb{E}(w_{k}w_{k}^{T})-\mathbb{E}(w_{k})\mathbb{E}(w_{k}^{T})=\mathbb{E}(G_{k}a_{k}a_{k}^{T}G_{k}^{T})=G_{k}\mathbb{E}(a_{k}a_{k}^{T})G_{k}^{T}\label{eq:qmatrix}
 \end{equation}
 
 \end_inset
@@ -190,30 +415,38 @@ a=cb\label{F:F1}
 \end_layout
 
 \begin_layout Standard
-Окружение 
-\family typewriter
-cases
-\family default
- опять работает (см.
- 
+Так как компоненты вектора 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+(
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "F:F2"
+reference "eq:аcceleration"
 
 \end_inset
 
-), спасибо И.
- Короткову за исправления..
+) являются независимыми случайными величинами, то 
+\begin_inset Formula $\mathbb{E}(a_{k}a_{k}^{T})=\begin{bmatrix}\sigma_{a}^{2} & 0\\
+0 & \sigma_{a}^{2}
+\end{bmatrix}$
+\end_inset
+
+.
+ Следовательно, формула (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:qmatrix"
+
+\end_inset
+
+) принимает следующий вид:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-a=\begin{cases}
-3x+5y+z,\mbox{если хорошо}\\
-7x-2y+4z,\mbox{если плохо}\\
--6x+3y+2z,\mbox{если совсем плохо}
-\end{cases}\label{F:F2}
+Q_{k}=G_{k}G_{k}^{T}\sigma_{a}^{2}\label{eq:process_noise}
 \end{equation}
 
 \end_inset
@@ -221,99 +454,240 @@ a=\begin{cases}
 
 \end_layout
 
-\begin_layout Подраздел
-Подсистема всякой ерунды
-\end_layout
-
 \begin_layout Standard
-Культурная вставка dot-файлов через утилиту dot2tex (рис.
-\begin_inset space ~
+Вектор измерения 
+\begin_inset Formula $z_{k}$
+\end_inset
+
+ для данной задачи представляется следующим образом:
+\begin_inset Formula 
+\begin{equation}
+z_{k}=\begin{bmatrix}\chi_{k}\\
+\gamma_{k}\\
+\vartheta_{k}^{x}\\
+\vartheta_{k}^{y}
+\end{bmatrix},
+\end{equation}
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $\chi_{k},\gamma_{k}$
+\end_inset
+
+ - координаты объекта, полученные от датчика, 
+\begin_inset Formula $\vartheta_{k}^{x},\vartheta_{k}^{y}$
+\end_inset
+
+ - скорость объекта, полученная от датчика.
+ Матрица 
+\begin_inset Formula $H$
+\end_inset
+
+ в формуле (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:fig02"
+reference "eq:measurement"
+
+\end_inset
+
+) принимается равной единичной матрице размерностью 
+\begin_inset Formula $4\times4$
+\end_inset
+
+, так как в рамках данной задачи считается, что измерение есть линейная
+ комбинация вектора состояния и некоторых случайных погрешностей.
+ Ковариационная матрица погрешности измерений 
+\begin_inset Formula $R$
+\end_inset
+
+ считается заданной.
+ Один из возможных вариантов ее вычисления - использование данных о предполагаем
+ой точности измерения, получаемых от датчика.
+\end_layout
+
+\begin_layout Пункт
+Применение фильтра Калмана к построенной модели
+\end_layout
+
+\begin_layout Standard
+Для применения фильтра необходимо ввести следующие понятия:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\hat{s}_{k}$
+\end_inset
+
+- апостериорная оценка состояния объекта в момент k, полученная по результатам
+ наблюдений вплоть до момента k включительно.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\hat{s}_{k}^{\sim}$
+\end_inset
+
+- нескорректированная апостериорная оценка состояния объекта в момент времени
+ k.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P_{k}$
+\end_inset
+
+- апостериорная ковариационная матрица ошибок, задающая оценку точности
+ полученной оценки вектора состояния и включающая в себя оценку дисперсий
+ погрешности вычисленного состояния и ковариации, показывающие выявленные
+ взаимосвязи между параметрами состояния системы.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P_{k}^{\sim}$
+\end_inset
+
+- нескорректированная апостериорная ковариационная матрица ошибок.
+\end_layout
+
+\begin_layout Standard
+Матрица 
+\begin_inset Formula $P_{0}$
+\end_inset
+
+ задается как нулевая, так как считается, что известно начальное положение
+ объекта.
+\end_layout
+
+\begin_layout Standard
+Одна итерация фильтра Калмана состоит из двух этапов: экстраполяция и коррекция.
+\end_layout
+
+\begin_layout Enumerate
+На этапе экстраполяции вычисляется оценка 
+\begin_inset Formula $\hat{s}_{k}^{\sim}$
+\end_inset
+
+по оценке вектора состояния 
+\begin_inset Formula $\hat{s}_{k-1}$
+\end_inset
+
+ и ковариационная матрица ошибок 
+\begin_inset Formula $P_{k}^{\sim}$
+\end_inset
+
+по следующим формулам:
+\begin_inset Formula 
+\begin{equation}
+\hat{s}_{k}^{\sim}=A_{k}\hat{s}_{k-1},
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+P_{k}^{\sim}=AP_{k-1}A^{T}+Q_{k},
+\end{equation}
+
+\end_inset
+
+где матрица 
+\begin_inset Formula $A_{k}$
+\end_inset
+
+ известна из формулы (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:transiton_matrix"
+
+\end_inset
+
+), матрица 
+\begin_inset Formula $Q_{k}$
+\end_inset
+
+ вычисляется по формуле (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:process_noise"
 
 \end_inset
 
 ).
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
+\begin_layout Enumerate
+На этапе коррекции вычисляется матрица коэффициентов усиления 
+\begin_inset Formula $K_{k}$
+\end_inset
 
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename inc/dot/cow2.pdf
-	width 50text%
+ по следующей формуле:
+\begin_inset Formula 
+\begin{equation}
+K_{k}=P_{k}^{\sim}H^{T}(HP_{k}^{\sim}H^{T}+R)^{-1},
+\end{equation}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Рисунок
-\end_layout
-
+где 
+\begin_inset Formula $R,H$
 \end_inset
 
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:fig02"
-
-\end_inset
-
+ считаются известными.
  
-\end_layout
+\begin_inset Formula $K_{k}$
+\end_inset
+
+ используется для коррекции оценки состояния объекта 
+\begin_inset Formula $\hat{s}_{k}^{\sim}$
+\end_inset
+
+и ковариационной матрицы ошибок 
+\begin_inset Formula $P_{k}^{\sim}$
+\end_inset
+
+следующим образом:
+\begin_inset Formula 
+\begin{equation}
+\hat{s}_{k}=\hat{s}_{k}^{\sim}+K_{k}(z_{k}-H\hat{s}_{k}^{\sim}),
+\end{equation}
 
 \end_inset
 
 
-\end_layout
+\begin_inset Formula 
+\begin{equation}
+P_{k}=(I-K_{K}H_{k})P_{k}^{\sim},
+\end{equation}
 
-\begin_layout Пункт
-Блок-схема всякой ерунды
-\end_layout
+\end_inset
 
-\begin_layout Подпункт
-Кстати о заголовках
+где 
+\begin_inset Formula $I$
+\end_inset
+
+ - единичная матрица.
 \end_layout
 
 \begin_layout Standard
-У нас есть и 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-subsubsection
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
+Следует заметить, что для использования указанных выше соотношений, необходимо,
+ чтобы для параметров объекта, участвующих в вычислениях, единицы измерений
+ были согласованы.
+ Однако в исходных данных широта и долгота приводятся в угловых координатах,
+ а скорость --- в метрических.
+ Кроме того, ускорение для расчета ошибки процесса также удобнее задавать
+ в метрических единицах.
+ Для перевода скорости и ускорения в угловые единицы используются формулы
+ Винченти 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vincenty"
 
 \end_inset
 
 .
- Только лучше её не нумеровать.
 \end_layout
 
 \end_body

@@ -12,6 +12,7 @@
 % Остальные стандартные настройки убраны в preamble.inc.tex.
 \include{preamble.inc}
 
+
 % Полезные макросы листингов.
 \include{macros.inc}
 \end_preamble
