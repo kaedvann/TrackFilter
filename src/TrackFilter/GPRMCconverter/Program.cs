@@ -9,11 +9,11 @@ namespace GPRMCconverter
         {
             var worker = new TrackXmlWorker();
             var parser = new GPRMCparser();
-            const string filename = @"C:\Users\Rostislav\Google Диск\bach\gps_tracks\track 3\Output_COM19.txt";
+            const string filename = @"C:\Users\Rostislav\Google Диск\bach\gps_tracks\track 2\Output_COM18.txt";
             using (var reader = File.OpenText(filename))
             {
                 var result = parser.Parse(reader);
-                worker.WriteTrack(new Track{Coordinates = result}, "gps19.xml");
+                worker.WriteTrack(new Track{Coordinates = result}, "gps18.xml");
             }
         }
     }

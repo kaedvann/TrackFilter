@@ -136,15 +136,15 @@ namespace TrackFilter.ViewModels
             resultDerivations.Points.AddRange(analysis.Select((a, i) => new DataPoint(i, a.ResultDerivation)));
             resultDerivations.Color = result.Color.ToOxyColor();
 
-            SourceAverage = trackDerivations.SelectMany(s => s).Average();
-            SourceVariance = trackDerivations.SelectMany(s => s).StandardDeviation();
-            ResultAverage = fullResultDerivations.Average();
-            ResultVariance = fullResultDerivations.StandardDeviation();
+            SourceAverage = trackDerivations.SelectMany(s => s).Average()*ToMeters;
+            SourceVariance = trackDerivations.SelectMany(s => s).StandardDeviation()*ToMeters;
+            ResultAverage = fullResultDerivations.Average()*ToMeters;
+            ResultVariance = fullResultDerivations.StandardDeviation()*ToMeters;
             Plot.Series.Clear();
             Plot.Series.Add(sourceDerivations);
             Plot.Series.Add(resultDerivations);
         }
-
+        private const double ToMeters = 56000.0;
         public double ResultVariance
         {
             get { return _resultVariance; }
