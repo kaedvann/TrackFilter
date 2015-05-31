@@ -74,43 +74,225 @@
 Экспериментальный раздел
 \end_layout
 
-\begin_layout Standard
-\begin_inset CommandInset label
-LatexCommand label
-name "cha:research"
+\begin_layout Подраздел
+Постановка эксперимента
+\end_layout
 
-\end_inset
-
-
+\begin_layout Пункт
+Описание эксперимента
 \end_layout
 
 \begin_layout Standard
-В данном разделе проводятся вычислительные эксперименты.
- А на рис.
-\begin_inset space ~
-\end_inset
+Эксперимент проводится для подтверждения применимости предложенного метода
+ к рассматриваемой задаче.
+ 
+\end_layout
 
+\begin_layout Standard
+В ходе эксперимента рассматривается отклонение исходного маршрута и маршрута,
+ являющегося результатом работы предложенного метода, от эталонного маршрута.
+ 
+\end_layout
 
+\begin_layout Пункт
+Размер выборки
+\end_layout
+
+\begin_layout Standard
+Перед началом исследования необходимо определить размер выборки.
+ Следует отметить, что элементом выборки в данном случае является один кадр.
+ Размер выборки обусловлен точностью определения параметров метода и необходимой
+ сложностью исследования.
+ Для оценки размера выборки можно воспользоваться законом больших чисел,
+ записанном в форме 2-го неравенства Чебышева (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:spire01"
+reference "eq:cheb"
 
 \end_inset
 
- показана схема мыслительного процесса автора...
+).
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P\{|X-MX|\geq\epsilon\}\leq\frac{\sigma^{2}}{N\epsilon^{2}},\label{eq:cheb}
+\end{equation}
+
+\end_inset
+
+где 
+\begin_inset Formula $N$
+\end_inset
+
+ – размер выборки, 
+\begin_inset Formula $X$
+\end_inset
+
+ – случайная величина, 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ – требуемая точность, 
+\begin_inset Formula $σ^{2}$
+\end_inset
+
+– дисперсия случайной величины, 
+\begin_inset Formula $MX$
+\end_inset
+
+ – математическое ожидание случайной величины.
+ Критерий качества лежит в диапазоне от 0 до 1, поэтому дисперсия качества
+ оцениваемого параметра не превосходит 0.25.
+ Для получения оценки объёма выборки можно принять 
+\begin_inset Formula $σ^{2}=0.25$
+\end_inset
+
+.
+ Задав достоверность метода 
+\begin_inset Formula $P=0,95$
+\end_inset
+
+, а требуемую точность 
+\begin_inset Formula $ε=0.05$
+\end_inset
+
+, можно получить значение необходимого объёма выборки (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:exp_number_eq"
+
+\end_inset
+
+) – (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:exp_number"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+N\geq\frac{\sigma^{2}}{P\{|X-MX|\geq\epsilon\}\epsilon^{2}}\label{eq:exp_number_eq}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+N\geq\frac{0.25}{(1-0.95)\times0.5^{2}}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+N\geq2000\label{eq:exp_number}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Следовательно, с ошибкой не более 
+\begin_inset Formula $5\%$
+\end_inset
+
+ и вероятностью 
+\begin_inset Formula $95\%$
+\end_inset
+
+ необходимый размер выборки равен 
+\begin_inset Formula $2000$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Пункт
+Данные для эксперимента
+\end_layout
+
+\begin_layout Standard
+Для эксперимента были подготовлены 4 класса входных данных:
+\end_layout
+
+\begin_layout Enumerate
+Пеший маршрут + метро
+\end_layout
+
+\begin_layout Enumerate
+Автомобильный маршрут
+\end_layout
+
+\begin_layout Enumerate
+Маршрут наземного общественного транспорта
+\end_layout
+
+\begin_layout Enumerate
+Велосипедный маршрут
+\end_layout
+
+\begin_layout Standard
+Количество координат в каждом из перечисленных маршрутов превышает 2000,
+ что удовлетворяет установленному объему выборки.
+ 
+\end_layout
+
+\begin_layout Standard
+Эталонные маршруты для сравнения были составлены вручную с использованием
+ инструментов Яндекс.Карт.
+\end_layout
+
+\begin_layout Standard
+На рис.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:exp_track"
+
+\end_inset
+
+ приведен пример данных для эксперимента.
+ Зеленым цветом изображен исходный маршрут, красным -- итоговый, синим --
+ эталонный.
+ 
 \begin_inset Float figure
+placement th
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Graphics
-	filename inc/svg/pic01.pdf
-	width 100text%
+	filename inc/pics/exp.PNG
+	display false
+	width 80page%
 
 \end_inset
 
@@ -118,24 +300,459 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Как страшно жить
+Данные для эксперимента
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:exp_track"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Подраздел
+Результат эксперимента
+\end_layout
+
+\begin_layout Standard
+На рис.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:exp_gist"
+
+\end_inset
+
+ приведена гистограмма, построенная по результатам эксперимента.
+ На гистограмме приведено математическое ожидание отклонения маршрутов от
+ эталонного, а также его среднеквадратичное отклонение.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename inc/pics/gist.PNG
+	display false
+	width 80page%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Гистограмма с результатами эксперимента
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:exp_gist"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+По приведенным результатам можно сделать вывод, что для трех случаев предложенны
+й метод снижает отклонение маршрута и уменьшает дисперсию отклонения.
+ Отсутствие существенного улучшения в случае автомобильного маршрута объясняется
+ более высокой точностью исходных данных, по сравнению с остальными рассмотренны
+ми случаями.
+ Однако из приведенных в таблице 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:exp_result"
+
+\end_inset
+
+ численных результатов можно сделать вывод, что наблюдается повышение точности
+ и в случае автомобильного маршрута.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Результаты эксперимента
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="2.8cm">
+<column alignment="center" valignment="middle" width="3.2cm">
+<column alignment="center" valignment="middle" width="3cm">
+<column alignment="center" valignment="middle" width="2.7cm">
+<column alignment="center" valignment="middle" width="3cm">
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Маршрут
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Отклонение исходного маршрута, м
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Отклонение итогового маршрута, м
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Коэффициент снижения отклонения
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Коэффициент уменьшения интервала ошибки 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Пешие участки + метро
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+22,7263±205,307 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+11,4884±12,6923 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+1,9782 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+16,1757 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Наземный общественный транспорт
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+30,0419±147,8227 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+12,9868±44,1246 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+2,31326 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+3,35012 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Автомобиль
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+10,6518±10,6853 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+10,0099±10,0372 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+1,06413 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+1,06457 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Велосипед
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+17,9114±115,615 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+11,2262±70,577
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+1,5955 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+1,63814 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
 
 \end_inset
 
 
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:spire01"
+name "tab:exp_result"
+
+\end_inset
+
+ 
+\end_layout
 
 \end_inset
 
 
 \end_layout
 
-\end_inset
+\begin_layout Подраздел
+Выводы 
+\end_layout
 
+\begin_layout Standard
+В результате эксперимента была подтверждена применимость предложенного метода.
+ Рассмотренные классы входных данных покрывают основные случаи возможных
+ источников входных данных.
+ 
+\end_layout
 
+\begin_layout Standard
+Наилучшие результаты метод показывает для данных с высокой степенью погрешности,
+ однако наблюдается повышение точности и для других ситуаций.
+ 
 \end_layout
 
 \end_body
