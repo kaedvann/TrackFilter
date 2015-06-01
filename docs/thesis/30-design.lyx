@@ -85,6 +85,18 @@ name "cha:design"
 \end_layout
 
 \begin_layout Подраздел
+Объединение последовательностей координат
+\end_layout
+
+\begin_layout Подраздел
+Устранение пиков
+\end_layout
+
+\begin_layout Подраздел
+Определение остановок
+\end_layout
+
+\begin_layout Подраздел
 Сглаживание погрешностей маршрута
 \end_layout
 

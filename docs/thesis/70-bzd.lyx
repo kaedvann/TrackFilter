@@ -127,9 +127,14 @@ name "cha:bzd"
 \end_layout
 
 \begin_layout Standard
-Нормы для работы с ПЭВМ определены с СанПиН 2.2.2/2.4.1340-03 "Гигиенические
- требования к персональным электронно-вычислительным машинам и организации
- работы".
+Нормы для работы с ПЭВМ определены с СанПиН 2.2.2/2.4.1340-03 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sanpin22224134003"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -154,10 +159,6 @@ reference "tab:controlledParameters"
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -168,7 +169,7 @@ reference "tab:controlledParameters"
 <column alignment="left" valignment="top" width="5page%">
 <column alignment="left" valignment="top" width="20page%">
 <column alignment="center" valignment="top" width="10page%">
-<column alignment="left" valignment="top" width="30page%">
+<column alignment="left" valignment="top" width="26page%">
 <row endfirsthead="true" caption="true">
 <cell multicolumn="1" alignment="none" valignment="top" usebox="none">
 \begin_inset Text
@@ -603,6 +604,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 Уровни звукового давления в октавных полосах со среднегеометрическими частотами
 \end_layout
 
@@ -684,6 +687,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 Уровни звука в дБА
 \end_layout
 
@@ -695,6 +700,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 31,5 Гц
 \end_layout
 
@@ -704,6 +711,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 63 Гц
 \end_layout
 
@@ -713,6 +722,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 125 Гц 
 \end_layout
 
@@ -722,6 +733,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 250 Гц
 \end_layout
 
@@ -731,6 +744,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 500 Гц 
 \end_layout
 
@@ -740,6 +755,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 1000 Гц
 \end_layout
 
@@ -749,6 +766,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 2000 Гц
 \end_layout
 
@@ -758,6 +777,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 4000 Гц
 \end_layout
 
@@ -767,6 +788,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
  8000 Гц
 \end_layout
 
@@ -787,6 +810,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 86 дБ 
 \end_layout
 
@@ -796,6 +821,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 71 дБ 
 \end_layout
 
@@ -805,6 +832,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 61 дБ
 \end_layout
 
@@ -814,6 +843,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 54 дБ 
 \end_layout
 
@@ -823,6 +854,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 49 дБ 
 \end_layout
 
@@ -832,6 +865,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
  45 дБ
 \end_layout
 
@@ -841,6 +876,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 42 дБ
 \end_layout
 
@@ -850,6 +887,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 40 дБ
 \end_layout
 
@@ -859,6 +898,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 38 дБ 
 \end_layout
 
@@ -868,6 +909,8 @@ name "tab:soundLevels"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 50
 \end_layout
 
@@ -914,12 +957,14 @@ status open
 <features rotate="0" tabularvalignment="middle">
 <column alignment="right" valignment="top">
 <column alignment="center" valignment="top" width="50page%">
-<column alignment="center" valignment="top" width="30page%">
+<column alignment="center" valignment="top" width="25page%">
 <row>
 <cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 № 
 \end_layout
 
@@ -929,6 +974,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Параметры
 \end_layout
 
@@ -938,6 +985,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Допустимые значения
 \end_layout
 
@@ -949,6 +998,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 1
 \end_layout
 
@@ -958,6 +1009,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Яркость белого поля 
 \end_layout
 
@@ -967,6 +1020,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Не менее 35 
 \begin_inset Formula $\text{кд/м}^{2}$
 \end_inset
@@ -982,6 +1037,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 2
 \end_layout
 
@@ -991,6 +1048,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Неравномерность яркости рабочего поля 
 \end_layout
 
@@ -1000,6 +1059,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Не более 
 \begin_inset Formula $\pm$
 \end_inset
@@ -1015,6 +1076,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 3
 \end_layout
 
@@ -1024,6 +1087,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Контрастность (для монохромного режима) 
 \end_layout
 
@@ -1033,6 +1098,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Не менее 3:1 
 \end_layout
 
@@ -1044,6 +1111,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 4
 \end_layout
 
@@ -1053,6 +1122,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Временная нестабильность изображения (непреднамеренное изменение во времени
  яркости изображения на экране дисплея) 
 \end_layout
@@ -1063,6 +1134,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Не должна фиксироваться
 \end_layout
 
@@ -1074,6 +1147,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 5 
 \end_layout
 
@@ -1083,6 +1158,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Пространственная нестабильность изображения (непреднамеренные изменения
  положения фрагментов изображения на экране) 
 \end_layout
@@ -1093,6 +1170,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Не более 
 \begin_inset Formula $2\cdot10^{-4L}$
 \end_inset
@@ -1191,9 +1270,25 @@ reference "tab:micro"
 
 \end_inset
 
-) в СанПиН 2.2.4.548-96 «Гигиенические требования к микроклимату производственных
- помещений» и ССБТ ГОСТ 12.1.005-88 «Общие санитарно-гигиенические требования
- к воздуху рабочей зоны».
+) в СанПиН 2.2.4.548-96 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sanpin22454896"
+
+\end_inset
+
+ и ССБТ ГОСТ 12.1.005-88 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ssbtgost121"
+
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1205,8 +1300,8 @@ reference "tab:micro"
 <column alignment="center" valignment="middle" width="16page%">
 <column alignment="center" valignment="middle" width="12page%">
 <column alignment="center" valignment="middle" width="13text%">
-<column alignment="center" valignment="middle" width="16page%">
-<column alignment="center" valignment="middle" width="10page%">
+<column alignment="center" valignment="middle" width="2.5cm">
+<column alignment="center" valignment="middle" width="2.4cm">
 <row endfirsthead="true" caption="true">
 <cell multicolumn="1" alignment="none" valignment="top" usebox="none">
 \begin_inset Text
@@ -1284,7 +1379,7 @@ name "tab:micro"
 
 \begin_layout Plain Layout
 
-\size small
+\size scriptsize
 Период года
 \end_layout
 
@@ -1295,7 +1390,7 @@ name "tab:micro"
 
 \begin_layout Plain Layout
 
-\size small
+\size scriptsize
 Категория работ по уровням энергозатрат, Вт
 \end_layout
 
@@ -1306,7 +1401,7 @@ name "tab:micro"
 
 \begin_layout Plain Layout
 
-\size small
+\size scriptsize
 Температура воздуха,°C 
 \end_layout
 
@@ -1317,7 +1412,7 @@ name "tab:micro"
 
 \begin_layout Plain Layout
 
-\size small
+\size scriptsize
 Температура поверхностей, °C
 \end_layout
 
@@ -1328,7 +1423,7 @@ name "tab:micro"
 
 \begin_layout Plain Layout
 
-\size small
+\size scriptsize
 Относительная влажность воздуха, %
 \end_layout
 
@@ -1339,7 +1434,7 @@ name "tab:micro"
 
 \begin_layout Plain Layout
 
-\size small
+\size scriptsize
 Скорость движения воздуха, м/с
 \end_layout
 
@@ -1351,6 +1446,8 @@ name "tab:micro"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 Холодный
 \end_layout
 
@@ -1360,6 +1457,8 @@ name "tab:micro"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 Iа (до 139)
 \end_layout
 
@@ -1369,6 +1468,8 @@ Iа (до 139)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
  22,0 - 24,0
 \end_layout
 
@@ -1378,6 +1479,8 @@ Iа (до 139)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 21,0 - 25,0 
 \end_layout
 
@@ -1387,6 +1490,8 @@ Iа (до 139)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 60 - 40
 \end_layout
 
@@ -1396,6 +1501,8 @@ Iа (до 139)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 0,1
 \end_layout
 
@@ -1416,6 +1523,8 @@ Iа (до 139)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 Iб (140-174)
 \end_layout
 
@@ -1425,6 +1534,8 @@ Iб (140-174)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
  21,0 - 23,0
 \end_layout
 
@@ -1434,6 +1545,8 @@ Iб (140-174)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 20,0 - 24,0 
 \end_layout
 
@@ -1443,6 +1556,8 @@ Iб (140-174)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 60 - 40
 \end_layout
 
@@ -1452,6 +1567,8 @@ Iб (140-174)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 0,1
 \end_layout
 
@@ -1463,6 +1580,8 @@ Iб (140-174)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 Теплый
 \end_layout
 
@@ -1472,6 +1591,8 @@ Iб (140-174)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 Iа (до 139)
 \end_layout
 
@@ -1481,6 +1602,8 @@ Iа (до 139)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
  23,0 - 25,0
 \end_layout
 
@@ -1490,6 +1613,8 @@ Iа (до 139)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 22,0 - 26,0 
 \end_layout
 
@@ -1499,6 +1624,8 @@ Iа (до 139)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 60 - 40
 \end_layout
 
@@ -1508,6 +1635,8 @@ Iа (до 139)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 0,1
 \end_layout
 
@@ -1528,6 +1657,8 @@ Iа (до 139)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 Iб (140-174)
 \end_layout
 
@@ -1537,6 +1668,8 @@ Iб (140-174)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
  22,0 - 24,0
 \end_layout
 
@@ -1546,6 +1679,8 @@ Iб (140-174)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 21,0 - 25,0 
 \end_layout
 
@@ -1555,6 +1690,8 @@ Iб (140-174)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 60 - 40
 \end_layout
 
@@ -1564,6 +1701,8 @@ Iб (140-174)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 0,1
 \end_layout
 
@@ -1584,9 +1723,14 @@ Iб (140-174)
 
 \begin_layout Standard
 Уровни положительных и отрицательных аэроионов в воздухе помещения должны
- соответствовать нормам, указанным в СанПиН 2.2.4.1294-03 «Гигиенические требования
- к аэроионному составу воздуха производственных и общественных помещений»
- (таблица
+ соответствовать нормам, указанным в СанПиН 2.2.4.1294-03 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sanpin224129403"
+
+\end_inset
+
+ (таблица 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:aeroions"
@@ -1794,7 +1938,14 @@ name "tab:aeroions"
 
 Содержании химических веществ в помещении не должно превышать предельно
  допустимых концентраций в соответствии с действующими гигиеническими нормативам
-и (ГН 2.2.5.1313-03).
+и 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gn225131303"
+
+\end_inset
+
+.
  Концентрации вредных веществ, выделяемых ПЭВМ в воздух помещений, не должны
  превышать предельно допустимых концентраций, установленных для атмосферного
  воздуха.
@@ -1807,7 +1958,14 @@ name "tab:aeroions"
 
 \begin_layout Standard
 Уровни шума в помещении не должны превышать предельно допустимых значений,
- установленных ГОСТ 12.1.003.83 (таблица 
+ установленных ГОСТ 12.1.003.83 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ssbtgost121"
+
+\end_inset
+
+ (таблица 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:noiseLevels"
@@ -1847,12 +2005,14 @@ status open
 <column alignment="center" valignment="top" width="1cm">
 <column alignment="center" valignment="top" width="1cm">
 <column alignment="center" valignment="top" width="1cm">
-<column alignment="left" valignment="middle" width="3cm">
+<column alignment="left" valignment="middle" width="2.4cm">
 <row>
 <cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 Рабочее место
 \end_layout
 
@@ -1862,6 +2022,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 Уровень звукового давления в дБ в октавных полосах со среднегеометрическими
  частотами, Гц
 \end_layout
@@ -1935,7 +2097,9 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Уровень звука, дБА, эквивалентный уровень звука, дБА
+
+\size scriptsize
+Эквивалентный уровень звука, дБА
 \end_layout
 
 \end_inset
@@ -1955,6 +2119,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 63
 \end_layout
 
@@ -1964,6 +2130,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 125
 \end_layout
 
@@ -1973,6 +2141,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 250
 \end_layout
 
@@ -1982,6 +2152,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 500
 \end_layout
 
@@ -1991,6 +2163,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 1000
 \end_layout
 
@@ -2000,6 +2174,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 2000
 \end_layout
 
@@ -2009,6 +2185,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 4000
 \end_layout
 
@@ -2018,6 +2196,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 8000
 \end_layout
 
@@ -2038,9 +2218,9 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Помещения КБ, расчетчиков, программистов вычислительных машин, лабораторий
- для теоретических работ и обработки экспериментальных данных, приема больных
- здравпунктов
+
+\size scriptsize
+Помещения КБ, расчетчиков, программистов вычислительных машин
 \end_layout
 
 \end_inset
@@ -2049,6 +2229,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 71
 \end_layout
 
@@ -2058,6 +2240,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 61
 \end_layout
 
@@ -2067,6 +2251,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 54
 \end_layout
 
@@ -2076,6 +2262,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 49
 \end_layout
 
@@ -2085,6 +2273,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 45
 \end_layout
 
@@ -2094,6 +2284,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 42
 \end_layout
 
@@ -2103,6 +2295,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 40
 \end_layout
 
@@ -2112,6 +2306,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 38
 \end_layout
 
@@ -2121,6 +2317,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 50
 \end_layout
 
@@ -2313,8 +2511,12 @@ reference "tab:visualParameters"
  Высота помещения – 2,9 м.
  В помещении расположены три рабочих места.
  В соответствии с требованиями к рабочим местам пользователя ПЭВМ, под каждое
- рабочее место отводится 4,5 м2, рабочие места расположены так, чтобы естественн
-ое освещение поступало слева, как указано на рис.
+ рабочее место отводится 4,5 
+\begin_inset Formula $\text{м}^{2}$
+\end_inset
+
+, рабочие места расположены так, чтобы естественное освещение поступало
+ слева, как указано на рис.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2414,8 +2616,14 @@ name "fig:office_scheme"
 \end_layout
 
 \begin_layout Standard
-Согласно СанПиН 2.2.2/2.4.1340-03, система светильники должны быть равномерно
- распределены по помещению.
+Согласно СанПиН 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sanpin22224134003"
+
+\end_inset
+
+, система светильники должны быть равномерно распределены по помещению.
  Целесообразно использовать люминесцентные лампы, поскольку они имеют ряд
  преимуществ перед лампами накаливания, среди которых повышенная светоотдача
  и КПД.
@@ -2496,8 +2704,14 @@ n --- коэффициент использования, (выражается �
 я в долях единицы; зависит от характеристик светильника, размеров помещения,
  окраски стен и потолка, характеризуемых коэффициентами отражения от стен
  (РС) и потолка (РП).
- В соответствии с СанПиН 2.2.2/2.4.1340-03, эти коэффициенты равны РС = 50%
- и РП = 70%.)
+ В соответствии с СанПиН 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sanpin22224134003"
+
+\end_inset
+
+, эти коэффициенты равны РС = 50% и РП = 70%.
 \end_layout
 
 \begin_layout Standard
@@ -3290,9 +3504,6 @@ B=B_{1000}\cdot\mu,
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 L_{\Sigma}=10\cdot lg(10^{\frac{L_{1}}{10}}),
@@ -3353,13 +3564,14 @@ L_{\Sigma}=10\cdot lg(10^{\frac{L_{1}}{10}}),
 \end_layout
 
 \begin_layout Standard
-Нормативные значения звукового давления выбираются в соответствии с СН 2.2.4/2.1.8.56
-2-96: «Творческая деятельность, руководящая работа с повышенными требованиями,
- научная деятельность, конструирование и проектирование, программирование,
- преподавание и обучение, врачебная деятельность.
- Рабочие места в помещениях дирекции, проектно-конструкторских бюро, расчетчиков
-, программистов вычислительных машин, в лабораториях для теоретических работ
- и обработки данных, приема больных в здравпунктах.»
+Нормативные значения звукового давления выбираются в соответствии с СН 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sn224218"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3371,7 +3583,7 @@ reference "tab:sound_levels_result"
 \end_inset
 
  приведены результаты вычислений и нормативное значение.
- Норма – предельный уровень звукового давления (СН 2.2.4/2.1.8.562-96).
+ Норма – предельный уровень звукового давления.
  Соответствующий график изображен на рисунке 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3379,7 +3591,7 @@ reference "fig:noise_levels"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -3701,6 +3913,8 @@ L
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Норма
 \end_layout
 
@@ -3710,6 +3924,8 @@ L
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 71 
 \end_layout
 
@@ -3719,6 +3935,8 @@ L
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 61
 \end_layout
 
@@ -3728,6 +3946,8 @@ L
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 54
 \end_layout
 
@@ -3737,6 +3957,8 @@ L
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 49
 \end_layout
 
@@ -3746,6 +3968,8 @@ L
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 45
 \end_layout
 
@@ -3755,6 +3979,8 @@ L
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 42
 \end_layout
 
@@ -3764,6 +3990,8 @@ L
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 40
 \end_layout
 
@@ -3773,6 +4001,8 @@ L
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 38
 \end_layout
 
