@@ -37,7 +37,7 @@ namespace GPRMCconverter
                 var pieces = line.Split(',');
                 double result;
                 var p = double.TryParse(pieces[8], NumberStyles.Any, CultureInfo.InvariantCulture, out result);
-                return p ? result*2 : 500;
+                return p ? result*5 : 500;
             }
             catch
             {

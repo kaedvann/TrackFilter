@@ -2,22 +2,6 @@
 <Tracks>
   <Coordinates>
     <Coordinate>
-      <Accuracy>15.8</Accuracy>
-      <Azimuth>115.17</Azimuth>
-      <Longitude>37.519716666666667</Longitude>
-      <Latitude>55.68985</Latitude>
-      <Speed>16.3902</Speed>
-      <Time>04/30/0015 18:47:10 +03:00</Time>
-    </Coordinate>
-    <Coordinate>
-      <Accuracy>21.8</Accuracy>
-      <Azimuth>155.83</Azimuth>
-      <Longitude>37.43715</Longitude>
-      <Latitude>55.719361666666664</Latitude>
-      <Speed>2.315</Speed>
-      <Time>04/30/0015 18:47:11 +03:00</Time>
-    </Coordinate>
-    <Coordinate>
       <Accuracy>17.8</Accuracy>
       <Azimuth>155.83</Azimuth>
       <Longitude>37.437541666666668</Longitude>

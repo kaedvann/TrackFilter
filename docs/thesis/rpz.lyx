@@ -12,6 +12,7 @@
 % Остальные стандартные настройки убраны в preamble.inc.tex.
 \include{preamble.inc}
 
+
 % Полезные макросы листингов.
 \include{macros.inc}
 \end_preamble
@@ -36,7 +37,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize 12
+\paperfontsize 14
 \spacing single
 \use_hyperref false
 \pdf_bookmarks true

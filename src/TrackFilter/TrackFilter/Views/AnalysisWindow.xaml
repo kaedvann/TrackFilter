@@ -42,17 +42,17 @@
                         <TextBlock Text="Source average:"
                                    VerticalAlignment="Center"
                                    ></TextBlock>
-                        <TextBox Text="{Binding SourceAverage}"
+                        <TextBox Text="{Binding SourceAverage, StringFormat={}{0:N4}, ConverterCulture=ru-RU}"
                                  Margin="10"></TextBox>
 
-                        <TextBox Text="{Binding SourceVariance}"
+                        <TextBox Text="{Binding SourceVariance, StringFormat={}{0:N4}, ConverterCulture=ru-RU}"
                                  Margin="10"></TextBox>
                         <TextBlock Text="Result average"
                                    VerticalAlignment="Center"
                                    Margin="20,0,0,0"></TextBlock>
-                        <TextBox Text="{Binding ResultAverage}"
+                        <TextBox Text="{Binding ResultAverage, StringFormat={}{0:N4}, ConverterCulture=ru-RU}"
                                  Margin="10"></TextBox>
-                        <TextBox Text="{Binding ResultVariance}"
+                        <TextBox Text="{Binding ResultVariance, StringFormat={}{0:N4}, ConverterCulture=ru-RU}"
                                  Margin="10"></TextBox>
                     </StackPanel>
                 </Grid>

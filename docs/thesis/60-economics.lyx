@@ -101,7 +101,14 @@ name "cha:econom"
 
 \begin_layout Standard
 Планирование длительности этапов и содержания работ осуществляется в соответстви
-и с ГОСТ 19.102-77.
+и с ГОСТ 19.102-77 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gost1910277"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -602,9 +609,6 @@ reference "eq:ec_estimated_time"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 t_{\text{ож}}=\frac{3\cdot T_{min}+2\cdot T_{max}}{5}=\frac{3\cdot690+2\cdot810}{5}=738\text{ часов}\label{eq:ec_estimated_time}
@@ -624,9 +628,6 @@ reference "eq:ec_work_estim"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 Q_{prog}=t_{1}+t_{2}+t_{3},\label{eq:ec_work_estim}
@@ -642,21 +643,21 @@ Q_{prog}=t_{1}+t_{2}+t_{3},\label{eq:ec_work_estim}
 \begin_inset Formula $t_{1}$
 \end_inset
 
---- время на разработку алгоритмов и проектирование системы;
+ --- время на разработку алгоритмов и проектирование системы;
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula $t_{2}$
 \end_inset
 
---- время на написание программы;
+ --- время на написание программы;
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula $t_{3}$
 \end_inset
 
---- время на проведение тестирования, исправлений и написание документации;
+ --- время на проведение тестирования, исправлений и написание документации;
 \end_layout
 
 \begin_layout Standard
@@ -668,7 +669,7 @@ Q_{prog}=t_{1}+t_{2}+t_{3},\label{eq:ec_work_estim}
 , так как данный этап наиболее важный.
  Затраты труда на проведения тестирования, внесения исправлений и подготовки
  сопроводительной документации определяются суммой затрат на выполнение
- каждой работы этапа тестирования по формуле
+ каждой работы этапа тестирования по формуле 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:ec_t3"
@@ -694,21 +695,21 @@ t_{3}=t_{\text{Т}}+t_{\text{И}}+t_{\text{Д}},\label{eq:ec_t3}
 \begin_inset Formula $t_{\text{Т}}$
 \end_inset
 
---- затраты труда на проведение тестирования;
+ --- затраты труда на проведение тестирования;
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula $t_{\text{И}}$
 \end_inset
 
---- затраты труда на внесение исправлений;
+ --- затраты труда на внесение исправлений;
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula $t_{\text{Д}}$
 \end_inset
 
---- затраты труда на написание документации;
+ --- затраты труда на написание документации;
 \end_layout
 
 \begin_layout Standard
@@ -716,7 +717,7 @@ t_{3}=t_{\text{Т}}+t_{\text{И}}+t_{\text{Д}},\label{eq:ec_t3}
 \begin_inset Formula $t_{3}$
 \end_inset
 
-определяется посредством ввода соответствующих коэффициентов к значениям
+ определяется посредством ввода соответствующих коэффициентов к значениям
  затрат труда на непосредственно программирование (формула 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -772,9 +773,6 @@ reference "eq:ec_t3_again"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 t_{3}=t_{2}(n_{T}+n_{\text{И}}+n_{\text{Д}})=t_{2}(0,29+0,3+0,21)\label{eq:ec_t3_again}
@@ -802,7 +800,6 @@ reference "eq:t2_qprog"
 \end_inset
 
 .
- 
 \begin_inset Formula 
 \begin{equation}
 Q_{prog}=t_{2}(0,7+0,8+1)=2,5t_{2}\label{eq:t2_qprog}
@@ -1090,9 +1087,6 @@ reference "eq:final_work"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 Q_{p}=t_{1}+t_{2}+t_{3}+t_{4}=207+295+(77+89+62)+80=810\label{eq:final_work}
@@ -1116,9 +1110,6 @@ reference "eq:ec_worker_number"
 \end_inset
 
 :
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 N=\frac{Q_{p}}{F},\label{eq:ec_worker_number}
@@ -1143,7 +1134,7 @@ reference "eq:ec_time_fond"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-F=\stackrel[i=1]{T}{\sum}F_{M_{i}}\label{eq:ec_time_fond}
+F=\sum_{i=1}^{T}F_{M_{i}}\label{eq:ec_time_fond}
 \end{equation}
 
 \end_inset
@@ -1394,6 +1385,7 @@ reference "fig:ec_network_project"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1415,7 +1407,7 @@ centering
 \begin_inset Graphics
 	filename inc/pics/project_table.png
 	display false
-	width 85page%
+	width 80page%
 
 \end_inset
 
@@ -1477,6 +1469,7 @@ reference "fig:ec_guntt"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1498,7 +1491,7 @@ centering
 \begin_inset Graphics
 	filename inc/pics/guntt_watching.png
 	display false
-	width 85page%
+	width 80page%
 
 \end_inset
 
@@ -1558,10 +1551,6 @@ reference "tab:resource_usage"
 \end_inset
 
  отражена занятость каждого из работников в каждой задаче проекта.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1791,7 +1780,7 @@ name "tab:resource_usage"
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1800,7 +1789,7 @@ name "tab:resource_usage"
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" leftline="true" usebox="none">
+<cell alignment="right" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1809,7 +1798,7 @@ name "tab:resource_usage"
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" leftline="true" rightline="true" usebox="none">
+<cell alignment="right" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1820,7 +1809,7 @@ name "tab:resource_usage"
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1829,7 +1818,7 @@ name "tab:resource_usage"
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" leftline="true" usebox="none">
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1838,7 +1827,7 @@ name "tab:resource_usage"
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" leftline="true" rightline="true" usebox="none">
+<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2139,7 +2128,7 @@ name "tab:resource_usage"
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2148,7 +2137,7 @@ name "tab:resource_usage"
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell alignment="right" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2157,7 +2146,7 @@ name "tab:resource_usage"
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="right" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2168,7 +2157,7 @@ name "tab:resource_usage"
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2177,7 +2166,7 @@ name "tab:resource_usage"
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="right" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2186,7 +2175,7 @@ name "tab:resource_usage"
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="right" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2663,32 +2652,36 @@ K=C_{\text{ЗАРП}}+C_{\text{ОБ}}+C_{\text{ОРГ}}+C_{\text{НАКЛ}},\lab
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 где 
 \begin_inset Formula $C_{\text{ЗАРП}}$
 \end_inset
 
---- заработная плата исполнителей;
+ --- заработная плата исполнителей;
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula $C_{\text{ОБ}}$
 \end_inset
 
---- затраты на обеспечение необходимым оборудованием;
+ --- затраты на обеспечение необходимым оборудованием;
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula $C_{\text{ОРГ}}$
 \end_inset
 
---- затраты на организацию рабочих мест;
+ --- затраты на организацию рабочих мест;
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula $C_{\text{НАКЛ}}$
 \end_inset
 
---- накладные расходы.
+ --- накладные расходы.
 \end_layout
 
 \begin_layout Пункт
@@ -2712,6 +2705,10 @@ C_{\text{ЗАРП}}=C_{\text{З.ОСН}}+C_{\text{З.ДОП}}+C_{\text{З.ОТЧ
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 где 
 \begin_inset Formula $С_{\text{З}.\text{ОСН}}$
 \end_inset
@@ -2752,7 +2749,11 @@ C_{\text{ЗАРП}}=T_{\text{ЗАН}}\cdot O_{\text{ДН}},\label{eq:ec_zarp}
 
 \end_inset
 
- где 
+ 
+\end_layout
+
+\begin_layout Standard
+где 
 \begin_inset Formula $Т_{\text{ЗАН}}$
 \end_inset
 
@@ -2786,6 +2787,10 @@ O_{\text{ДН}}=\frac{O_{\text{МЕС}}}{F_{\text{М}}}\text{,}\label{eq:ec_dail
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 где 
 \begin_inset Formula $О_{\text{МЕС}}$
 \end_inset
@@ -2851,8 +2856,15 @@ reference "tab:ec_project_res"
 ом не менее производительным, чем Intel Core i5, минимум 8 Гб оперативной
  памяти и SSD.
  Возможна закупка трёх моноблоков Lenovo IdeaCentre B40-30 по 49000 рублей
- (согласно данным Яндекс.Маркет, это минимальная стоимость моноблока, удовлетворя
-ющего приведенным требованиям) (табл.
+ (согласно данным Яндекс.Маркет 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "yandexmarket"
+
+\end_inset
+
+, это минимальная стоимость моноблока, удовлетворяющего приведенным требованиям)
+ (табл.
  4.6).
  Аренда в данной ситуации не является решением, так как выбор техники сильно
  ограничен.
@@ -2871,9 +2883,15 @@ reference "tab:ec_project_res"
 \end_layout
 
 \begin_layout Standard
-В соответствии с СанПин, расстояние между рабочими столами с видеомониторами
- должно быть не менее 2 м., а между боковыми поверхностями видеомониторов
- - не менее 1,2 м.
+В соответствии с СанПин 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sanpin22224134003"
+
+\end_inset
+
+, расстояние между рабочими столами с видеомониторами должно быть не менее
+ 2 м., а между боковыми поверхностями видеомониторов - не менее 1,2 м.
  Площадь на одно рабочее место с терминалом или ПК должна составлять не
  менее 6 кв.м., а объем - не менее 20 куб.м.
  Площадь, предусмотренная для размещения одного принтера, соответствует
@@ -2887,7 +2905,14 @@ reference "tab:ec_project_res"
  18 кв.м.
  Стоимость годовой аренды помещений требуемого класса в различных районах
  г.
- Москвы (источник) приведена в табл.
+ Москвы 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "izruk"
+
+\end_inset
+
+ приведена в табл.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2900,7 +2925,7 @@ reference "tab:ec_office_cost"
 
 \begin_layout Standard
 \begin_inset Float table
-placement ht
+placement H
 wide false
 sideways false
 status open
@@ -2923,7 +2948,7 @@ status open
 <features rotate="0" tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="3.5cm">
 <row>
 <cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -3035,7 +3060,7 @@ status open
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3065,7 +3090,7 @@ status open
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3095,7 +3120,7 @@ status open
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3125,7 +3150,7 @@ status open
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3173,11 +3198,7 @@ C_{\text{ОРГ}}=\frac{C_{\text{кв.м}}}{12}\cdot S\cdot T_{\text{АР}},\lab
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-где
+где 
 \begin_inset Formula $С_{\text{кв.м}}$
 \end_inset
 
@@ -3192,7 +3213,7 @@ S --- арендуемая площадь офиса;
 \begin_inset Formula $T_{\text{АР}}$
 \end_inset
 
---- срок аренды.
+ --- срок аренды.
  
 \end_layout
 
@@ -3246,7 +3267,7 @@ reference "eq:ec_nakl"
 
 \begin_layout Standard
 \begin_inset Float table
-placement ht
+placement H
 wide false
 sideways false
 status open
@@ -3271,12 +3292,14 @@ status open
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="3.4cm">
 <column alignment="left" valignment="top" width="2.6cm">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="1.8cm">
 <row>
 <cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Название ресурса
 \end_layout
 
@@ -3286,6 +3309,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Тип
 \end_layout
 
@@ -3295,6 +3320,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Стандартная ставка
 \end_layout
 
@@ -3304,6 +3331,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Начисление
 \end_layout
 
@@ -3313,6 +3342,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Затраты 
 \end_layout
 
@@ -3324,6 +3355,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Программист 1
 \end_layout
 
@@ -3333,6 +3366,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Трудовой
 \end_layout
 
@@ -3342,6 +3377,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 70000,00 р./мес.
 \end_layout
 
@@ -3351,6 +3388,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Пропорц.
 \end_layout
 
@@ -3360,6 +3399,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 159687,50 р.
 \end_layout
 
@@ -3371,6 +3412,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Программист 2
 \end_layout
 
@@ -3380,6 +3423,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Трудовой
 \end_layout
 
@@ -3389,6 +3434,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 70000,00 р./мес.
 \end_layout
 
@@ -3398,6 +3445,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Пропорц.
 \end_layout
 
@@ -3407,6 +3456,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 134750,00 р.
 \end_layout
 
@@ -3418,6 +3469,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Математик
 \end_layout
 
@@ -3427,6 +3480,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Трудовой
 \end_layout
 
@@ -3436,6 +3491,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 75000,00 р./мес.
 \end_layout
 
@@ -3445,6 +3502,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Пропорц.
 \end_layout
 
@@ -3454,6 +3513,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 107343,75 р.
 \end_layout
 
@@ -3465,6 +3526,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Моноблок Lenovo IdeaCentre B40-30
 \end_layout
 
@@ -3474,6 +3537,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Материальный
 \end_layout
 
@@ -3483,6 +3548,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 49000,00 р./шт.
 \end_layout
 
@@ -3492,6 +3559,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 В начале
 \end_layout
 
@@ -3501,6 +3570,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 147000,00 р.
 \end_layout
 
@@ -3512,6 +3583,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Накладные расходы
 \end_layout
 
@@ -3521,6 +3594,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Материальный
 \end_layout
 
@@ -3530,6 +3605,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 42750,00 р.
 \end_layout
 
@@ -3539,15 +3616,19 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 В начале
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 241068,00 р.
 \end_layout
 
@@ -3559,6 +3640,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Отчисления на заработную плату
 \end_layout
 
@@ -3568,6 +3651,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Материальный
 \end_layout
 
@@ -3577,6 +3662,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 241068,00 р.
 \end_layout
 
@@ -3586,15 +3673,19 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 В начале
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 120 534,00 р.
 \end_layout
 
@@ -3606,6 +3697,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Офис
 \end_layout
 
@@ -3615,6 +3708,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Материальный
 \end_layout
 
@@ -3624,6 +3719,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 120534,00 р.
 \end_layout
 
@@ -3633,6 +3730,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 В начале
 \end_layout
 
@@ -3642,6 +3741,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 42750,00 р.
 \end_layout
 
@@ -3693,7 +3794,7 @@ reference "tab:ec_costs"
 <lyxtabular version="3" rows="24" columns="3">
 <features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top" width="30page%">
-<column alignment="right" valignment="top" width="35page%">
+<column alignment="right" valignment="top" width="6cm">
 <column alignment="right" valignment="top" width="2.5cm">
 <row endfirsthead="true" caption="true">
 <cell multicolumn="1" alignment="none" valignment="top" usebox="none">
@@ -3744,6 +3845,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Название задачи
 \end_layout
 
@@ -3753,6 +3856,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Названия ресурсов 
 \end_layout
 
@@ -3762,6 +3867,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Затраты, p.
 \end_layout
 
@@ -3775,6 +3882,7 @@ name "tab:ec_costs"
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Метод уточнения и построения маршрута по набору GPS-координат
 \end_layout
 
@@ -3795,6 +3903,7 @@ name "tab:ec_costs"
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 953133,25 
 \end_layout
 
@@ -3806,6 +3915,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Начало проекта
 \end_layout
 
@@ -3815,6 +3926,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Моноблок Lenovo IdeaCentre B40-30[3 шт];Накладные расходы[1];Отчисления
  на заработную плату[1];Офис[1]
 \end_layout
@@ -3825,6 +3938,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 551352,00 
 \end_layout
 
@@ -3838,6 +3953,7 @@ name "tab:ec_costs"
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Анализ и проектирование
 \end_layout
 
@@ -3856,6 +3972,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 109250,00
 \end_layout
 
@@ -3867,6 +3985,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Анализ предметной области
 \end_layout
 
@@ -3876,6 +3996,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Математик;Программист 1;Программист 2
 \end_layout
 
@@ -3885,6 +4007,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 32093,75 
 \end_layout
 
@@ -3896,6 +4020,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Составление математической модели задачи
 \end_layout
 
@@ -3905,6 +4031,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Математик
 \end_layout
 
@@ -3914,6 +4042,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 18 750,00 
 \end_layout
 
@@ -3925,6 +4055,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Разработка алгоритма
 \end_layout
 
@@ -3934,6 +4066,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Математик;Программист 1
 \end_layout
 
@@ -3943,6 +4077,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 19906,25
 \end_layout
 
@@ -3954,6 +4090,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Разработка архитектуры ПО
 \end_layout
 
@@ -3963,6 +4101,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Программист 1;Программист 2
 \end_layout
 
@@ -3972,6 +4112,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 23187,50
 \end_layout
 
@@ -3983,6 +4125,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Проектирование интерфейса
 \end_layout
 
@@ -3992,6 +4136,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Программист 2
 \end_layout
 
@@ -4001,6 +4147,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 15312,50
 \end_layout
 
@@ -4014,6 +4162,7 @@ name "tab:ec_costs"
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Кодирование
 \end_layout
 
@@ -4032,6 +4181,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 153906,25
 \end_layout
 
@@ -4043,6 +4194,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Реализация созданного алгоритма
 \end_layout
 
@@ -4052,6 +4205,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Математик;Программист 1
 \end_layout
 
@@ -4061,6 +4216,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 27031,25
 \end_layout
 
@@ -4072,6 +4229,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Реализация компонента загрузки данных 
 \end_layout
 
@@ -4081,6 +4240,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Программист 2
 \end_layout
 
@@ -4090,6 +4251,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 17500,00
 \end_layout
 
@@ -4101,6 +4264,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Реализация компонента работы с картой
 \end_layout
 
@@ -4110,6 +4275,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Программист 1
 \end_layout
 
@@ -4119,6 +4286,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 26250,00
 \end_layout
 
@@ -4130,6 +4299,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Реализация пользовательского интерфейса
 \end_layout
 
@@ -4139,6 +4310,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Программист 2
 \end_layout
 
@@ -4148,6 +4321,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 21875,00
 \end_layout
 
@@ -4159,6 +4334,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Интеграция разработанных компонентов
 \end_layout
 
@@ -4168,6 +4345,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Программист 1;Программист 2
 \end_layout
 
@@ -4177,6 +4356,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 61250,00
 \end_layout
 
@@ -4190,6 +4371,7 @@ name "tab:ec_costs"
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Тестирование и отладка
 \end_layout
 
@@ -4208,6 +4390,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 69750,00
 \end_layout
 
@@ -4219,6 +4403,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Сбор тестовых данных
 \end_layout
 
@@ -4228,6 +4414,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Математик;Программист 1;Программист 2
 \end_layout
 
@@ -4237,6 +4425,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 2812,50
 \end_layout
 
@@ -4248,6 +4438,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Тестирование на собранных данных
 \end_layout
 
@@ -4257,6 +4449,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Математик;Программист 1;Программист 2
 \end_layout
 
@@ -4266,6 +4460,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 66937,50
 \end_layout
 
@@ -4279,6 +4475,7 @@ name "tab:ec_costs"
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Написание документации
 \end_layout
 
@@ -4288,6 +4485,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Математик;Программист 1;Программист 2
 \end_layout
 
@@ -4297,6 +4496,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 28562,50
 \end_layout
 
@@ -4310,6 +4511,7 @@ name "tab:ec_costs"
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Внедрение
 \end_layout
 
@@ -4328,6 +4530,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 40312,50
 \end_layout
 
@@ -4339,6 +4543,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Установка и настройка
 \end_layout
 
@@ -4348,6 +4554,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Программист 1;Программист 2
 \end_layout
 
@@ -4357,6 +4565,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 2625,00 
 \end_layout
 
@@ -4368,6 +4578,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Обучение пользователей
 \end_layout
 
@@ -4377,6 +4589,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Математик;Программист 1;Программист 2
 \end_layout
 
@@ -4386,6 +4600,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 2687,50 
 \end_layout
 
@@ -4397,6 +4613,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Опытная эксплуатация
 \end_layout
 
@@ -4406,6 +4624,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Программист 1
 \end_layout
 
@@ -4415,6 +4635,8 @@ name "tab:ec_costs"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 35000,00
 \end_layout
 
@@ -4544,7 +4766,11 @@ K_{\text{ПО}}=(\Delta K+K_{\text{ВН}})\cdot(1+D_{\text{ПРИБ}}),\label{eq
 
 \end_inset
 
-где
+
+\end_layout
+
+\begin_layout Standard
+где 
 \begin_inset Formula $\Delta K$
 \end_inset
 
@@ -4583,7 +4809,7 @@ K_{\text{ПО}}=(\Delta K+K_{\text{ВН}})\cdot(1+D_{\text{ПРИБ}}),\label{eq
 \end_layout
 
 \begin_layout Standard
-где
+где 
 \begin_inset Formula $K$
 \end_inset
 
@@ -4594,7 +4820,7 @@ K_{\text{ПО}}=(\Delta K+K_{\text{ВН}})\cdot(1+D_{\text{ПРИБ}}),\label{eq
 \begin_inset Formula $N_{P}^{O}$
 \end_inset
 
---- планируемое число копий ПО; 
+ --- планируемое число копий ПО; 
 \end_layout
 
 \begin_layout Standard
@@ -4660,8 +4886,8 @@ status open
 <column alignment="center" valignment="middle" width="2cm">
 <column alignment="center" valignment="middle" width="2.6cm">
 <column alignment="center" valignment="middle" width="2.6cm">
-<column alignment="center" valignment="middle" width="2.6cm">
 <column alignment="center" valignment="middle" width="2cm">
+<column alignment="center" valignment="middle" width="1.8cm">
 <row>
 <cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -4669,7 +4895,7 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size scriptsize
 Период расчёта
 \end_layout
 
@@ -4681,7 +4907,7 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size scriptsize
 Баланс начальный
 \end_layout
 
@@ -4693,7 +4919,7 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size scriptsize
 Сумма продаж
 \end_layout
 
@@ -4705,7 +4931,7 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size scriptsize
 Сумма погашения кредита 
 \end_layout
 
@@ -4717,7 +4943,7 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size scriptsize
 Факт.
  совокупная прибыль
 \end_layout
@@ -4730,7 +4956,7 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size scriptsize
 Факт.
  чистая прибыль
 \end_layout
@@ -4743,7 +4969,7 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size scriptsize
 Баланс конечный
 \end_layout
 
@@ -4757,7 +4983,7 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size scriptsize
 3--6.2015
 \end_layout
 
@@ -4769,7 +4995,7 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size scriptsize
 -912820,75
 \end_layout
 
@@ -4781,7 +5007,7 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size scriptsize
 1358434,23
 \end_layout
 
@@ -4793,7 +5019,7 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size scriptsize
 1140934,66
 \end_layout
 
@@ -4805,7 +5031,7 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size scriptsize
 217500,23
 \end_layout
 
@@ -4817,7 +5043,7 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size scriptsize
 178350,19
 \end_layout
 
@@ -4829,7 +5055,7 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size scriptsize
 406464,10
 \end_layout
 
