@@ -601,14 +601,14 @@ name "tab:ec_expert_estim"
 \end_layout
 
 \begin_layout Standard
-Ожидаемая продолжительность вычисляется по формуле 
+Ожидаемая продолжительность вычисляется по формуле (
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:ec_estimated_time"
 
 \end_inset
 
-.
+).
 \begin_inset Formula 
 \begin{equation}
 t_{\text{ож}}=\frac{3\cdot T_{min}+2\cdot T_{max}}{5}=\frac{3\cdot690+2\cdot810}{5}=738\text{ часов}\label{eq:ec_estimated_time}
@@ -620,14 +620,14 @@ t_{\text{ож}}=\frac{3\cdot T_{min}+2\cdot T_{max}}{5}=\frac{3\cdot690+2\cdot81
 \end_layout
 
 \begin_layout Standard
-Затраты труда на разработку ПО выражаются формулой 
+Затраты труда на разработку ПО выражаются формулой (
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:ec_work_estim"
 
 \end_inset
 
-.
+).
 \begin_inset Formula 
 \begin{equation}
 Q_{prog}=t_{1}+t_{2}+t_{3},\label{eq:ec_work_estim}
@@ -669,14 +669,14 @@ Q_{prog}=t_{1}+t_{2}+t_{3},\label{eq:ec_work_estim}
 , так как данный этап наиболее важный.
  Затраты труда на проведения тестирования, внесения исправлений и подготовки
  сопроводительной документации определяются суммой затрат на выполнение
- каждой работы этапа тестирования по формуле 
+ каждой работы этапа тестирования по формуле (
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:ec_t3"
 
 \end_inset
 
-.
+).
 \end_layout
 
 \begin_layout Standard
@@ -765,14 +765,14 @@ t_{3}=t_{2}\cdot n_{i}\label{eq:ec_t3_cof}
 \end_layout
 
 \begin_layout Standard
-Затраты на выполнение этапа тестирования выражаются формулой 
+Затраты на выполнение этапа тестирования выражаются формулой (
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:ec_t3_again"
 
 \end_inset
 
-.
+).
 \begin_inset Formula 
 \begin{equation}
 t_{3}=t_{2}(n_{T}+n_{\text{И}}+n_{\text{Д}})=t_{2}(0,29+0,3+0,21)\label{eq:ec_t3_again}
@@ -792,14 +792,14 @@ t_{3}=t_{2}(n_{T}+n_{\text{И}}+n_{\text{Д}})=t_{2}(0,29+0,3+0,21)\label{eq:ec_
 \begin_inset Formula $t_{2}$
 \end_inset
 
- выражается формулой 
+ выражается формулой (
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:t2_qprog"
 
 \end_inset
 
-.
+).
 \begin_inset Formula 
 \begin{equation}
 Q_{prog}=t_{2}(0,7+0,8+1)=2,5t_{2}\label{eq:t2_qprog}
@@ -1079,14 +1079,14 @@ name "tab:ec_work_estim"
 \end_layout
 
 \begin_layout Standard
-Общее значение трудозатрат определяется по формуле 
+Общее значение трудозатрат определяется по формуле (
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:final_work"
 
 \end_inset
 
-.
+).
 \begin_inset Formula 
 \begin{equation}
 Q_{p}=t_{1}+t_{2}+t_{3}+t_{4}=207+295+(77+89+62)+80=810\label{eq:final_work}
@@ -1102,14 +1102,14 @@ Q_{p}=t_{1}+t_{2}+t_{3}+t_{4}=207+295+(77+89+62)+80=810\label{eq:final_work}
 \end_layout
 
 \begin_layout Standard
-Средняя численность исполнителей определяется по формуле 
+Средняя численность исполнителей определяется по формуле (
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:ec_worker_number"
 
 \end_inset
 
-:
+):
 \begin_inset Formula 
 \begin{equation}
 N=\frac{Q_{p}}{F},\label{eq:ec_worker_number}
@@ -1121,14 +1121,14 @@ N=\frac{Q_{p}}{F},\label{eq:ec_worker_number}
 \end_layout
 
 \begin_layout Standard
-где F --- фонд рабочего времени, определяющийся по формуле 
+где F --- фонд рабочего времени, определяющийся по формуле (
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:ec_time_fond"
 
 \end_inset
 
-.
+).
 \end_layout
 
 \begin_layout Standard
@@ -1313,14 +1313,14 @@ reference "eq:ec_time_fond"
 \end_layout
 
 \begin_layout Standard
-Средняя численность исполнителей вычисляется по формуле 
+Средняя численность исполнителей вычисляется по формуле (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:number_of_workers"
 
 \end_inset
 
-:
+):
 \end_layout
 
 \begin_layout Standard
@@ -2690,14 +2690,14 @@ K=C_{\text{ЗАРП}}+C_{\text{ОБ}}+C_{\text{ОРГ}}+C_{\text{НАКЛ}},\lab
 
 \begin_layout Standard
 Затраты на выплату исполнителям заработной платы определяется соотношением
- 
+ (
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:ec_salary"
 
 \end_inset
 
-: 
+): 
 \begin_inset Formula 
 \begin{equation}
 C_{\text{ЗАРП}}=C_{\text{З.ОСН}}+C_{\text{З.ДОП}}+C_{\text{З.ОТЧ}}\label{eq:ec_salary}
@@ -2733,14 +2733,14 @@ C_{\text{ЗАРП}}=C_{\text{З.ОСН}}+C_{\text{З.ДОП}}+C_{\text{З.ОТЧ
 \begin_layout Standard
 Расчет основной заработной платы при дневной оплате труда исполнителей следует
  проводить на основе данных по окладам и графику занятости исполнителей
- согласно формуле 
+ согласно формуле (
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:ec_zarp"
 
 \end_inset
 
-.
+).
  
 \begin_inset Formula 
 \begin{equation}
@@ -2772,14 +2772,14 @@ C_{\text{ЗАРП}}=T_{\text{ЗАН}}\cdot O_{\text{ДН}},\label{eq:ec_zarp}
 \begin_inset Formula $О_{\text{ДН}}$
 \end_inset
 
- рассчитывается по соотношению 
+ рассчитывается по соотношению (
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:ec_daily_salary"
 
 \end_inset
 
-: 
+): 
 \begin_inset Formula 
 \begin{equation}
 O_{\text{ДН}}=\frac{O_{\text{МЕС}}}{F_{\text{М}}}\text{,}\label{eq:ec_daily_salary}
@@ -3183,14 +3183,14 @@ name "tab:ec_office_cost"
 Аренда самого дешевого офиса требуемого класса обходится в 9000 рублей за
  квадратный метр.
  Затраты на аренду помещения на этапе разработки вычисляются по формуле
- 
+ (
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:ec_office_cost"
 
 \end_inset
 
-:
+):
 \begin_inset Formula 
 \begin{equation}
 C_{\text{ОРГ}}=\frac{C_{\text{кв.м}}}{12}\cdot S\cdot T_{\text{АР}},\label{eq:ec_office_cost}
@@ -3251,14 +3251,14 @@ C_{\text{Р.НАКЛ.}}=C_{\text{Р.З.НАКЛ.}}\cdot0.6\label{eq:ec_nakl}
 
 \end_inset
 
-Накладные расходы на разработку программы, рассчитанные по формуле 
+Накладные расходы на разработку программы, рассчитанные по формуле (
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:ec_nakl"
 
 \end_inset
 
-, составляют: 
+), составляют: 
 \begin_inset Formula $С_{\text{р}.\text{накл}}=401780,00\cdot0.6=241068$
 \end_inset
 
@@ -4748,14 +4748,14 @@ name "fig:ec_cost_diagr"
 ия объема продаж, определим стоимость одного комплекта программного обеспечения.
  Стоимость поставляемого на рынок ПО определяется частью стоимости разработки
  ПО, затрат на внедрение и прибыли фирмы-разработчика.
- Стоимость ПО можно рассчитать, используя соотношение 
+ Стоимость ПО можно рассчитать, используя соотношение (
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:ec_po_cost"
 
 \end_inset
 
-:
+):
 \end_layout
 
 \begin_layout Standard
@@ -4794,13 +4794,20 @@ K_{\text{ПО}}=(\Delta K+K_{\text{ВН}})\cdot(1+D_{\text{ПРИБ}}),\label{eq
 \begin_layout Standard
 Стоимость внедрения остается постоянной для каждой установки ПО, а частичная
  стоимость разработки, приходящаяся на каждый комплект ПО, определяется
- исходя из данных о планируемом объеме установок по формуле :
+ исходя из данных о планируемом объеме установок по формуле (
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ec_deltak"
+
+\end_inset
+
+):
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\Delta K=\frac{K}{N_{P}^{O}}\cdot(1+H_{\text{СТ}}),
+\Delta K=\frac{K}{N_{P}^{O}}\cdot(1+H_{\text{СТ}}),\label{eq:ec_deltak}
 \end{equation}
 
 \end_inset

@@ -2656,14 +2656,14 @@ key "sanpin22224134003"
 
 \begin_layout Standard
 Расчёт производится методом светового потока.
- Для определения количества светильников по формуле 
+ Для определения количества светильников по формуле (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:light_stream"
 
 \end_inset
 
- определяется световой поток, падающий на поверхность.
+) определяется световой поток, падающий на поверхность.
 \end_layout
 
 \begin_layout Standard
@@ -2716,14 +2716,14 @@ key "sanpin22224134003"
 
 \begin_layout Standard
 Значение n определяется по таблице коэффициентов использования светильников.
- Для определения n нужно вычислить индекс помещения по формуле 
+ Для определения n нужно вычислить индекс помещения по формуле (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:office_index"
 
 \end_inset
 
-: 
+): 
 \begin_inset Formula 
 \begin{equation}
 I=\frac{S}{h\cdot(A+B)},\label{eq:office_index}

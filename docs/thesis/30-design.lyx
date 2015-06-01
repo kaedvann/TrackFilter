@@ -141,14 +141,14 @@ name "cha:design"
 
 \begin_layout Enumerate
 Если в группу входит больше одной координаты, то она заменяется на координату,
- широта и долгота которой вычисляются по формуле 
+ широта и долгота которой вычисляются по формуле (
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:des_uniting"
 
 \end_inset
 
-.
+).
  
 \begin_inset Formula 
 \begin{equation}
@@ -202,9 +202,9 @@ x & y\end{array}\right]^{T}$
 \end_layout
 
 \begin_layout Standard
-Прочие параметры координаты, такие как направление движения в точке, скорость,
- точность и время получения являются средним арифметическим соответствующих
- значений в группе.
+Прочие параметры итоговой координаты, такие как направление движения в точке,
+ скорость, точность и время получения являются средним арифметическим соответств
+ующих значений в группе.
 \end_layout
 
 \begin_layout Standard
@@ -276,8 +276,379 @@ name "fig:des_uning"
 Устранение пиков
 \end_layout
 
+\begin_layout Standard
+Входными данными алгоритма, который предлагается использовать для устранения
+ пиков, является последовательность координат.
+ На входные данные накладывается ряд ограничений:
+\end_layout
+
+\begin_layout Enumerate
+Последовательность координат упорядочена по времени
+\end_layout
+
+\begin_layout Enumerate
+С каждой координатой должны быть связаны следующие данные:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Широта
+\end_layout
+
+\begin_layout Itemize
+Долгота
+\end_layout
+
+\begin_layout Itemize
+Время получения
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Результатом работы алгоритма является последовательность координат, из которой
+ удалены точки, соответствующими предлагаемым критериям пика.
+\end_layout
+
+\begin_layout Standard
+Для обнаружения пиков предлагается использовать два критерия:
+\end_layout
+
+\begin_layout Enumerate
+Оценка скорости объекта.
+\begin_inset Newline newline
+\end_inset
+
+Данный критерий основан на определении расстояния между парой подряд идущих
+ в последовательности координат и вычислении скорости, необходимой для преодолен
+ия данного расстояния.
+ Расстояние определяется по формуле (
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:des_coord_dist"
+
+\end_inset
+
+).
+\begin_inset Formula 
+\begin{equation}
+H=\sqrt{(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}}\label{eq:des_coord_dist}
+\end{equation}
+
+\end_inset
+
+По известному значению расстояния 
+\begin_inset Formula $H$
+\end_inset
+
+ определяется теоретическая скорость объекта:
+\begin_inset Formula 
+\begin{equation}
+v=\frac{H}{T_{2}-T_{1}},
+\end{equation}
+
+\end_inset
+
+где 
+\begin_inset Formula $T_{1,2}$
+\end_inset
+
+ --- время получения первой и второй координаты соответственно.
+ При выполнении условия (
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:des_spike_crit1"
+
+\end_inset
+
+) вторая точка считается пиком и удаляется из исходной последовательности.
+\begin_inset Formula 
+\begin{equation}
+v>v_{max}\label{eq:des_spike_crit1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Оценка геометрических параметров участка маршрута.
+\begin_inset Newline newline
+\end_inset
+
+Для данного критерия рассматриваются тройки идущих подряд координат (рис.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:des_spikes"
+
+\end_inset
+
+).
+ Попарно определяются расстояния между координатам в группе и проверяется
+ условие (
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:des_spike_crit2"
+
+\end_inset
+
+).
+\begin_inset Formula 
+\begin{equation}
+\frac{H_{1}}{H_{\text{сл}}}>k\,\wedge\,\frac{H_{2}}{H_{\text{сл}}}>k,\label{eq:des_spike_crit2}
+\end{equation}
+
+\end_inset
+
+где 
+\begin_inset Formula $H_{1,2}$
+\end_inset
+
+ --- расстояния между центральной и крайними точками группы,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $H_{\text{сл}}$
+\end_inset
+
+ --- расстояние между крайними точками,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $k$
+\end_inset
+
+ --- задаваемый пороговый коэффициент.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Если указанное условие выполняется, средняя точка считается пиком и удаляется
+ из последовательности.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename inc/pics/spikes_signed.PNG
+	display false
+	width 60page%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Устранение пиков
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:des_spikes"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Подраздел
 Определение остановок
+\end_layout
+
+\begin_layout Standard
+Входными данными алгоритма, который предлагается использовать для определения
+ остановок и устранения избыточных координат, является последовательность
+ координат.
+ На входные данные накладывается ряд ограничений:
+\end_layout
+
+\begin_layout Enumerate
+Последовательность координат упорядочена по времени
+\end_layout
+
+\begin_layout Enumerate
+С каждой координатой должны быть связаны следующие данные:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Широта
+\end_layout
+
+\begin_layout Itemize
+Долгота
+\end_layout
+
+\begin_layout Itemize
+Время получения
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Результатом работы алгоритма является последовательность координат, в которой
+ группы координат, определенные как остановки, заменены средними значениями.
+\end_layout
+
+\begin_layout Standard
+Этапы алгоритма:
+\end_layout
+
+\begin_layout Enumerate
+Задается временное окно, позволяющее разбить исходную последовательность
+ на группы точек для анализа.
+\end_layout
+
+\begin_layout Enumerate
+Для каждой группы координат вычисляется координата со средними значениями
+ широты и долготы.
+\end_layout
+
+\begin_layout Enumerate
+Проверяется условие 
+\begin_inset Formula 
+\begin{equation}
+\frac{\sum_{i=1}^{n}H_{i}}{n}>H_{min},
+\end{equation}
+
+\end_inset
+
+где 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+ --- расстояние от 
+\begin_inset Formula $i$
+\end_inset
+
+-ой координаты точки до средней точки,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $H_{min}$
+\end_inset
+
+ --- задаваемое пороговое значение среднего расстояния,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $n$
+\end_inset
+
+ --- количество координат в группе.
+\end_layout
+
+\begin_layout Enumerate
+Если условие выполняется, группа координат заменяется средним значением.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Подряд идущие группы координат, определенные как остановки, заменяются единствен
+ным средним значением.
+\end_layout
+
+\begin_layout Standard
+На рисунке 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:des_stops"
+
+\end_inset
+
+ приведен пример группы координат.
+ Черным цветом обозначены координаты, попавшие в рассматриваемую группу,
+ синим --- координаты, отсеченные окном, красным цветом обозначена координата
+ со средними значениями широты и долготы.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename inc/pics/stops.png
+	display false
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Определение остановок
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:des_stops"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Подраздел
@@ -303,7 +674,7 @@ key "tr-kalman"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-s_{k}=A_{k}s_{k-1}+B_{k}u_{k-1}+w_{k}\label{eq:process}
+s_{k}=A_{k}s_{k-1}+B_{k}u_{k-1}+w_{k},\label{eq:process}
 \end{equation}
 
 \end_inset
@@ -338,7 +709,7 @@ reference "eq:process"
 \begin_inset Formula $A$
 \end_inset
 
-- матрица размерностью 
+ - матрица размерностью 
 \begin_inset Formula $n\times n$
 \end_inset
 
