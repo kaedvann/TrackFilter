@@ -31,7 +31,7 @@ namespace Filter
             StopsDetection = true;
             SpikeDetection = true;
             AccelerationVariance = 6;
-            StopsTreshold = 15;
+            StopsTreshold = 35;
             CombineTreshold = TimeSpan.FromSeconds(2);
         }
         public Track ProcessTracks(IList<Track> tracks)

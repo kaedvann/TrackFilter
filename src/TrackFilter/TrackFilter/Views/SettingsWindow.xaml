@@ -6,7 +6,7 @@
         xmlns:viewModels="clr-namespace:TrackFilter.ViewModels"
         mc:Ignorable="d"
         Title="SettingsWindow" 
-        Height="300" 
+        Height="400" 
         Width="300" 
         WindowStyle="ToolWindow"
         d:DataContext="{d:DesignInstance viewModels:MainViewModel}">
@@ -24,6 +24,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
         <CheckBox IsChecked="{Binding StopsDetection}"
                   Grid.Row="0">Stops Detection</CheckBox>
@@ -31,8 +32,10 @@
                   Grid.Row="1">Spike Detection</CheckBox>
         <CheckBox IsChecked="{Binding Filtering}"
                   Grid.Row="2">Filtering</CheckBox>
+        <CheckBox IsChecked="{Binding PointsEnabled}"
+                  Grid.Row="3">Show Points</CheckBox>
         <Button Command="{Binding CloseCommand}"
                 CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-                Grid.Row="3">OK</Button>
+                Grid.Row="4">OK</Button>
     </Grid>
 </Window>

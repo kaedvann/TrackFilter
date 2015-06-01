@@ -34,6 +34,7 @@
                               HorizontalContentAlignment="Stretch"
                               HorizontalAlignment="Stretch"
                               VerticalAlignment="Stretch"
+                              PointsEnabled="{Binding PointsEnabled}"
                               Tracks="{Binding Tracks}"
                               />
         </Grid>

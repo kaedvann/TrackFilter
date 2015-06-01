@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
 using Domain;
@@ -44,6 +46,24 @@ namespace TrackFilter.Views
             {
 
                 var route = new GMapRoute(track.Coordinates.Select(c => new PointLatLng(c.Latitude, c.Longitude)));
+                if (PointsEnabled)
+                {
+                    var markers = track.Coordinates.Select(c => new GMapMarker(new PointLatLng(c.Latitude, c.Longitude))
+                    {
+                        Shape = new Ellipse()
+                        {
+                            Fill = new SolidColorBrush(track.Color),
+                            Height = 6,
+                            Width = 6,
+                            Margin = new Thickness(-3, -3, 0, 0)
+
+                        }
+                    });
+                    foreach (var marker in markers)
+                    {
+                        Map.Markers.Add(marker);
+                    }
+                }
                 Map.Markers.Add(route);
                 route.RegenerateShape(Map);
                 var path = route.Shape as Path;
@@ -52,9 +72,34 @@ namespace TrackFilter.Views
                     path.Effect = null;
                     path.Stroke = new SolidColorBrush(track.Color);
                     path.StrokeThickness = 2;
+                    path.ToolTip = String.Format("{0} track, {1} points", track.Name, track.Coordinates.Count);
+                    path.IsManipulationEnabled = true;
+                    path.IsHitTestVisible = true;
+
                 }
             }
         }
+
+
+
+
+
+        public bool PointsEnabled
+        {
+            get { return (bool)GetValue(PointsEnabledProperty); }
+            set { SetValue(PointsEnabledProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty PointsEnabledProperty =
+            DependencyProperty.Register("PointsEnabled", typeof(bool), typeof(MapControl), new PropertyMetadata(default(bool), PointsEnabledCallback));
+
+        private static void PointsEnabledCallback(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs dependencyPropertyChangedEventArgs)
+        {
+            var mapControl = (dependencyObject as MapControl);
+            mapControl.RenderTracks();
+        }
+
 
         public ICollection<Track> Tracks
         {

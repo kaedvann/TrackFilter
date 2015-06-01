@@ -18,6 +18,7 @@ namespace TrackFilter.ViewModels
         private bool _stopsDetection = true;
         private bool _spikeDetection = true;
         private bool _filtering = true;
+        private bool _pointsEnabled;
         public DelegateCommand LoadFileCommand { get; set; }
 
         public BindableCollection<Track> Tracks { get; set; }
@@ -123,6 +124,17 @@ namespace TrackFilter.ViewModels
             }
         }
 
+        public bool PointsEnabled
+        {
+            get { return _pointsEnabled; }
+            set
+            {
+                if (value == _pointsEnabled) return;
+                _pointsEnabled = value;
+                NotifyOfPropertyChange(() => PointsEnabled);
+            }
+        }
+
         private void LoadFile()
         {
             try
@@ -161,7 +173,7 @@ namespace TrackFilter.ViewModels
                 Tracks.AddRange(SourceTracks);
 
                 FilterResult = _trackProcessor.ProcessTracks(SourceTracks);
-
+                FilterResult.Name = "Result";
                 Tracks.Add(FilterResult);
                 
             }

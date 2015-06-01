@@ -134,13 +134,30 @@ namespace Filter
         }
         private const double MaxAzimuthVariance = 50000;
         private const double MaxSpeedVariance = 0;
-        private const double MaxLatLongVariance = 0.1e-10;
+        private const double MaxLatLongVariance = 5e-6;
+        public static double PointDistance(Point start, Point end)
+        {
+            return Math.Sqrt(Math.Pow(start.X - end.X, 2) + Math.Pow(start.Y - end.Y, 2));
+        }
+
         private bool IsStop(CoordinateGroup coordinateGroup)
         {
-            return 
-                (coordinateGroup.AzimuthVariance > MaxAzimuthVariance &&
-                   coordinateGroup.SpeedVariance > MaxSpeedVariance) ||
-              (coordinateGroup.LatitudeVariance < MaxLatLongVariance && coordinateGroup.LongitudeVariance<MaxLatLongVariance);
+            var mid = new Coordinate()
+            {
+                Latitude = coordinateGroup.Coordinates.Average(c => c.Latitude),
+                Longitude = coordinateGroup.Coordinates.Average(c => c.Longitude),
+            };
+            var averageDist =
+                coordinateGroup.Coordinates.Average(
+                    c =>
+                        PointDistance(new Point() {X = c.Longitude, Y = c.Latitude},
+                            new Point() {X = mid.Longitude, Y = mid.Latitude}));
+            return averageDist <
+                   MaxLatLongVariance;
+            //return 
+            //    (coordinateGroup.AzimuthVariance > MaxAzimuthVariance &&
+            //       coordinateGroup.SpeedVariance > MaxSpeedVariance) ||
+            //  (coordinateGroup.LatitudeVariance < MaxLatLongVariance && coordinateGroup.LongitudeVariance<MaxLatLongVariance);
         }
 
         private CoordinateGroup CalculateStatistics(List<Coordinate> coordinates)
