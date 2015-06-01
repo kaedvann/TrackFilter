@@ -41,10 +41,22 @@ namespace Filter
             var accuracySum = coordinatesToCombine.Sum(c => c.Accuracy);
             var weightSum = coordinatesToCombine.Sum(c => accuracySum - c.Accuracy);
             var times = coordinatesToCombine.Select(c => c.Time).OrderBy(t => t);
+            double lat;
+            double lon;
+            try
+            {
+                lat = coordinatesToCombine.Sum(c => (accuracySum - c.Accuracy)*c.Latitude)/weightSum;
+                lon = coordinatesToCombine.Sum(c => (accuracySum - c.Accuracy)*c.Longitude)/weightSum;
+            }
+            catch
+            {
+                lat = coordinatesToCombine.Average(c => c.Latitude);
+                lon = coordinatesToCombine.Average(c => c.Longitude);
+            }
             var result = new Coordinate
             {
-                Latitude = coordinatesToCombine.Sum(c => (accuracySum - c.Accuracy) * c.Latitude) / weightSum,
-                Longitude = coordinatesToCombine.Sum(c => (accuracySum - c.Accuracy) * c.Longitude) / weightSum,
+                Latitude = lat,
+                Longitude =lon,
                 Time = times.First().AddSeconds(times.Average(d => (d - times.First()).TotalSeconds)),
                 Azimuth = coordinatesToCombine.Average(c => c.Azimuth),
                 Speed = coordinatesToCombine.Average(c => c.Speed),

@@ -89,11 +89,187 @@ name "cha:design"
 \end_layout
 
 \begin_layout Standard
-Для объединения последовательностей координат предлагается следующий алгоритм:
+Входными данными алгоритма, который предлагается использовать для объединения
+ координат от разных источников, является список последовательностей координат.
+ На входные данные накладывается ряд ограничений:
+\end_layout
+
+\begin_layout Enumerate
+Список последовательностей координат и последовательности координат не могут
+ быть пустыми
+\end_layout
+
+\begin_layout Enumerate
+Последовательности координат упорядочены по времени получения
+\end_layout
+
+\begin_layout Enumerate
+С каждой координатой должны быть связаны следующие данные:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Широта
+\end_layout
+
+\begin_layout Itemize
+Долгота
+\end_layout
+
+\begin_layout Itemize
+Время получения
+\end_layout
+
+\begin_layout Itemize
+Точность
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Результатом работы алгоритма является упорядоченная по времени последовательност
+ь координат, в которой представлены усредненные данные, полученные от нескольких
+ источников.
+\end_layout
+
+\begin_layout Standard
+Описание алгоритма:
 \end_layout
 
 \begin_layout Enumerate
 Задается временное окно для определения группы координат, подлежащих объединению.
+\end_layout
+
+\begin_layout Enumerate
+Если в группу входит больше одной координаты, то она заменяется на координату,
+ широта и долгота которой вычисляются по формуле 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:des_uniting"
+
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{equation}
+C=\frac{\sum_{i=1}^{n}(\sum a-a_{i})\times C_{i}}{\sum_{j=1}^{n}(\sum a-a_{j})},\label{eq:des_uniting}
+\end{equation}
+
+\end_inset
+
+где 
+\begin_inset Formula $C$
+\end_inset
+
+ --- вектор координат вида 
+\begin_inset Formula $\left[\begin{array}{cc}
+x & y\end{array}\right]^{T}$
+\end_inset
+
+, где 
+\begin_inset Formula $x$
+\end_inset
+
+ --- долгота точки, 
+\begin_inset Formula $y$
+\end_inset
+
+ --- широта,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $n$
+\end_inset
+
+ --- количество координат в текущем окне,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $a$
+\end_inset
+
+ --- точность координаты,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\sum a$
+\end_inset
+
+ --- сумма всех значений точности координат в текущей группе.
+\end_layout
+
+\begin_layout Standard
+Прочие параметры координаты, такие как направление движения в точке, скорость,
+ точность и время получения являются средним арифметическим соответствующих
+ значений в группе.
+\end_layout
+
+\begin_layout Standard
+На рисунке 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:des_uning"
+
+\end_inset
+
+ приведен пример объединения двух точек.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename inc/pics/uniting.png
+	display false
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Объединение координат
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:des_uning"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Подраздел
