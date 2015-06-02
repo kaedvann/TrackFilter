@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnalyzerTests.cs" />
-    <Compile Include="UtilTets.cs" />
+    <Compile Include="UtilTests.cs" />
     <Compile Include="VincentyTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

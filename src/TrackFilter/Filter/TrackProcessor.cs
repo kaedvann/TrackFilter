@@ -22,8 +22,8 @@ namespace Filter
 
         public double AccelerationVariance { get; set; }
 
-        public double StopsTreshold { get; set; }
-        public TimeSpan CombineTreshold { get; set; }
+        public double StopsThreshold { get; set; }
+        public TimeSpan CombineThreshold { get; set; }
 
         public TrackProcessor()
         {
@@ -31,12 +31,12 @@ namespace Filter
             StopsDetection = true;
             SpikeDetection = true;
             AccelerationVariance = 6;
-            StopsTreshold = 35;
-            CombineTreshold = TimeSpan.FromSeconds(2);
+            StopsThreshold = 35;
+            CombineThreshold = TimeSpan.FromSeconds(2);
         }
         public Track ProcessTracks(IList<Track> tracks)
         {
-            _trackCombiner.Threshold = CombineTreshold;
+            _trackCombiner.Threshold = CombineThreshold;
             var combined = _trackCombiner.Combine(tracks);
             return ProcessTrack(combined);
         }
@@ -45,7 +45,7 @@ namespace Filter
         {
             var withoutSpikes = SpikeDetection ? _spikeRemover.Process(combined.Coordinates) : combined.Coordinates;
 
-            _stopsDetector.Threshold = StopsTreshold;
+            _stopsDetector.Threshold = StopsThreshold;
             var withoutStops = StopsDetection ? _stopsDetector.RemoveStops(withoutSpikes) : withoutSpikes;
 
             _kalman.AccelerationVariance = AccelerationVariance;

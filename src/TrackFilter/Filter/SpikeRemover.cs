@@ -7,7 +7,7 @@ namespace Filter
 {
     public class SpikeRemover
     {
-        private const double MaxDegSpeed = 0.00054;// 47e-5;
+        private const double MaxDegSpeed = 0.00059;// 47e-5;
         public List<Coordinate> Process(List<Coordinate> track)
         {
             var result = new List<Coordinate>{track.First()};

@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace DomainTests
 {
     [TestFixture]
-    public class UtilTets
+    public class UtilTests
     {
         [TestCase(0, 0, 0,1, 0.5, 1, 0.5)]
         [TestCase(0, 0, 2, 2, 2, 0, 1.4142135623730950488016887242097)]

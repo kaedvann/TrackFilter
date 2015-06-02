@@ -788,15 +788,15 @@ reference "eq:measurement"
 
 .
  
-\begin_inset Formula $\nu_{k}\mathbb{R}^{m}$
+\begin_inset Formula $\nu_{k}\in\mathbb{R}^{m}$
 \end_inset
 
  - случайная величина, характеризующая погрешности измерений, причем 
-\begin_inset Formula $p(\nu)\sim N(0,P)$
+\begin_inset Formula $p(\nu)\sim N(0,R)$
 \end_inset
 
 , где 
-\begin_inset Formula $P$
+\begin_inset Formula $R$
 \end_inset
 
  - ковариационная матрица погрешностей измерений.
@@ -1075,6 +1075,35 @@ reference "eq:measurement"
  считается заданной.
  Один из возможных вариантов ее вычисления - использование данных о предполагаем
 ой точности измерения, получаемых от датчика.
+ Тогда 
+\begin_inset Formula $R$
+\end_inset
+
+ задается соотношением (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:des_error"
+
+\end_inset
+
+).
+\begin_inset Formula 
+\begin{equation}
+R=\begin{bmatrix}p_{x}^{2} & 0 & 0 & 0\\
+0 & p_{y}^{2} & 0 & 0\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0
+\end{bmatrix},\label{eq:des_error}
+\end{equation}
+
+\end_inset
+
+где 
+\begin_inset Formula $p_{x,y}$
+\end_inset
+
+ --- точность определения координаты по горизонтальной и вертикальной оси
+ соответственно.
 \end_layout
 
 \begin_layout Пункт
@@ -1253,8 +1282,40 @@ P_{k}=(I-K_{K}H_{k})P_{k}^{\sim},
 \end_layout
 
 \begin_layout Standard
-Для перевода скорости и ускорения в угловые единицы используются формулы
- Винченти 
+Для использования приведенных соотношений необходимо согласовать единицы
+ измерения данных о местоположении.
+ Датчик предоставляет следующие сведения:
+\end_layout
+
+\begin_layout Enumerate
+Широта и долгота в угловых координатах
+\end_layout
+
+\begin_layout Enumerate
+Скорость в м/с
+\end_layout
+
+\begin_layout Enumerate
+Направление движения в угловых градусах
+\end_layout
+
+\begin_layout Enumerate
+Точность в метрах
+\end_layout
+
+\begin_layout Standard
+Таким образом, необходимо выбрать единицы измерения для проведения вычислений.
+ Так как основной задачей является уточнение широты и долготы, было решено
+ проводить вычисления в угловых координатах, отсюда возникает задача перевода
+ скорости и точности в угловые единицы.
+ Задача определения координат точки по известной точке, направлению перемещения
+ и расстоянию называется прямой геодезической задачей.
+ Данная задача усложняется тем, что Земля не является идеальным эллипсоидом.
+\end_layout
+
+\begin_layout Standard
+Для перевода скорости и ускорения в угловые единицы решено использовать
+ формулы Винченти 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "vincenty"
@@ -1262,6 +1323,659 @@ key "vincenty"
 \end_inset
 
 .
+ Вводятся следующие обозначения:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a$
+\end_inset
+
+ --- длина большой полуоси эллипсоида
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+ --- коэффициент уплощения
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $b=(1-f)\times a$
+\end_inset
+
+ --- длина малой полуоси эллипсоида
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\phi_{1,2}$
+\end_inset
+
+ --- широта точек
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $L_{1,2}$
+\end_inset
+
+--- долгота точек
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $U_{1}=\arctan[(1-f)\tan\phi_{1}]$
+\end_inset
+
+ --- параметризованная широта
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $U_{2}=\arctan[(1-f)\tan\phi_{2}]$
+\end_inset
+
+ --- параметризованная широта
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $L=L_{2}-L_{1}$
+\end_inset
+
+ --- разность долготы двух точек
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda_{1},\lambda_{2}$
+\end_inset
+
+ --- параметризованная долгота точек
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha_{1,2}$
+\end_inset
+
+ --- азимуты в точках
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha$
+\end_inset
+
+ --- азимут на экваторе
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $s$
+\end_inset
+
+ --- расстояние между точками на эллипсоиде
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma$
+\end_inset
+
+ --- длина дуги между двумя точками на впомогательной сфере
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+U_{1}=\arctan((1-f)\tan\phi_{1})\label{eq:des_vinc_1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\sigma_{1}=\arctan(\frac{\tan U_{1}}{\cos\alpha_{1}})
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\sin\alpha=\cos U_{1}\sin\alpha_{1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\cos^{2}\alpha=1-\sin^{2}\alpha
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+u_{2}=\cos^{2}\alpha\frac{a^{2}-b^{2}}{b^{2}}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+A=1+\frac{u^{2}}{16384}\{4096+u^{2}[-768+u^{2}(320-175u^{2})]\}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+B=\frac{u^{2}}{1024}\{256+u^{2}[-128+u^{2}(74-47u^{2})]\}\label{eq:des_vinc_end1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+После проведения расчётов по формулам (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:des_vinc_1"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:des_vinc_end1"
+
+\end_inset
+
+) необходимо уточнить значение 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ по формулам (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:des_vinc_its"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:des_vic_ite"
+
+\end_inset
+
+).
+ Начальное значение 
+\begin_inset Formula $\sigma=\frac{s}{bA}$
+\end_inset
+
+.
+ Итерации останавливаются при достижении требуемой точности.
+ 
+\begin_inset Formula 
+\begin{equation}
+2\sigma_{m}=2\sigma_{1}+\sigma\label{eq:des_vinc_its}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline}
+\Delta\sigma=B\sin\sigma\{\cos(2\sigma_{m})+\frac{1}{4}B[\cos\sigma(-1+2\cos^{2}(2\sigma_{m}))-\\
+-\frac{1}{6}B\cos(2\sigma_{m})(-3+4\sin^{2}\sigma)(-3+4\cos^{2}(2\sigma_{m}))]\}
+\end{multline}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\sigma=\frac{s}{bA}+\Delta\sigma\label{eq:des_vic_ite}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+После вычисления 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ определяются результирующие значения по формулам (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:des_vinc_fin1"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:des_vinc_fine"
+
+\end_inset
+
+).
+\begin_inset Formula 
+\begin{equation}
+\phi_{2}=\arctan(\frac{\sin U_{1}\cos\sigma+\cos U_{1}\sin\sigma\cos\alpha_{1}}{(1-f)\sqrt{\sin^{2}\alpha+(\sin U_{1}\sin\sigma-\cos U_{1}cos\sigma\cos\alpha_{1})^{2}}})\label{eq:des_vinc_fin1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\lambda=\arctan(\frac{\sin\sigma\sin\alpha_{1}}{\cos U_{1}\cos\sigma-\sin U_{1}\sin\sigma\cos\alpha_{1}})
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+C=\frac{f}{16}\cos^{2}\alpha[4+f(4-3\cos^{2}\alpha)]
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline}
+L=\lambda-(1-C)f\sin\alpha\{\sigma+C\sin\sigma[\cos(2\sigma_{m})+\\
++C\cos\sigma(-1+2\cos^{2}(2\sigma_{m}))]\}
+\end{multline}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+L_{2}=L+L_{1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\alpha_{2}=\arctan(\frac{\sin\alpha}{-\sin U_{1}\sin\sigma+\cos U_{1}\cos\sigma\cos\alpha_{1}})\label{eq:des_vinc_fine}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Данные формулы способны обеспечить точность до 0.5 мм, что позволяет практически
+ исключить дополнительные погрешности в процессе фильтрации.
+\end_layout
+
+\begin_layout Standard
+Перевод скорости осуществляется следующим образом:
+\end_layout
+
+\begin_layout Enumerate
+Определяются проекции скорости на координатные оси (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:des_vx"
+
+\end_inset
+
+,
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:des_vy"
+
+\end_inset
+
+).
+\begin_inset Formula 
+\begin{equation}
+v_{x}=v\times\cos\alpha,\label{eq:des_vx}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+v_{y}=v\times\sin\alpha,\label{eq:des_vy}
+\end{equation}
+
+\end_inset
+
+где 
+\begin_inset Formula $v$
+\end_inset
+
+ --- скорость объекта,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\alpha$
+\end_inset
+
+ --- направление движения объекта.
+\end_layout
+
+\begin_layout Enumerate
+По формулам Винченти вычисляются координаты точек, расстояния до которых
+ от точки местоположения объекта определяется значением 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ по горизонтальной оси и 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+ по вертикальной.
+ 
+\end_layout
+
+\begin_layout Enumerate
+За значение скорости в угловых единицах принимается разность соответствующих
+ координат итоговых и исходной точки.
+\end_layout
+
+\begin_layout Standard
+Перевод проекций точности на координатные оси осуществляется аналогичным
+ способом.
+\end_layout
+
+\begin_layout Подраздел
+Метод уточнения и построения маршрута
+\end_layout
+
+\begin_layout Standard
+Для решения рассматриваемой задачи предлагается метод, использующий приведенные
+ раннее алгоритмы.
+ Функциональная модель метода представлена в виде диаграммы IDEF0 на рис.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:des_meth_idef"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename inc/pics/idef_filter.PNG
+	display false
+	width 80page%
+
+\end_inset
+
+.
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Функциональная модель метода
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:des_meth_idef"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+Входными данными для метода является список последовательностей координат.
+ Результатом работы метода является последовательность координат с устраненными
+ пиками, избыточными точками и сглаженными погрешностями.
+\end_layout
+
+\begin_layout Standard
+Ограничения метода представляют собой объединение ограничений используемых
+ в методе алгоритмов:
+\end_layout
+
+\begin_layout Enumerate
+Список последовательностей координат и последовательности координат не могут
+ быть пустыми
+\end_layout
+
+\begin_layout Enumerate
+Последовательности координат упорядочены по времени получения
+\end_layout
+
+\begin_layout Enumerate
+С каждой координатой должны быть связаны следующие данные:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Широта и долгота в угловых координатах
+\end_layout
+
+\begin_layout Itemize
+Время получения координаты
+\end_layout
+
+\begin_layout Itemize
+Точность в метрах
+\end_layout
+
+\begin_layout Itemize
+Скорость в м/с
+\end_layout
+
+\begin_layout Itemize
+Направление движения в градусах относительно
+\end_layout
+
+\end_deeper
+\begin_layout Подраздел
+Структура разрабатываемого ПО
+\end_layout
+
+\begin_layout Standard
+Общая структура разрабатываемого программного обеспечения представлена на
+ рис.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:des_structure"
+
+\end_inset
+
+ в виде UML диаграммы пакетов.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename inc/pics/uml_short.png
+	display false
+	width 75page%
+
+\end_inset
+
+.
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Структура ПО
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:des_structure"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Предложенная структура позволяет независимо реализовывать компоненты программы,
+ решающие разные задачи.
+ Выделение модуля реализации предложенного метода позволяет провести проверку
+ работы метода до завершения работы над всей программой и дает возможность
+ повторного использования разрабатываемого компонента.
+ Выделение модуля работы с хранилищем данных позволяет абстрагироваться
+ от способа представления данных и предоставляет возможность расширения
+ поддерживаемых входных и выходных форматов данных.
+\end_layout
+
+\begin_layout Подраздел
+Диаграмма классов метода
+\end_layout
+
+\begin_layout Standard
+Для реализации метода предполагается использовать структуру классов, приведенную
+ на рис.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:des_class_diag"
+
+\end_inset
+
+ в виде UML диаграммы классов.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename inc/pics/uml_classes.png
+	display false
+	width 75page%
+
+\end_inset
+
+.
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Диаграмма классов модуля обработки маршрута
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:des_class_diag"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+Класс TrackProcessor является фасадом 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "godpatterns"
+
+\end_inset
+
+ модуля обработки маршрута и предоставляет единую точку управления параметрами
+ обработки для остальных модулей.
 \end_layout
 
 \end_body
