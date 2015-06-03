@@ -174,6 +174,10 @@ name "cha:impl"
 Предоставляется возможность отображения на карте маркеров и линий с подписями.
 \end_layout
 
+\begin_layout Standard
+В программе используются растровые карты Google Maps.
+\end_layout
+
 \begin_layout Подраздел
 Система контроля версий
 \end_layout
@@ -339,6 +343,7 @@ filename "inc/xsd.xml"
  установленных в операционной системе, а также отсутствует необходимость
  в модификации системных и пользовательских настроек, было принято решение
  не разрабатывать инсталлятор.
+ Установка производится копированием папки с программой в нужную директорию.
  Исполняемым файлом программы является TrackFilter.exe.
 \end_layout
 
@@ -465,9 +470,73 @@ name "fig:des_impl_choosing"
 \end_layout
 
 \begin_layout Standard
-Окно настроек программы окрывается с помощью пункта меню Tools->Settings.
+Окно настроек программы (рис.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:des_impl_settings"
+
+\end_inset
+
+) открывается с помощью пункта меню Tools->Settings.
  В данном окне осуществляется управления параметрами метода и отображения
  данных на карте.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename inc/pics/settings.PNG
+	display false
+	width 75page%
+
+\end_inset
+
+.
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Окно настроек программы
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:des_impl_settings"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Подраздел

@@ -75,63 +75,192 @@
 \end_layout
 
 \begin_layout Подраздел
-Описание задачи
+Цель и задачи работы
 \end_layout
 
 \begin_layout Standard
 Целью данной работы является разработка метода, позволяющего воспроизводить
  маршрут наблюдаемого подвижного объекта по последовательности координат,
- полученных от одного или нескольких связанных с объектом источников.
+ полученных от одного или нескольких связанных с объектом источников, а
+ также устранять погрешности и повышать точность маршрута.
  
 \end_layout
 
 \begin_layout Standard
-Метод должен работать с итоговым набором координат, а не в режиме слежения
- за объектом.
+Предполагается использование метода для обработки полного маршрута объекта,
+ а не в режиме слежения.
  
 \end_layout
 
 \begin_layout Standard
-Можно выделить следующие подзадачи, которые необходимо решить: 
+На рис.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:anal_problem"
+
+\end_inset
+
+ приведен пример двух маршрутов объекта, полученных от разных датчиков.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename inc/pics/bad_track.PNG
+	display false
+	width 75page%
+
+\end_inset
+
+.
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Пример маршрутов от двух датчиков, содержащих погрешности
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:anal_problem"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+На приведенном рисунке указаны наиболее распространенные проблемы, заметные
+ при анализе маршрута объекта: 
 \end_layout
 
 \begin_layout Itemize
-Объединение наборов координат 
+Расхождение данных от разных датчиков.
+ В этом случае невозможно установить, какой из маршрутов является более
+ достоверным.
+ Также возможен случай, при котором на разных участках маршрута более точными
+ являются данные от разных датчиков.
+ 
 \end_layout
 
 \begin_layout Itemize
-Устранение избыточных данных 
+Присутствуют одиночные точки с высокой степенью погрешности (более 100 м).
+ Для обозначения таких точек в данной работе вводится понятие 
+\begin_inset Quotes fld
+\end_inset
+
+пик
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Наличие таких точек в маршруте может значительно исказить результаты анализа
+ маршрута.
+ Например, недостоверной становится оценка пройденного объектом расстояния.
+ 
 \end_layout
 
 \begin_layout Itemize
-Определение мест остановок объекта 
+Во время длительной стоянки объекта накапливается большое количество точек.
+ Такие точки являются избыточными, так как относятся к одному местоположению.
+ Кроме того, из-за погрешностей датчика точки не совпадают.
 \end_layout
 
 \begin_layout Itemize
-Сглаживание погрешностей датчика, создающих выбросы при отображении маршрута
- на карте.
+Присутствуют точки с небольшой погрешностью.
+ Данные точки также вносят искажения и снижают достоверность маршрута.
  
 \end_layout
 
 \begin_layout Standard
-Под выбросом понимаются координаты, значительно отличающиеся от предыдущих
- и последующих.
- 
+Таким образом, возникают следующие задачи:
+\end_layout
+
+\begin_layout Enumerate
+Объединение маршрутов, полученных от разных источников
+\end_layout
+
+\begin_layout Enumerate
+Устранение пиков
+\end_layout
+
+\begin_layout Enumerate
+Устранение избыточных координат, накопленных во время стоянки объекта
+\end_layout
+
+\begin_layout Enumerate
+Сглаживание погрешностей датчика
+\end_layout
+
+\begin_layout Подраздел
+Причины погрешности
 \end_layout
 
 \begin_layout Standard
-Источником координат служат датчики, установленные в мобильные телефоны.
+Источником координат может быть широкий спектр устройств:
+\end_layout
+
+\begin_layout Itemize
+Датчики, установленные в мобильные телефоны и планшетные компьютеры.
  Такие датчики используют несколько источников для определения местоположения:
- базовые станции, спутники GPS/ГЛОНАСС, данные, полученные из сетей Wi-Fi.
- Зачастую нельзя получить информацию о источнике местоположения, в некоторых
+ станции мобильной связи, спутники GPS/ГЛОНАСС, данные, полученные из сетей
+ Wi-Fi.
+ Зачастую нельзя получить информацию о источнике местоположения, а в некоторых
  датчиках результат получается методом комбинирования данных с нескольких
  источников.
- Данные от датчика обладают погрешностью.
  
 \end_layout
 
+\begin_layout Itemize
+Специализированные устройства навигации.
+ Источником данных служит GPS/ГЛОНАСС.
+\end_layout
+
+\begin_layout Itemize
+Внешние GPS-датчики, подключаемые к различным устройствам с помощью USB
+ и COM.
+\end_layout
+
 \begin_layout Standard
-Основные факторы, вызывающие погрешность: 
+Основные факторы, вызывающие погрешность 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Yadav2011"
+
+\end_inset
+
+: 
 \end_layout
 
 \begin_layout Itemize
@@ -145,12 +274,16 @@
 \end_layout
 
 \begin_layout Itemize
-Местность, в которой используется датчик.
+Наличие периодов коррекции спутников.
+\end_layout
+
+\begin_layout Itemize
+Особенности местности, в которой используется датчик.
  
 \end_layout
 
 \begin_layout Itemize
-Отражения сигналов спутника и преграды на их пути снижают точность.
+Явление отражения сигналов спутника и преграды на их пути.
 \end_layout
 
 \begin_layout Itemize
@@ -158,35 +291,235 @@
  
 \end_layout
 
-\begin_layout Standard
-В результате погрешности при отображении на карте маршрута возникают следующие
- эффекты, заметные пользователю и усложняющие восприятие маршрута:
+\begin_layout Itemize
+Солнечная интерференция.
 \end_layout
 
 \begin_layout Itemize
-Большое количество точек, случайным образом расположенных в области остановки
- наблюдаемого объекта.
- 
-\end_layout
-
-\begin_layout Itemize
-Одиночные выбросы.
- 
-\end_layout
-
-\begin_layout Itemize
-Выбросы, состоящие из более чем одной координаты.
- 
-\end_layout
-
-\begin_layout Itemize
-Возможных комбинации приведенных пунктов.
- 
+Ошибки округления и вычисления в датчиках.
 \end_layout
 
 \begin_layout Standard
-Описанные эффекты, помимо снижения визуального качества маршрута, искажают
- информацию о пройденном объектом расстоянии.
+Несмотря на множество факторов, в данной работе рассматривается только результир
+ующая погрешность как некоторая случайная величина.
+\end_layout
+
+\begin_layout Подраздел
+Существующие решения
+\end_layout
+
+\begin_layout Пункт
+Объединение данных от разных источников
+\end_layout
+
+\begin_layout Standard
+Данная задача является разновидностью задачи слияния данных датчиков (sensor
+ fusion) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Xiong2002"
+
+\end_inset
+
+.
+ Данная задача подразумевает использование данных от нескольких независимых
+ источников измерения для получения точности, превышающей точность датчиков
+ при изолированном использовании.
+ Однако методы решения таких задач требуют построение сложной модели наблюдаемог
+о процесса и исследование параметров датчиков, влияющих на их погрешность.
+\end_layout
+
+\begin_layout Standard
+Частное решение данной задачи в рассматриваемой предметной области присутствует
+ в современных смартфонах.
+ Смартфоны используют несколько источников информации о местоположении:
+\end_layout
+
+\begin_layout Enumerate
+Глобальные системы спутниковой навигации (GPS/ГЛОНАСС).
+\end_layout
+
+\begin_layout Enumerate
+Данные сетей сотовой связи.
+\end_layout
+
+\begin_layout Enumerate
+Данные беспроводных сетей Wi-Fi.
+\end_layout
+
+\begin_layout Standard
+Средствами системного ПО происходит выбор наиболее точных доступных данных,
+ которые затем передаются в программы, запросившие определение местоположения.
+\end_layout
+
+\begin_layout Standard
+Данное решение не подходит к рассматриваемой задаче по следующим причинам:
+\end_layout
+
+\begin_layout Itemize
+Объединение информации происходит на уровне системного ПО устройства.
+ Пользователь не имеет возможности повлиять на процесс или предоставить
+ дополнительные данные, которые необходимо учесть.
+\end_layout
+
+\begin_layout Itemize
+Объединение происходит в режиме реального времени, что противоречит условию
+ задачи.
+\end_layout
+
+\begin_layout Itemize
+Известна априорная точность источников данных о местоположении.
+ Таким образом, итоговый результат может являться данными от датчика с максималь
+ной точностью, доступного в текущий момент времени.
+\end_layout
+
+\begin_layout Standard
+Не удалось обнаружить общедоступные программные продукты, выполняющие объединени
+е маршрутов, полученных от разных физических устройств.
+\end_layout
+
+\begin_layout Пункт
+Устранение пиков
+\end_layout
+
+\begin_layout Standard
+Данная задача решается во многих программах-навигаторах.
+ Существуют два основных подхода:
+\end_layout
+
+\begin_layout Enumerate
+Использование данных о предполагаемом маршруте объекта и графа дорог.
+ В данном решении принимается допущение, что объект, вероятнее всего, движется
+ по рекомендуемому программой маршруту.
+ Кроме того, используется информация о дорогах и отбрасываются координаты,
+ где объект не может находиться физически.
+ Недостатки такого решения:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Требуется дополнительная информация о дорогах.
+ Это требование ограничивает применение данного подхода в случаях неполной
+ информации о дорогах.
+ Кроме того, данные занимают большие объёмы памяти, что затрудняет их автономное
+ использование.
+ Обычно такие данные предоставляются онлайн-сервисами (например, Яндекс.Навигатор
+), либо хранятся на специальном устройстве, используемом только для навигации.
+ 
+\end_layout
+
+\begin_layout Itemize
+Объект может находиться не на дороге.
+ Такое решение в указанном случае дает заведомо недостоверный результат
+\end_layout
+
+\begin_layout Standard
+Перечисленные недостатки ограничивают область применения данного решения.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Использование информации о точности, получаемой от датчика.
+ Датчики предоставляют данные о предполагаемой погрешности полученной координаты.
+ Удаление координат с высокой погрешностью уменьшает количество пиков.
+ Однако такое решение не способно устранить все пики, так как нередко датчики
+ предоставляют неверные сведения о точности.
+ Таким образом, данный подход является ненадежным.
+\end_layout
+
+\begin_layout Пункт
+Определение мест остановок
+\end_layout
+
+\begin_layout Standard
+В смартфонах решается сходная задача уменьшения количества избыточных координат,
+ однако целью решения данной задачи является не повышение точности данных
+ о маршруте, а сокращение потребления энергии.
+ Устройство может не оповещать приложения о поступлении новых данных о местополо
+жении, если разрешен режим энергосбережения, при выполнении следующих условий:
+\end_layout
+
+\begin_layout Itemize
+Новые данные отличаются от ранее полученных на незначительную величину
+\end_layout
+
+\begin_layout Itemize
+Скорость движения объекта, согласно датчику, равна нулю.
+\end_layout
+
+\begin_layout Standard
+Данное решение может снизить количество накапливаемых за время стоянки точек,
+ однако многие системы, собирающие информацию о передвижении наблюдаемых
+ объектов, требуют отчета о местоположении через фиксированные интервалы
+ времени.
+ Таким образом, приложения вынуждены принудительно опрашивать датчик с целью
+ получения новых данных о местоположении и сохранять их.
+ В таких случаях описанное решение не работает.
+\end_layout
+
+\begin_layout Пункт
+Сглаживание погрешностей
+\end_layout
+
+\begin_layout Standard
+Предварительная коррекция данных происходит в процессе работы датчика.
+ Пользователю предоставляются уже скорректированные данные.
+ Однако степень коррекции недостаточна, так как на итоговом маршруте присутствую
+т погрешности.
+ Дополнительное исправление ошибки происходит в прикладных программах.
+ В программах навигации погрешности корректируются с помощью информации
+ о дороге и предполагаемом маршруте.
+ В данных программах нет принципиального отличия пиков от незначительных
+ погрешностей.
+ Помимо перечисленных ранее недостатков такого решения, присутствует следующий:
+ для параллельных дорог, по которым объект может передвигаться с равной
+ вероятностью (например, проспект и дублёр), программа навигации не может
+ определить местоположение.
+ В результате объект может отображаться не на той дороге, по которой он
+ передвигается, либо может наблюдаться поочередная смена дороги с некоторой
+ периодичностью.
+ В результате при воспроизведении маршрута могут наблюдаться участки, на
+ которых траектория объекта заметно отличается от реальной.
+ 
+\end_layout
+
+\begin_layout Standard
+Альтернативным вариантом является обработка всего маршрута при его загрузке
+ в соответствующий сервис.
+ Например, сглаживаются погрешности при сохранении истории о перемещениях
+ в сервисе RunKeeper 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "runtracker"
+
+\end_inset
+
+.
+ Возможно, помимо известных алгоритмов сглаживания сигналов, могут использоватьс
+я дополнительные данные, например, от акселерометра смартфона, однако точные
+ алгоритмы неизвестны.
+\end_layout
+
+\begin_layout Пункт
+Выводы
+\end_layout
+
+\begin_layout Standard
+Анализ существующих решений показал, что предложенные к рассмотрению задачи
+ актуальны и решаются.
+ Однако у приведенных решений есть недостатки, ограничивающие их применимость.
+ Необходимо отметить, что точные способы решения не известны.
+ Предположения об используемых данных и методах сделаны исходя из наблюдаемых
+ результатов и ограничений.
+ Кроме того, не удалось найти в свободном доступе программное обеспечение,
+ решающее перечисленные задачи в комплексе.
+\end_layout
+
+\begin_layout Standard
+С учетом приведенных ранее доводов, принято решение о разработке собственного
+ метода для решения комплекса указанных задач.
+ В разрабатываемом методе должны учитываться и преодолеваться ограничения
+ существующих решений.
  
 \end_layout
 
@@ -227,65 +560,7 @@
 \end_layout
 
 \begin_layout Подраздел
-Существующие программные продукты
-\end_layout
-
-\begin_layout Standard
-Существует несколько программных продуктов, решающих сходные задачи.
-\end_layout
-
-\begin_layout Itemize
-Сервис gps-shadow.
- Данный сервис предназначен для управления работой мобильных сотрудников
- и контроля их деятельности.
- Одной из рекламируемых возможностей является фильтрация GPS-координат.
- Точное описание алгоритма отсутствует, однако упоминается, что он выполняется
- в два этапа.
- На первом этапе происходит отсечение координат, точность которых (доступная
- от устройства) ниже некоторого порогового значения, на втором этапе происходит
- аппроксимация маршрута по оставшимся точкам.
- 
-\end_layout
-
-\begin_layout Itemize
-Навигационные сервисы.
- (Например, Яндекс-Навигатор).
- В таких сервисах также происходит коррекция местоположения для того, чтобы
- отображать движение объекта по предлагаемому системой маршруту.
- Однако в данном случае есть несколько серьезных отличий от поставленной
- задачи: 
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-При построении маршрута известен способ передвижения, что позволяет не учитывать
- заведомо некорректные координаты.
-\end_layout
-
-\begin_layout Enumerate
-Существует предоставленной системой эталонный маршрут, по которому должен
- двигаться объект.
- Данные об этом маршруте могут использоваться для коррекции реальных данных
- от датчика местоположения.
- 
-\end_layout
-
-\begin_layout Enumerate
-Коррекция осуществляется только для текущего местоположения и происходит
- в режиме реального времени.
- Данные о всем маршруте недоступны.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-Указанные продукты не решают одну из поставленных задач: объединение данных
- с нескольких источников.
- 
-\end_layout
-
-\begin_layout Подраздел
-Формализация задачи
+Постановка задачи
 \end_layout
 
 \begin_layout Пункт
@@ -293,15 +568,15 @@
 \end_layout
 
 \begin_layout Standard
-Исходными данными для задачи является набор треков, связанных с наблюдаемым
+Исходными данными для задачи является набор маршрутов, связанных с наблюдаемым
  объектом.
  В наборе должен присутствовать хотя бы один трек.
- Под треком понимается непустая последовательность данных о местоположении
- объекта, полученных от одного датчика.
+ Под маршрутом понимается непустая, упорядоченная по времени последовательность
+ данных о местоположении объекта, полученных от одного датчика.
 \end_layout
 
 \begin_layout Standard
-Одна точка трека обязательно содержит следующую информацию: 
+Одна точка маршрута содержит следующую информацию: 
 \end_layout
 
 \begin_layout Itemize
@@ -312,16 +587,20 @@
 Время получения 
 \end_layout
 
+\begin_layout Itemize
+Направление движения
+\end_layout
+
+\begin_layout Itemize
+Скорость
+\end_layout
+
+\begin_layout Itemize
+Точность
+\end_layout
+
 \begin_layout Standard
-Также с точкой могут быть связаны дополнительные данные:
-\end_layout
-
-\begin_layout Itemize
-Азимут
-\end_layout
-
-\begin_layout Itemize
-Скорость 
+В разрабатываемом методе не учитывается высота объекта над уровнем моря.
 \end_layout
 
 \begin_layout Пункт
@@ -329,18 +608,87 @@
 \end_layout
 
 \begin_layout Standard
-Результатом разрабатываемого метода является трек, представляющий собой
- аппроксимацию маршрута объекта.
- Точки трека содержат географические координаты объекта и предполагаемый
+Результатом разрабатываемого метода является маршрут, представляющий собой
+ аппроксимацию реального маршрута объекта.
+ Точки маршрута содержат географические координаты объекта и предполагаемый
  момент времени, в который объект находился в данной точке.
- Для точек, являющихся местом продолжительной остановки, указана длительность
- остановки.
  
 \end_layout
 
 \begin_layout Standard
 Полученный трек можно отобразить на карте и экспортировать.
+\end_layout
+
+\begin_layout Пункт
+Функциональная модель задачи
+\end_layout
+
+\begin_layout Standard
+На рис.
  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:anal_idef"
+
+\end_inset
+
+ приведена диаграмма IDEF0 функциональной модели решаемой задачи.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename inc/pics/idef0_anal.PNG
+	display false
+	width 75page%
+
+\end_inset
+
+.
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Функциональная модель задачи
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:anal_idef"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Подраздел
@@ -348,28 +696,564 @@
 \end_layout
 
 \begin_layout Standard
-Можно предложить следующую последовательность действий:
+Для решения поставленных задач можно предложить следующую последовательность
+ действий:
 \end_layout
 
 \begin_layout Enumerate
-Объединение треков.
- 
+Объединение маршрутов.
+ Выполнение данного этапа позволяет уменьшить число необходимых вычислений,
+ которые в противном случае было бы необходимо проводить для каждого маршрута
+ из исходного списка.
+ Также возможно, что объединение маршрутов и оперирование усредненными по
+ результатам нескольких наблюдений данных повысит точность дальнейших этапов.
+\begin_inset Newline linebreak
+\end_inset
+
+Для решения данной задачи можно предложить алгоритм, усредняющий значение
+ некоторых групп координат с учетом их точности.
+ Таким образом можно снизить влияние заведомо неточных координат на итоговый
+ результат.
 \end_layout
 
 \begin_layout Enumerate
-Определение остановок объекта и удаление лишних точек из объединенного трека.
- 
+Устранение пиков.
+ Данный этап целесообразно проводить до определения остановок, так как пики
+ могут возникать в моменты времени, в которые объект был неподвижен.
+ Наличие таких точек может помешать определению группы точек как остановки
+ и снизить точность алгоритма.
+\begin_inset Newline linebreak
+\end_inset
+
+Для решения данной задачи можно предложить алгоритм, опирающийся на предполагаем
+ые характеристики объекта.
+ Например, можно анализировать скорость, необходимую для преодоления расстояния
+ между двумя точками, и сопоставлять эту скорость с максимально возможной.
 \end_layout
 
 \begin_layout Enumerate
-Устранение шумов.
+Определение остановок и удаление избыточных координат.
+ Входными данными для данного этапа является маршрут, в котором устранены
+ самые значительные погрешности, что упрощает поиск точек, которые могут
+ относиться к одному положению объекта.
+\begin_inset Newline linebreak
+\end_inset
+
+Для решения данной задачи можно предложить алгоритм, который разбивает по
+ какому-либо признаку точки маршрута на группы и анализирует распределение
+ точек в группе.
+ Возможно существование критерия, который позволит отличить группы точек,
+ относящиеся к месту остановки объекта.
+\end_layout
+
+\begin_layout Enumerate
+Сглаживание погрешностей.
+ Данным этапом целесообразно завершать обработку маршрута, так как предыдущие
+ этапы могут внести дополнительную погрешность в исходные данные.
+ Кроме того, выполнение данного этапа перед устранением остановок и пиков
+ может внести искажения в исходные данные, что может затруднить выполнение
+ предложенных ранее алгоритмов.
+\begin_inset Newline linebreak
+\end_inset
+
+На данном этапе маршрут можно рассматривать как двумерный сигнал, что позволяет
+ использование известных фильтров для устранения шумов.
+\end_layout
+
+\begin_layout Подраздел
+Обзор алгоритмов сглаживания
+\end_layout
+
+\begin_layout Пункт
+Медианный фильтр
+\end_layout
+
+\begin_layout Standard
+Медианный фильтр 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sinha1990"
+
+\end_inset
+
+ является нелинейным фильтром с конечной импульсной характеристикой.
+ Данный фильтр широко используется для фильтрации изображений, однако его
+ можно применять и для других типов сигналов.
+ Фильтрация осуществляется следующим образом:
+\end_layout
+
+\begin_layout Enumerate
+Значения отсчетов сигнала внутри окна фильтра сортируются по возрастанию
+ (убыванию).
+\end_layout
+
+\begin_layout Enumerate
+Выходом фильтра является значение, находящееся в середине упорядоченного
+ списка (в случае четного размера окна, выходом является среднее значение
+ двух отсчетов в середине списка).
  
 \end_layout
 
 \begin_layout Standard
-На этапе рассмотрения шумов трек можно рассматривать как двумерный сигнал.
- Таким образом, можно использовать известные фильтры для устранения шумов.
+Медианный фильтр является эффективным средством обработки сигналов, подверженным
+ импульсным помехам.
+ Дополнительным преимуществом является простота реализации.
+ Однако данный фильтр не учитывает тип сигнала, его физическую природу и
+ не позволяет дополнительные известные параметры обрабатываемых данных для
+ повышения точности.
+\end_layout
+
+\begin_layout Пункт
+Экспоненциальное сглаживание
+\end_layout
+
+\begin_layout Standard
+Экспоненциальное сглаживание 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chen2000"
+
+\end_inset
+
+ --- способ обработки последовательности данных, применяемый для получения
+ их сглаженного представления и для прогнозирования.
+ Может применяться как в случае случайного процесса, так и для упорядоченного,
+ но подверженного воздействию шумов.
+ Алгоритм задается формулой 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:anal_exp"
+
+\end_inset
+
+.
  
+\begin_inset Formula 
+\begin{equation}
+s_{t}=\begin{cases}
+x_{t}, & t=0\\
+\alpha x_{t}+(1-\alpha)s_{t-1}, & t>0
+\end{cases},\label{eq:anal_exp}
+\end{equation}
+
+\end_inset
+
+где 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+ --- значение исходной величины в момент времени 
+\begin_inset Formula $t$
+\end_inset
+
+,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $s_{t}$
+\end_inset
+
+ --- результат работы алгоритма для момента времени 
+\begin_inset Formula $t$
+\end_inset
+
+,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\alpha$
+\end_inset
+
+ --- коэффициент сглаживания, 
+\begin_inset Formula $0<\alpha<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Значение коэффициента сглаживания можно определять для очередной итерации,
+ исходя из дополнительных сведений о точности значений.
+ Применительно к рассматриваемой задаче, значение 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ можно вычислять по значениям точности, получаемым от датчика.
+ Однако в такой модели сложно учесть дополнительные известные параметры.
+\end_layout
+
+\begin_layout Пункт
+Ядерное сглаживание
+\end_layout
+
+\begin_layout Standard
+Ядерное сглаживание 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ramsay1991"
+
+\end_inset
+
+ --- статистический метод оценки истинного значения функции по ее зашумленным
+ измерениям, применяющийся в случае отсутствия информации о законе распределения
+ шумов и значений функции.
+ Данный метод предполагает использование одной из известных функций ядра
+ (kernel functions) для получения оценки наблюдаемого параметра.
+ Возможно вычисление параметров функции ядра по дополнительным данным о
+ процессе, однако данный метод не предполагает использование сведений о
+ природе процесса.
+ Также результаты работы метода чувствительны к выбору функции ядра.
+\end_layout
+
+\begin_layout Пункт
+Фильтр Калмана
+\end_layout
+
+\begin_layout Standard
+Фильтр Калмана 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kalman60"
+
+\end_inset
+
+ --- рекурсивный фильтр, оценивающий вектор состояния динамической системы,
+ используя ряд неполных и зашумленных измерений.
+ Зачастую размерность вектора состояния объекта превосходит размерность
+ вектора данных наблюдения.
+ Фильтр Калмана позволяет оценивать полное внутреннее состояние объекта.
+\end_layout
+
+\begin_layout Standard
+Фильтр Калмана предназначен для рекурсивного дооценивания вектора состояния
+ априорно известной динамической системы, то есть для расчёта текущего состояния
+ системы необходимо знать текущее измерение, а также предыдущее состояние
+ самого фильтра.
+ Таким образом, фильтр Калмана, подобно другим рекурсивным фильтрам, реализован
+ во временно́м, а не в частотном представлении, но в отличие от других подобных
+ фильтров, фильтр Калмана оперирует не только оценками состояния, а еще
+ и оценками неопределенности (плотности распределения) вектора состояния,
+ опираясь на формулу Байеса условной вероятности.
+\end_layout
+
+\begin_layout Standard
+Алгоритм работает в два этапа.
+ На этапе прогнозирования фильтр Калмана экстраполирует значения переменных
+ состояния, а также их неопределенности.
+ На втором этапе, по данным измерения (полученного с некоторой погрешностью),
+ результат экстраполяции уточняется.
+ 
+\end_layout
+
+\begin_layout Standard
+Применительно к рассматриваемой задаче, фильтр Калмана позволяет учитывать
+ модель движения, а также позволяет разделить погрешности измерений и погрешност
+и движения.
+ Таким образом, для оценки и уточнения положения объекта можно использовать
+ все доступные от датчика данные, перечисленные в пункте 1.5.1.
+\end_layout
+
+\begin_layout Пункт
+Выводы
+\end_layout
+
+\begin_layout Standard
+Результаты сравнения перечисленных алгоритмов приведены в таблице 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:anal_filters"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Сравнение алгоритмов сглаживания
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="3.7cm">
+<column alignment="center" valignment="middle" width="3.4cm">
+<column alignment="center" valignment="middle" width="2.8cm">
+<column alignment="center" valignment="middle" width="2.8cm">
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Алгоритм
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Учет модели движения
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Учет погрешностей процесса
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Учет погрешностей датчика 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Медианный фильтр
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Экспоненциальное сглаживание
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
++
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Ядерное сглаживание
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
++
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Фильтр
+\begin_inset Newline linebreak
+\end_inset
+
+Калмана
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
++
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
++
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
++
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:anal_filters"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Так как в данной задаче с помощью фильтра Калмана можно учитывать больше
+ параметров, по сравнению с остальными рассмотренными алгоритмами, для сглаживан
+ия погрешностей маршрута решено использовать фильтр Калмана.
 \end_layout
 
 \end_body
