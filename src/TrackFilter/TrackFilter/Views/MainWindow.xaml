@@ -5,25 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewModels="clr-namespace:TrackFilter.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow"
+        Title="Обработка маршрутов"
         WindowState="Maximized" 
+        Icon="../27-512.png"
         d:DataContext="{d:DesignInstance viewModels:MainViewModel}">
     <DockPanel>
         <Menu
             DockPanel.Dock="Top">
-            <MenuItem Header="File">
-                <MenuItem Header="Open track"
+            <MenuItem Header="Файл">
+                <MenuItem Header="Открыть маршрут"
                           Command="{Binding LoadFileCommand}"></MenuItem>
-                <MenuItem Header="Save Result"
+                <MenuItem Header="Сохранить результат"
                           Command="{Binding ExportTrackCommand}"></MenuItem>
-                <MenuItem Header="Exit"
+                <MenuItem Header="Выход"
                           Command="{Binding CloseCommand}"
                           CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"></MenuItem>
             </MenuItem>
-            <MenuItem Header="Tools">
-                <MenuItem Header="Analysis"
+            <MenuItem Header="Инструменты">
+                <MenuItem Header="Анализ"
                           Command="{Binding StartAnalysisCommand}"></MenuItem>
-                <MenuItem Header="Settings"
+                <MenuItem Header="Настройки"
                           Command="{Binding ShowSettingsCommand}"
                           ></MenuItem>
             </MenuItem>

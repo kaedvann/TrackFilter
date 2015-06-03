@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewModels="clr-namespace:TrackFilter.ViewModels"
         mc:Ignorable="d"
-        Title="SettingsWindow" 
+        Title="Настройки" 
         Height="400" 
         Width="300" 
         WindowStyle="ToolWindow"
@@ -27,13 +27,13 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <CheckBox IsChecked="{Binding StopsDetection}"
-                  Grid.Row="0">Stops Detection</CheckBox>
+                  Grid.Row="0">Определение остановок</CheckBox>
         <CheckBox IsChecked="{Binding SpikeDetection}"
-                  Grid.Row="1">Spike Detection</CheckBox>
+                  Grid.Row="1">Определение пиков</CheckBox>
         <CheckBox IsChecked="{Binding Filtering}"
-                  Grid.Row="2">Filtering</CheckBox>
+                  Grid.Row="2">Фильтрация</CheckBox>
         <CheckBox IsChecked="{Binding PointsEnabled}"
-                  Grid.Row="3">Show Points</CheckBox>
+                  Grid.Row="3">Отображать точки</CheckBox>
         <Button Command="{Binding CloseCommand}"
                 CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                 Grid.Row="4">OK</Button>

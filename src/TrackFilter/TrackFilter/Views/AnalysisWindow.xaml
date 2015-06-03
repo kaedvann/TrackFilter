@@ -6,7 +6,8 @@
         xmlns:viewModels="clr-namespace:TrackFilter.ViewModels"
         xmlns:oxy="http://oxyplot.org/wpf"
         mc:Ignorable="d"
-        Title="AnalysisWindow"
+        Title="Анализ метода"
+        Icon="../27-512.png"
         WindowState="Maximized" d:DataContext="{d:DesignInstance viewModels:AnalysisViewModel }">
     <Grid>
         <Grid.RowDefinitions>
@@ -14,22 +15,22 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <Menu>
-            <MenuItem Header="File">
-                <MenuItem Header="Open Reference Track"
+            <MenuItem Header="Файл">
+                <MenuItem Header="Открыть эталонный маршрут"
                           Command="{Binding OpenReferenceCommand}" />
-                <MenuItem Header="Open Actual Track"
+                <MenuItem Header="Открыть маршрут"
                           Command="{Binding OpenActualCommand}" />
-                <MenuItem Header="Close Window"
+                <MenuItem Header="Закрыть"
                           Command="{Binding CloseCommand}"
                           CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}"/>
             </MenuItem>
 
         </Menu>
         <TabControl Grid.Row="1">
-            <TabItem Header="Map">
+            <TabItem Header="Карта">
                 <views:MapControl Tracks="{Binding Tracks}" />
             </TabItem>
-            <TabItem Header="Plot">
+            <TabItem Header="График">
                 <Grid VerticalAlignment="Stretch"
                       HorizontalAlignment="Stretch">
                     <Grid.RowDefinitions>
@@ -39,7 +40,7 @@
                     <oxy:PlotView Model="{Binding Plot}" />
                     <StackPanel Grid.Row="1"
                                 Orientation="Horizontal">
-                        <TextBlock Text="Source average:"
+                        <TextBlock Text="Среднее отклонение исходного маршрута:"
                                    VerticalAlignment="Center"
                                    ></TextBlock>
                         <TextBox Text="{Binding SourceAverage, StringFormat={}{0:N4}, ConverterCulture=ru-RU}"
@@ -47,7 +48,7 @@
 
                         <TextBox Text="{Binding SourceVariance, StringFormat={}{0:N4}, ConverterCulture=ru-RU}"
                                  Margin="10"></TextBox>
-                        <TextBlock Text="Result average"
+                        <TextBlock Text="Среднее отклонение результата:"
                                    VerticalAlignment="Center"
                                    Margin="20,0,0,0"></TextBlock>
                         <TextBox Text="{Binding ResultAverage, StringFormat={}{0:N4}, ConverterCulture=ru-RU}"

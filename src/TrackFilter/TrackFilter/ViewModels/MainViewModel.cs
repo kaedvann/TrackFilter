@@ -108,7 +108,7 @@ namespace TrackFilter.ViewModels
                 {
                     Filter = "XML documents | *.xml",
                     FileName = "Result.xml",
-                    Title = "Choose location to save result track"
+                    Title = "Выберите путь для сохранения"
                 };
                 var result = dialog.ShowDialog();
                 if (result == true)
@@ -120,7 +120,7 @@ namespace TrackFilter.ViewModels
             }
             catch
             {
-                MessageBox.Show("Error occured while saving track");
+                MessageBox.Show("Ошибка в процессе сохранения");
             }
         }
 
@@ -143,7 +143,7 @@ namespace TrackFilter.ViewModels
                 {
                     Filter = "XML documents | *.xml",
                     Multiselect = false,
-                    Title = "Choose xml file with track"
+                    Title = "Выберите XML-документ с маршрутом"
                 };
                 var result = dialog.ShowDialog();
                 if (result == true)
@@ -158,7 +158,7 @@ namespace TrackFilter.ViewModels
             }
             catch
             {
-                MessageBox.Show("Bad file format");
+                MessageBox.Show("Неверный формат файла");
             }
         }
 
