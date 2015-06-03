@@ -96,11 +96,11 @@ name "cha:design"
 
 \begin_layout Enumerate
 Список последовательностей координат и последовательности координат не могут
- быть пустыми
+ быть пустыми.
 \end_layout
 
 \begin_layout Enumerate
-Последовательности координат упорядочены по времени получения
+Последовательности координат упорядочены по времени получения.
 \end_layout
 
 \begin_layout Enumerate
@@ -1916,7 +1916,7 @@ name "fig:des_structure"
 \end_layout
 
 \begin_layout Подраздел
-Диаграмма классов метода
+Диаграмма классов модуля обработки маршрута
 \end_layout
 
 \begin_layout Standard
